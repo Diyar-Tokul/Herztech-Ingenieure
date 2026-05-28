@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sS -o /dev/null -w \"home %{http_code}\\\\n\" http://localhost:4321/)",
+      "Bash(curl -sS -o /dev/null -w \"leistungen %{http_code}\\\\n\" http://localhost:4321/leistungen)",
+      "Bash(curl -sS -o /dev/null -w \"abdichtung %{http_code}\\\\n\" http://localhost:4321/leistungen/abdichtungssysteme)",
+      "Bash(curl -sS -o /dev/null -w \"balkon %{http_code}\\\\n\" http://localhost:4321/leistungen/balkon-und-garage)",
+      "Bash(curl -sS -o /dev/null -w \"feucht %{http_code}\\\\n\" http://localhost:4321/leistungen/feuchtigkeit-und-sanierung)",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $jpg = [System.Drawing.Image]::FromFile\\(\"c:\\\\Users\\\\diyar\\\\Desktop\\\\Website\\\\claude\\\\herztechingenieure\\\\public\\\\media\\\\herztechLogo.png\"\\); $jpg.Save\\(\"c:\\\\Users\\\\diyar\\\\Desktop\\\\Website\\\\claude\\\\herztechingenieure\\\\public\\\\media\\\\herztechLogo.png\", [System.Drawing.Imaging.ImageFormat]::Png\\); $jpg.Dispose\\(\\); Get-ChildItem \"c:\\\\Users\\\\diyar\\\\Desktop\\\\Website\\\\claude\\\\herztechingenieure\\\\public\\\\media\\\\\" | Select-Object Name, Length)",
+      "PowerShell(Get-NetTCPConnection -LocalPort 4321 -ErrorAction SilentlyContinue | ForEach-Object { try { Stop-Process -Id $_.OwningProcess -Force -ErrorAction Stop } catch {} }; Start-Sleep -Seconds 1; \"stopped\")",
+      "PowerShell(Get-NetTCPConnection -LocalPort 4321 -ErrorAction SilentlyContinue | ForEach-Object { try { Stop-Process -Id $_.OwningProcess -Force -ErrorAction Stop } catch {} }; \"done\")",
+      "Bash(cp \"Abdichtungssysteme.jpg\" \"../../../public/media/abdichtungssysteme.jpg\")",
+      "Bash(cp \"Außenabdichtung Altbau.jpg\" \"../../../public/media/aussenabdichtung-altbau.jpg\")",
+      "Bash(cp \"Balkonabdichtung.webp\" \"../../../public/media/balkonabdichtung.webp\")",
+      "Bash(cp \"Balkonabdichtung2.webp\" \"../../../public/media/balkonabdichtung-2.webp\")",
+      "Bash(cp \"Bodenabdichtung.webp\" \"../../../public/media/bodenabdichtung.webp\")"
+    ]
+  }
+}
