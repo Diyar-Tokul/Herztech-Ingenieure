@@ -5,6 +5,7 @@ const cols = [
   {
     title: "Leistungen",
     links: [
+      { href: "/leistungen/mauertrockenlegung", label: "Mauertrockenlegung" },
       { href: "/leistungen/abdichtungssysteme", label: "Abdichtungssysteme" },
       { href: "/leistungen/balkonabdichtung", label: "Balkonabdichtung" },
       { href: "/leistungen/garagenabdichtung", label: "Garagen- & Bodenabdichtung" },
@@ -34,10 +35,10 @@ export default function Footer() {
           <div>
             <div className="inline-flex items-center gap-3 rounded-2xl bg-white px-4 py-3">
               <Image
-                src="/media/herztechLogo.png"
-                alt="HERZTEC Ingenieure"
-                width={220}
-                height={66}
+                src="/media/drycore-logo.png"
+                alt="Drycore – Ingenieurtechnik für Bauwerksabdichtung"
+                width={240}
+                height={100}
                 className="h-8 w-auto object-contain"
               />
             </div>
@@ -99,8 +100,8 @@ export default function Footer() {
                 <span className="mt-0.5 grid h-7 w-7 place-items-center rounded-full bg-white/5 ring-1 ring-white/10">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
                 </span>
-                <a href="mailto:info@herztec.de" className="hover:text-white">
-                  info@herztec.de
+                <a href="mailto:info@drycore.de" className="hover:text-white">
+                  info@drycore.de
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -114,7 +115,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/60 sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} HERZTEC Ingenieure. Alle Rechte vorbehalten.</p>
+          <p>© {new Date().getFullYear()} Drycore. Alle Rechte vorbehalten.</p>
           <p>
             Geschäftsführer: Mohammed Herz und Irfan Tokul
           </p>

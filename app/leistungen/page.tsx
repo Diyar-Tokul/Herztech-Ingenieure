@@ -8,13 +8,34 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Leistungen",
   description:
-    "Abdichtungssysteme, Balkonabdichtung, Garagen- und Bodenabdichtung, Feuchtigkeits- und Sanierungstechnik, Gasleitungsprüfung und Gasleitungssanierung. Alle Leistungen von HERZTEC Ingenieure im Überblick.",
+    "Mauertrockenlegung, Abdichtungssysteme, Balkonabdichtung, Garagen- und Bodenabdichtung, Feuchtigkeits- und Sanierungstechnik, Gasleitungsprüfung und Gasleitungssanierung. Alle Leistungen von Drycore im Überblick.",
 };
 
 const services = [
   {
     index: "01",
-    title: "HERZTEC Abdichtungssysteme",
+    title: "Mauertrockenlegung",
+    intro:
+      "Feuchte Wände dauerhaft trockenlegen. Nachträgliche Horizontalsperre, Mauerwerksinjektion und Sanierputz gegen aufsteigende Feuchtigkeit.",
+    bullets: [
+      "Feuchtigkeitsmessung und Diagnose",
+      "Nachträgliche Horizontalsperre durch Injektion",
+      "Mauerwerksinjektion bei hoher Durchfeuchtung",
+      "Sanierputz gegen Salzausblühungen",
+    ],
+    href: "/leistungen/mauertrockenlegung",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 21h18" />
+        <path d="M5 21V7h14v14" />
+        <path d="M5 11h14M5 15h14M9 7v14M14 7v14" />
+        <path d="M12 2v3" />
+      </svg>
+    ),
+  },
+  {
+    index: "02",
+    title: "Abdichtungssysteme",
     intro:
       "Vom Keller bis zum Sockel. Innenabdichtung, Außenabdichtung, Sockelabdichtung, Horizontalsperre und Bodenabdichtung nach DIN 18533.",
     bullets: [
@@ -34,7 +55,7 @@ const services = [
     ),
   },
   {
-    index: "02",
+    index: "03",
     title: "Balkonabdichtung",
     intro:
       "Wetterfeste Verbundabdichtung für Balkon und Terrasse, mit sauberen Anschlussdetails und neuem Belag.",
@@ -54,7 +75,7 @@ const services = [
     ),
   },
   {
-    index: "03",
+    index: "04",
     title: "Garagen- & Bodenabdichtung",
     intro:
       "Belastbare Beschichtungen für Garage, Stellplatz und Tiefgarage. Robust gegen Wasser, Frost und Tausalz.",
@@ -74,7 +95,7 @@ const services = [
     ),
   },
   {
-    index: "04",
+    index: "05",
     title: "Feuchtigkeits- & Sanierungstechnik",
     intro:
       "Messen, verstehen, lösen. Wir bringen Ihre Bauteile zurück in den trockenen Zustand.",
@@ -91,7 +112,7 @@ const services = [
     ),
   },
   {
-    index: "05",
+    index: "06",
     title: "Gasleitungsprüfung",
     intro:
       "Sicherheit nach DVGW. Sicht- und Dichtheitsprüfung Ihrer Hausinstallation mit Protokoll.",
@@ -109,7 +130,7 @@ const services = [
     ),
   },
   {
-    index: "06",
+    index: "07",
     title: "Gasleitungssanierung",
     intro:
       "Fachgerechte Sanierung undichter Leitungen. Mit Druckprüfung, Inbetriebnahme und Übergabe.",

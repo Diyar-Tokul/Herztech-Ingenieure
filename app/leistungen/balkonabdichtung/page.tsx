@@ -4,7 +4,7 @@ import ServiceDetailLayout from "../../components/ServiceDetailLayout";
 export const metadata: Metadata = {
   title: "Balkonabdichtung",
   description:
-    "Belastbare Balkonabdichtung mit Verbundabdichtung, sauberen Anschlussdetails und neuem Belag. Vom Meisterbetrieb HERZTEC Ingenieure.",
+    "Belastbare Balkonabdichtung mit Verbundabdichtung, sauberen Anschlussdetails und neuem Belag. Vom Meisterbetrieb Drycore.",
 };
 
 export default function Page() {

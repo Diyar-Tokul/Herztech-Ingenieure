@@ -7,6 +7,11 @@ import { useEffect, useState } from "react";
 
 const services = [
   {
+    href: "/leistungen/mauertrockenlegung",
+    label: "Mauertrockenlegung",
+    desc: "Aufsteigende Feuchtigkeit stoppen, Wände trockenlegen.",
+  },
+  {
     href: "/leistungen/abdichtungssysteme",
     label: "Abdichtungssysteme",
     desc: "Keller, Wände, Sockel und Boden zuverlässig dicht.",
@@ -101,13 +106,13 @@ export default function Nav() {
         <Link
           href="/"
           className="flex items-center gap-3"
-          aria-label="HERZTEC Ingenieure Startseite"
+          aria-label="Drycore Startseite"
         >
           <Image
-            src="/media/herztechLogo.png"
-            alt="HERZTEC Ingenieure"
-            width={200}
-            height={60}
+            src="/media/drycore-logo.png"
+            alt="Drycore – Ingenieurtechnik für Bauwerksabdichtung"
+            width={240}
+            height={100}
             priority
             className={`h-9 w-auto object-contain transition-[filter] duration-500 ${
               onHero ? "brightness-0 invert" : ""

@@ -12,6 +12,7 @@ type Props = {
   icon: ReactNode;
   image?: string;
   imageAlt?: string;
+  problem?: string;
 };
 
 export default function ServiceCard({
@@ -23,6 +24,7 @@ export default function ServiceCard({
   icon,
   image,
   imageAlt,
+  problem,
 }: Props) {
   return (
     <Link
@@ -51,7 +53,22 @@ export default function ServiceCard({
         </span>
       </div>
 
-      <h3 className="mt-6 text-xl font-semibold tracking-tight text-navy-900 sm:text-2xl">
+      {problem ? (
+        <p className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-teal-50 px-3 py-1 text-[11px] font-semibold text-teal-700">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 8v4" />
+            <path d="M12 16h.01" />
+          </svg>
+          {problem}
+        </p>
+      ) : null}
+
+      <h3
+        className={`${
+          problem ? "mt-3" : "mt-6"
+        } text-xl font-semibold tracking-tight text-navy-900 sm:text-2xl`}
+      >
         {title}
       </h3>
       <p className="mt-3 text-sm leading-relaxed text-navy-700/80">{intro}</p>

@@ -4,7 +4,7 @@ import Reveal from "../components/Reveal";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum und Anbieterkennzeichnung der HERZTEC Ingenieure.",
+  description: "Impressum und Anbieterkennzeichnung von Drycore.",
 };
 
 export default function ImpressumPage() {
@@ -26,7 +26,7 @@ export default function ImpressumPage() {
                   Anbieter
                 </p>
                 <p className="mt-3 text-base font-semibold text-navy-900">
-                  HERZTEC Ingenieure
+                  Drycore
                 </p>
                 <p className="text-sm text-navy-700/80">Adresse folgt</p>
               </div>
@@ -46,7 +46,7 @@ export default function ImpressumPage() {
                   Kontakt
                 </p>
                 <p className="mt-3 text-sm text-navy-800">Telefon folgt</p>
-                <p className="text-sm text-navy-800">info@herztec.de</p>
+                <p className="text-sm text-navy-800">info@drycore.de</p>
               </div>
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-600">

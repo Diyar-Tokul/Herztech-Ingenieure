@@ -3,13 +3,13 @@ import Image from "next/image";
 import Reveal from "./components/Reveal";
 import SectionTitle from "./components/SectionTitle";
 import ServiceCard from "./components/ServiceCard";
-import SchadensfallSelector from "./components/SchadensfallSelector";
 import ContactForm from "./components/ContactForm";
 
 const services = [
   {
     index: "01",
     title: "Abdichtungssysteme",
+    problem: "Feuchter Keller & nasse Wände",
     intro:
       "Innen- und Außenabdichtung, Sockel, Horizontalsperren und Bodenabdichtung nach DIN 18533.",
     bullets: [
@@ -32,6 +32,7 @@ const services = [
   {
     index: "02",
     title: "Balkonabdichtung",
+    problem: "Undichter Balkon oder Terrasse",
     intro:
       "Wetterfeste Verbundabdichtung für Balkon und Terrasse, mit sauberen Anschlussdetails.",
     bullets: [
@@ -54,6 +55,7 @@ const services = [
   {
     index: "03",
     title: "Garagen- & Bodenabdichtung",
+    problem: "Risse & Feuchte im Garagenboden",
     intro:
       "Belastbare Beschichtungen für Garage, Stellplatz und Tiefgarage. Robust gegen Tausalz.",
     bullets: [
@@ -76,6 +78,7 @@ const services = [
   {
     index: "04",
     title: "Feuchtigkeit & Sanierung",
+    problem: "Wasserschaden & Schimmelverdacht",
     intro:
       "Vom akuten Wasserschaden bis zur dauerhaften Sanierung. Mit Analyse, Messung und Plan.",
     bullets: [
@@ -96,6 +99,7 @@ const services = [
   {
     index: "05",
     title: "Gasleitungsprüfung",
+    problem: "Unsichere oder fällige Gasleitung",
     intro:
       "Sicht- und Dichtheitsprüfung Ihrer Gas-Hausinstallation nach DVGW und TRGI.",
     bullets: [
@@ -117,6 +121,7 @@ const services = [
   {
     index: "06",
     title: "Gasleitungssanierung",
+    problem: "Veraltete, undichte Gasleitung",
     intro:
       "Fachgerechte Sanierung undichter oder veralteter Leitungen, mit Druckprüfung und Übergabe.",
     bullets: [
@@ -203,7 +208,7 @@ export default function Home() {
 
             <Reveal delay={240}>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-                HERZTEC Ingenieure plant und führt Bauwerksabdichtungen,
+                Drycore plant und führt Mauertrockenlegung, Bauwerksabdichtungen,
                 Sanierungen und Gasleitungsprüfungen aus. Analyse, Konzept und
                 Ausführung aus einer Hand.
               </p>
@@ -308,12 +313,12 @@ export default function Home() {
               eyebrow="Unsere Leistungen"
               title={
                 <>
-                  Vier Kompetenzfelder.
+                  Welches Problem
                   <br />
-                  <span className="text-gradient">Ein Anspruch.</span>
+                  <span className="text-gradient">haben Sie?</span>
                 </>
               }
-              intro="Wir konzentrieren uns auf das, was wir wirklich beherrschen. So bekommen Sie für jeden Bereich die fachgerechte Lösung statt halber Sachen."
+              intro="Ob feuchter Keller, undichter Balkon oder eine fällige Gasleitungsprüfung: Wählen Sie Ihr Schadensbild und Sie landen direkt beim passenden Kompetenzfeld. Für jedes Problem die fachgerechte Lösung, statt halber Sachen."
             />
             <Reveal delay={200}>
               <Link
@@ -352,31 +357,94 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SCHADENSFALL SELECTOR */}
+      {/* VORHER / NACHHER */}
       <section className="relative py-16 sm:py-24">
         <div className="absolute inset-0 -z-10 bg-grid bg-grid-fade opacity-40" />
         <div className="container-x">
           <SectionTitle
             align="center"
-            eyebrow="Schritt 1 zum trockenen Gebäude"
-            title="Sagen Sie uns, was Sie sehen."
-            intro="Wählen Sie Ihren Schadensfall und Sie sehen sofort, welche Leistung passt und wie der Ablauf aussieht. Wer richtig sucht, spart sich teure Umwege."
+            eyebrow="Vorher / Nachher"
+            title="Aus Feuchtigkeit wird Wohnraum."
+            intro="Ein durchfeuchteter Raum, fachgerecht abgedichtet und saniert, bis ein trockener Poolbereich daraus wird. Genau diese Verwandlung steckt hinter unseren Leistungen."
           />
-          <div className="mt-12">
-            <Reveal variant="scale">
-              <SchadensfallSelector />
-            </Reveal>
-          </div>
+
+          <Reveal variant="scale">
+            <div className="mt-12 grid gap-4 sm:gap-6 md:grid-cols-2">
+              {[
+                {
+                  src: "/media/pool-vorher.jpeg",
+                  tag: "Vorher",
+                  tagClass: "bg-amber-500/90 text-white",
+                  caption: "Feuchte, geschädigte Wand vor der Abdichtung",
+                },
+                {
+                  src: "/media/pool-nachher.jpeg",
+                  tag: "Nachher",
+                  tagClass: "bg-teal-500 text-white",
+                  caption: "Trockener, fertiger Poolraum nach der Sanierung",
+                },
+              ].map((item) => (
+                <figure
+                  key={item.tag}
+                  className="lift group relative aspect-4/5 overflow-hidden rounded-3xl ring-1 ring-navy-900/5 sm:aspect-4/3"
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.caption}
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <span
+                    className={`absolute left-4 top-4 inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] backdrop-blur ${item.tagClass}`}
+                  >
+                    {item.tag}
+                  </span>
+                  <figcaption className="absolute inset-x-4 bottom-4 rounded-lg bg-white/85 px-3 py-1.5 text-xs font-medium text-navy-800 backdrop-blur">
+                    {item.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={150}>
+            <div className="mt-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-center">
+              <p className="text-sm text-navy-700/80">
+                Ihr Problem ähnelt dem? Diese Leistungen haben diese Verwandlung möglich gemacht:
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Link
+                  href="/leistungen/feuchtigkeit-und-sanierung"
+                  className="group inline-flex h-11 items-center gap-2 rounded-full bg-navy-900 px-5 text-sm font-semibold text-white transition-all hover:bg-navy-800"
+                >
+                  Feuchtigkeit &amp; Sanierung
+                  <span aria-hidden className="grid h-6 w-6 place-items-center rounded-full bg-white/15 transition-transform group-hover:translate-x-0.5">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14" />
+                      <path d="m13 6 6 6-6 6" />
+                    </svg>
+                  </span>
+                </Link>
+                <Link
+                  href="/leistungen/abdichtungssysteme"
+                  className="inline-flex h-11 items-center gap-2 rounded-full bg-white px-5 text-sm font-semibold text-navy-900 ring-1 ring-navy-900/10 transition-colors hover:bg-navy-50"
+                >
+                  Abdichtungssysteme
+                </Link>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* WARUM HERZTEC */}
+      {/* WARUM DRYCORE */}
       <section className="relative py-24 sm:py-32">
         <div className="container-x">
           <div className="grid items-center gap-14 lg:grid-cols-2">
             <div>
               <SectionTitle
-                eyebrow="Warum HERZTEC"
+                eyebrow="Warum Drycore"
                 title={
                   <>
                     Ingenieurwissen,
@@ -592,7 +660,7 @@ export default function Home() {
               <p className="max-w-3xl text-xl font-medium leading-relaxed text-navy-900 sm:text-2xl">
                 &bdquo;Endlich ein Betrieb, der erklärt, was er macht und warum.
                 Das Konzept war nachvollziehbar, der Preis fair und die
-                Baustelle picobello. Wir empfehlen HERZTEC ohne zu zögern.&rdquo;
+                Baustelle picobello. Wir empfehlen Drycore ohne zu zögern.&rdquo;
               </p>
               <div className="mt-8 flex items-center gap-4">
                 <div className="grid h-12 w-12 place-items-center rounded-full bg-navy-900 text-sm font-semibold text-white">
@@ -649,7 +717,7 @@ export default function Home() {
                       <span className="block text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-700/70">
                         E-Mail
                       </span>
-                      info@herztec.de
+                      info@drycore.de
                     </span>
                   </li>
                 </ul>

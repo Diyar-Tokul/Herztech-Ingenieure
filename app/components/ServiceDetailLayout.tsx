@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { ReactNode } from "react";
 import PageHeader from "./PageHeader";
 import Reveal from "./Reveal";
@@ -23,6 +24,8 @@ type Props = {
   title: ReactNode;
   intro: ReactNode;
   hero?: ReactNode;
+  heroImage?: string;
+  heroImageAlt?: string;
   damageCases: DamageCase[];
   services: ServiceItem[];
   process: { title: string; text: string }[];
@@ -34,6 +37,8 @@ export default function ServiceDetailLayout({
   eyebrow,
   title,
   intro,
+  heroImage,
+  heroImageAlt,
   damageCases,
   services,
   process,
@@ -57,7 +62,20 @@ export default function ServiceDetailLayout({
       <section className="container-x">
         <Reveal variant="scale">
           <div className="grid gap-6 lg:grid-cols-[1.6fr_1fr]">
-            <ImagePlaceholder ratio="wide" rounded="3xl" />
+            {heroImage ? (
+              <div className="relative aspect-[16/7] overflow-hidden rounded-3xl ring-1 ring-navy-900/5">
+                <Image
+                  src={heroImage}
+                  alt={heroImageAlt ?? ""}
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 62vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            ) : (
+              <ImagePlaceholder ratio="wide" rounded="3xl" />
+            )}
             <div className="grid grid-cols-1 gap-3">
               {[
                 { k: "DIN 18533", v: "Normgerecht ausgeführt" },

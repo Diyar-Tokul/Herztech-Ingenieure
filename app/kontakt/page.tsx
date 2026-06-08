@@ -6,7 +6,7 @@ import ContactForm from "../components/ContactForm";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Sprechen Sie mit HERZTEC Ingenieure. Wir antworten innerhalb von 24 Stunden auf Anfragen zu Abdichtung, Sanierung und Gasleitungsprüfung.",
+    "Sprechen Sie mit Drycore. Wir antworten innerhalb von 24 Stunden auf Anfragen zu Abdichtung, Sanierung und Gasleitungsprüfung.",
 };
 
 export default function KontaktPage() {
@@ -57,7 +57,7 @@ export default function KontaktPage() {
                       <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-white/60">
                         E-Mail
                       </p>
-                      <p className="text-base font-semibold text-white">info@herztec.de</p>
+                      <p className="text-base font-semibold text-white">info@drycore.de</p>
                       <p className="text-xs text-white/60">Antwort innerhalb von 24 Stunden</p>
                     </div>
                   </li>

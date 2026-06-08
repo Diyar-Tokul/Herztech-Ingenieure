@@ -11,27 +11,31 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://herztec.de"),
+  metadataBase: new URL("https://drycore.de"),
   title: {
-    default: "HERZTEC Ingenieure | Abdichtungstechnik",
-    template: "%s | HERZTEC Ingenieure",
+    default: "Drycore | Ingenieurtechnik für Bauwerksabdichtung",
+    template: "%s | Drycore",
   },
   description:
-    "HERZTEC Ingenieure plant, prüft und saniert Bauwerksabdichtungen und Gasleitungen. Meisterbetrieb für Keller, Balkon, Garage und Feuchtigkeitssanierung.",
+    "Drycore plant, prüft und saniert Bauwerksabdichtungen und Gasleitungen. Meisterbetrieb für Mauertrockenlegung, Keller, Balkon, Garage und Feuchtigkeitssanierung.",
   keywords: [
     "Abdichtungstechnik",
+    "Mauertrockenlegung",
+    "Mauerwerkstrockenlegung",
     "Kellerabdichtung",
     "Bauwerksabdichtung",
     "Horizontalsperre",
+    "aufsteigende Feuchtigkeit",
+    "feuchte Wände",
     "Balkonabdichtung",
     "Garagenabdichtung",
     "Feuchtigkeitssanierung",
     "Gasleitungsprüfung",
     "Gasleitungssanierung",
-    "HERZTEC Ingenieure",
+    "Drycore",
   ],
   openGraph: {
-    title: "HERZTEC Ingenieure | Abdichtungstechnik",
+    title: "Drycore | Ingenieurtechnik für Bauwerksabdichtung",
     description:
       "Ingenieurtechnik für Bauwerks- und Gasleitungsabdichtung. Wir analysieren, planen und sanieren mit handwerklicher Präzision.",
     type: "website",

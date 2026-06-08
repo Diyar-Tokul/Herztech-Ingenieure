@@ -9,7 +9,7 @@ import ProjectGallery, { type Project } from "../components/ProjectGallery";
 export const metadata: Metadata = {
   title: "Referenzen",
   description:
-    "Ausgewählte Projekte von HERZTEC Ingenieure: Kellerabdichtung, Balkonabdichtung, Garagensanierung, Feuchtigkeitssanierung und Gasleitungsarbeiten.",
+    "Ausgewählte Projekte von Drycore: Mauertrockenlegung, Kellerabdichtung, Balkonabdichtung, Garagensanierung, Feuchtigkeitssanierung und Gasleitungsarbeiten.",
 };
 
 const projects: Project[] = [

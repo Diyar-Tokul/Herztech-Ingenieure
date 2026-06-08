@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServiceDetailLayout from "../../components/ServiceDetailLayout";
 
 export const metadata: Metadata = {
-  title: "HERZTEC Abdichtungssysteme",
+  title: "Abdichtungssysteme",
   description:
     "Innenabdichtung, Außenabdichtung, Sockelabdichtung, Horizontalsperre und Bodenabdichtung. Bauwerksabdichtung nach DIN 18533 vom Meisterbetrieb.",
 };
