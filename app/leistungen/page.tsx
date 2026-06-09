@@ -24,6 +24,7 @@ const services = [
       "Sanierputz gegen Salzausblühungen",
     ],
     href: "/leistungen/mauertrockenlegung",
+    image: "/media/mauertrockenlegung-horizontalsperre.jpeg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 21h18" />
@@ -46,6 +47,7 @@ const services = [
       "Bodenabdichtung von Kellerräumen",
     ],
     href: "/leistungen/abdichtungssysteme",
+    image: "/media/abdichtungssysteme-start.png",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 21V8l8-5 8 5v13" />
@@ -66,6 +68,7 @@ const services = [
       "Neuer Belag oder Beschichtung",
     ],
     href: "/leistungen/balkonabdichtung",
+    image: "/media/balkonabdichtung-start.png",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 12h18" />
@@ -86,6 +89,7 @@ const services = [
       "Sauberer Sockelanschluss",
     ],
     href: "/leistungen/garagenabdichtung",
+    image: "/media/garagenabdichtung-start.png",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="11" width="18" height="8" rx="1" />
@@ -105,6 +109,7 @@ const services = [
       "Sanierungskonzepte für Feuchtigkeitsschäden",
     ],
     href: "/leistungen/feuchtigkeit-und-sanierung",
+    image: "/media/feuchtigkeit-sanierung-start.png",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2s6 7 6 12a6 6 0 0 1-12 0c0-5 6-12 6-12Z" />
@@ -122,6 +127,7 @@ const services = [
       "Protokoll für Unterlagen und Versorger",
     ],
     href: "/leistungen/gasleitungspruefung",
+    image: "/media/gasleitungspruefung-start.png",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 12h6l2-4 4 8 2-4h2" />
@@ -141,6 +147,7 @@ const services = [
       "Übergabe mit Doku",
     ],
     href: "/leistungen/gasleitungssanierung",
+    image: "/media/gasleitungssanierung-start.png",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 18V8a2 2 0 0 1 2-2h4" />
@@ -164,7 +171,7 @@ export default function LeistungenPage() {
             <span className="text-gradient">trocken und sicher hält.</span>
           </>
         }
-        intro="Sechs Leistungen mit klarer Tiefe und Erfahrung. Wählen Sie Ihren Bereich, sehen Sie typische Schadensfälle und unsere Antworten darauf."
+        intro="Feuchte Wände, undichte Balkone, beschädigte Garagenböden oder anstehende Gasleitungsprüfungen brauchen keine Bastellösungen, sondern saubere Planung und Ausführung. HERZTEC bündelt sechs Leistungen unter einem Dach. Wählen Sie Ihren Bereich, sehen Sie typische Schadensfälle und die Antworten von über 30 Jahren Erfahrung im Team."
         crumbs={[{ label: "Start", href: "/" }, { label: "Leistungen" }]}
       />
 

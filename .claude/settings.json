@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"app/Bilder/Videos/AbdichtungssystemeStartseite.png\" \"public/media/abdichtungssysteme-start.png\")",
+      "Bash(cp \"app/Bilder/Videos/BalkonabdichtungStartseite.png\" \"public/media/balkonabdichtung-start.png\")",
+      "Bash(cp \"app/Bilder/Videos/GaragenabdichtungStartseite.png\" \"public/media/garagenabdichtung-start.png\")",
+      "Bash(cp \"app/Bilder/Videos/FeuchtigkeitUndSanierungStartseite.png\" \"public/media/feuchtigkeit-sanierung-start.png\")",
+      "Bash(cp \"app/Bilder/Videos/GasleitungsprüfungStartseite.png\" \"public/media/gasleitungspruefung-start.png\")",
+      "Bash(git pull *)",
+      "Bash(Get-Date -Format yyyy-MM-dd_HH:mm)",
+      "Bash(git stash *)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(echo \"EXIT_GREP=$?\")"
+    ]
+  }
+}

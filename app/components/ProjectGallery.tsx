@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import ImagePlaceholder from "./ImagePlaceholder";
+import Image from "next/image";
 
 export type ProjectCategory =
   | "abdichtung"
@@ -19,6 +19,7 @@ export type Project = {
   categoryLabel: string;
   scope: string;
   size: "sm" | "md" | "lg";
+  image: string;
 };
 
 const filters: { id: "all" | ProjectCategory; label: string }[] = [
@@ -88,8 +89,14 @@ export default function ProjectGallery({ projects }: Props) {
             style={{ ["--reveal-delay" as string]: `${(i % 6) * 60}ms` }}
             className={`reveal-scale is-visible lift group overflow-hidden rounded-3xl bg-white ring-1 ring-navy-900/5 ${sizeClass[p.size]}`}
           >
-            <div className="relative">
-              <ImagePlaceholder ratio={ratioForSize[p.size]} rounded="md" className="rounded-none" />
+            <div className={`relative ${ratioForSize[p.size] === "wide" ? "aspect-16/7" : ratioForSize[p.size] === "video" ? "aspect-video" : "aspect-3/4"} overflow-hidden`}>
+              <Image
+                src={p.image}
+                alt={p.title}
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
               <span className="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-navy-700 backdrop-blur">
                 {p.categoryLabel}
               </span>

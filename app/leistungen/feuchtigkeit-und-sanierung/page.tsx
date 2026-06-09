@@ -18,7 +18,9 @@ export default function Page() {
           <span className="text-gradient">dann sanieren.</span>
         </>
       }
-      intro="Feuchtigkeit hat immer eine Ursache. Wir finden sie mit Messtechnik und Erfahrung. Dann bekommen Sie ein Sanierungskonzept, das hält und nicht den nächsten Schaden vorbereitet."
+      intro="Wasserschäden, dauerhafte Durchfeuchtung oder ein Schimmelverdacht setzen Substanz und Gesundheit unter Druck. Wir messen mit kalibrierter Technik, finden die Ursache und liefern ein Sanierungskonzept, das hält und nicht den nächsten Schaden vorbereitet. Mit über 30 Jahren Erfahrung im Team und sauberer Abstimmung mit Ihrer Versicherung, wenn nötig."
+      heroImage="/media/feuchtigkeit-sanierung-start.png"
+      heroAlt="Feuchtigkeitsmessung und Sanierung an einer Innenwand"
       damageCases={[
         {
           id: "wasserschaden",

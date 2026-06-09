@@ -18,7 +18,9 @@ export default function Page() {
           <span className="text-gradient">der Wetter aushält.</span>
         </>
       }
-      intro="Balkone sind dauerhafter Belastung ausgesetzt: Regen, Frost, Sonne und mechanischer Verschleiß. Wir bauen Abdichtungssysteme im Verbund mit dem Belag, die genau dafür gemacht sind."
+      intro="Risse im Belag, durchnässte Decken darunter und beschädigte Fugen sind Warnsignale, die nicht warten. Wir nehmen den Bestand auf, sanieren den Untergrund und bauen eine Verbundabdichtung mit Anschlussdetails ein, die Regen, Frost und Belastung standhält. Mit über 30 Jahren Erfahrung im Team und sauberer Übergabe."
+      heroImage="/media/balkonabdichtung-start.png"
+      heroAlt="Balkonabdichtung mit neuem Belag"
       damageCases={[
         {
           id: "balkon-belag-undicht",

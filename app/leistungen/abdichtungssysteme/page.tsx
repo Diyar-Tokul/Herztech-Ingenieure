@@ -18,7 +18,9 @@ export default function Page() {
           <span className="text-gradient">vom Keller bis zum Sockel.</span>
         </>
       }
-      intro="Wir halten Wasser und Feuchtigkeit dort, wo sie hingehören: draußen. Mit Systemen für Innen- und Außenabdichtung, Horizontalsperren und Bodenabdichtung. Alles nach DIN 18533 und mit nachvollziehbarer Dokumentation."
+      intro="Feuchte Wände, abplatzender Putz, salzige Ausblühungen oder eindringendes Wasser zerstören die Bausubstanz und die Wohnqualität. Wir analysieren die Ursache, planen das passende System und führen es selbst aus. Innen, außen, im Sockel, als Horizontalsperre oder am Boden. Alles nach DIN 18533, vom Meisterbetrieb mit über 30 Jahren gebündelter Erfahrung."
+      heroImage="/media/abdichtungssysteme-start.png"
+      heroAlt="Bauwerksabdichtung an einer Außenwand"
       damageCases={[
         {
           id: "kellerwand-feucht",

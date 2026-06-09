@@ -18,7 +18,9 @@ export default function Page() {
           <span className="text-gradient">erneuert werden muss.</span>
         </>
       }
-      intro="Bei undichten oder veralteten Leitungen sanieren wir gezielt. Wir tauschen Abschnitte aus, modernisieren Verbindungen und sichern den Bestand. Mit Druckprüfung, Inbetriebnahme und Übergabeprotokoll."
+      intro="Undichte Leitungen, korrodierte Stränge oder eine alte Bestandsanlage sind keine Themen für später. Wir lokalisieren, demontieren und ersetzen mit zertifizierten Materialien. Druckprüfung, Inbetriebnahme und Übergabeprotokoll inklusive. Geführt vom Installateur- und Heizungsbaumeister mit über 30 Jahren Erfahrung im Team."
+      heroImage="/media/gasleitungssanierung-start.png"
+      heroAlt="Fachgerechte Sanierung einer Gasleitung"
       damageCases={[
         {
           id: "leckstelle",

@@ -18,7 +18,9 @@ export default function Page() {
           <span className="text-gradient">mit Protokoll.</span>
         </>
       }
-      intro="Gasleitungen sind sicherheitsrelevant. Wir prüfen Ihre Hausinstallation nach DVGW-Regelwerk und TRGI, dokumentieren das Ergebnis und sagen klar, ob alles in Ordnung ist."
+      intro="Eine fällige Prüfung, ein Druckverlust oder ein leichter Geruch lassen keinen Spielraum für Improvisation. Wir prüfen Ihre Gas-Hausinstallation nach DVGW-Regelwerk und TRGI, dokumentieren das Ergebnis und liefern ein Protokoll, das Ihrem Versorger reicht. Geführt von einem geprüften Installateur- und Heizungsbaumeister mit über 30 Jahren Erfahrung im Team."
+      heroImage="/media/gasleitungspruefung-start.png"
+      heroAlt="Dichtheitsprüfung einer Gasleitung"
       damageCases={[
         {
           id: "regelpruefung",

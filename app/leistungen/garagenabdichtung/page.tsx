@@ -18,7 +18,9 @@ export default function Page() {
           <span className="text-gradient">die alles aushalten.</span>
         </>
       }
-      intro="Garagen und Bodenflächen tragen Last, sehen Tausalz und stehen oft im Wasser. Wir setzen Systeme aus dem Industriebodenbau ein, die abdichten und mechanisch belastbar bleiben."
+      intro="Risse im Beton, Tausalzschäden und stehendes Wasser greifen Garage und Stellplatz an, bis am Ende die Bewehrung rostet. Wir setzen Industriebodensysteme ein, die abdichten und mechanisch belastbar bleiben. Saubere Vorbereitung, normgerechte Beschichtung und ein Sockelanschluss, der dicht ist. Mit über 30 Jahren gebündelter Erfahrung im Team."
+      heroImage="/media/garagenabdichtung-start.png"
+      heroAlt="Beschichteter Garagenboden mit Verschleißschutz"
       damageCases={[
         {
           id: "risse-im-boden",
