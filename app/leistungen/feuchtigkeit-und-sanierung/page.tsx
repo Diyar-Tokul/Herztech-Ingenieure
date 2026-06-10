@@ -4,7 +4,7 @@ import ServiceDetailLayout from "../../components/ServiceDetailLayout";
 export const metadata: Metadata = {
   title: "Feuchtigkeits- und Sanierungstechnik",
   description:
-    "Wasserschadensanierung, Feuchtigkeitsmessung, Schadensanalyse und Sanierungskonzepte. Strukturiertes Vorgehen vom Meisterbetrieb.",
+    "Wasserschadensanierung, Feuchtigkeitsmessung, Schadensanalyse und Sanierungskonzepte. Strukturiertes Vorgehen vom Ingenieurbetrieb für Abdichtungstechnik.",
 };
 
 export default function Page() {
@@ -19,8 +19,8 @@ export default function Page() {
         </>
       }
       intro="Wasserschäden, dauerhafte Durchfeuchtung oder ein Schimmelverdacht setzen Substanz und Gesundheit unter Druck. Wir messen mit kalibrierter Technik, finden die Ursache und liefern ein Sanierungskonzept, das hält und nicht den nächsten Schaden vorbereitet. Mit über 30 Jahren Erfahrung im Team und sauberer Abstimmung mit Ihrer Versicherung, wenn nötig."
-      heroImage="/media/feuchtigkeit-sanierung-start.png"
-      heroAlt="Feuchtigkeitsmessung und Sanierung an einer Innenwand"
+      heroImage="/media/FeuchtigkeitUndSarnierungLeistung.png"
+      heroImageAlt="Drycore Team bei der Feuchtigkeitssanierung an einer Innenwand"
       damageCases={[
         {
           id: "wasserschaden",
@@ -44,7 +44,7 @@ export default function Page() {
           problem:
             "Wand zeigt weiße Kristalle und bröckelnden Putz, oft im Sockelbereich.",
           solution:
-            "Trocknung, Salzanalyse, Sanierputzsystem oder Innenabdichtung in Kombination mit Horizontalsperre.",
+            "Trocknung, Salzanalyse, Sperrputzsystem oder Innenabdichtung in Kombination mit Horizontalsperre.",
         },
         {
           id: "unklare-ursache",

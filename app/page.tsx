@@ -4,6 +4,8 @@ import Reveal from "./components/Reveal";
 import SectionTitle from "./components/SectionTitle";
 import ServiceCard from "./components/ServiceCard";
 import ContactForm from "./components/ContactForm";
+import UrkundeModal from "./components/UrkundeModal";
+import SchadensfallSelector from "./components/SchadensfallSelector";
 
 const services = [
   {
@@ -19,7 +21,7 @@ const services = [
       "Bodenabdichtung im Keller",
     ],
     href: "/leistungen/abdichtungssysteme",
-    image: "/media/abdichtungssysteme.jpg",
+    image: "/media/abdichtungssysteme-start.png",
     imageAlt: "Bauwerksabdichtung im Außenbereich",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -42,7 +44,7 @@ const services = [
       "Neuer Belag oder Beschichtung",
     ],
     href: "/leistungen/balkonabdichtung",
-    image: "/media/balkonabdichtung.webp",
+    image: "/media/balkonabdichtung-start.png",
     imageAlt: "Balkonabdichtung mit neuem Belag",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -65,7 +67,7 @@ const services = [
       "Sauberer Sockelanschluss",
     ],
     href: "/leistungen/garagenabdichtung",
-    image: "/media/bodenabdichtung.webp",
+    image: "/media/garagenabdichtung-start.png",
     imageAlt: "Beschichteter Garagenboden",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -88,7 +90,7 @@ const services = [
       "Trocknung und Schimmelvermeidung",
     ],
     href: "/leistungen/feuchtigkeit-und-sanierung",
-    image: "/media/feuchtigkeit-sanierung.jpg",
+    image: "/media/feuchtigkeit-sanierung-start.png",
     imageAlt: "Feuchtigkeitssanierung an einer Wand",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -109,7 +111,7 @@ const services = [
       "Klare Handlungsempfehlung",
     ],
     href: "/leistungen/gasleitungspruefung",
-    image: "/media/gasleitungspruefung.jpg",
+    image: "/media/gasleitungspruefung-start.png",
     imageAlt: "Dichtheitsprüfung einer Gasleitung",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -131,7 +133,7 @@ const services = [
       "Übergabe mit vollständiger Doku",
     ],
     href: "/leistungen/gasleitungssanierung",
-    image: "/media/gasleitungssanierung.jpg",
+    image: "/media/gasleitungssanierung-start.png",
     imageAlt: "Sanierung einer Gasleitung",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -148,27 +150,27 @@ const steps = [
   {
     n: "01",
     title: "Vor-Ort-Termin",
-    text: "Wir kommen, hören zu und sehen uns das Objekt sorgfältig an. Erste Einschätzung noch beim Termin.",
+    text: "Wir analysieren Ihr Objekt vor Ort und geben eine erste fachliche Einschätzung.",
   },
   {
     n: "02",
-    title: "Analyse und Konzept",
-    text: "Feuchtigkeitsmessung, Schadensbild und Bauteilaufbau ergeben das passgenaue Sanierungskonzept.",
+    title: "Analyse & Konzept",
+    text: "Wir berücksichtigen Schadensursache, Bauteilaufbau und zukünftige Nutzung. Daraus entsteht das passende Sanierungskonzept.",
   },
   {
     n: "03",
     title: "Festpreisangebot",
-    text: "Transparente Leistungsbeschreibung mit klaren Positionen. Keine Überraschungen auf der Rechnung.",
+    text: "Klare Leistungen, transparente Preise und keine versteckten Kosten.",
   },
   {
     n: "04",
     title: "Ausführung",
-    text: "Saubere Baustelle, fachgerechte Ausführung und Dokumentation jeder Schicht und jedes Produkts.",
+    text: "Fachgerechte Umsetzung mit hochwertigen Abdichtungssystemen und vollständiger Dokumentation.",
   },
   {
     n: "05",
-    title: "Abnahme und Gewähr",
-    text: "Gemeinsame Abnahme mit Protokoll. Wir garantieren das Ergebnis und stehen langfristig zur Verfügung.",
+    title: "Abnahme & Sicherheit",
+    text: "Gemeinsame Abnahme, vollständige Dokumentation und langfristige Betreuung.",
   },
 ];
 
@@ -194,7 +196,7 @@ export default function Home() {
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white ring-1 ring-white/20 backdrop-blur">
                 <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
-                Meisterbetrieb für Abdichtungstechnik
+                Ingenieurbetrieb für Abdichtungstechnik
               </span>
             </Reveal>
 
@@ -208,9 +210,9 @@ export default function Home() {
 
             <Reveal delay={240}>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-                Drycore plant und führt Mauertrockenlegung, Bauwerksabdichtungen,
-                Sanierungen und Gasleitungsprüfungen aus. Analyse, Konzept und
-                Ausführung aus einer Hand.
+                Drycore steht für ingenieurgeführte Bauwerksabdichtung,
+                Feuchtesanierung und Mauertrockenlegung – von der Schadensanalyse
+                über das Sanierungskonzept bis zur fachgerechten Ausführung.
               </p>
             </Reveal>
 
@@ -283,7 +285,7 @@ export default function Home() {
           <Reveal variant="scale">
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-navy-100 shadow-[0_30px_80px_-40px_rgba(15,34,56,0.35)] sm:grid-cols-4">
               {[
-                { label: "Meisterbetrieb", value: "Eingetragen" },
+                { label: "Ingenieurbetrieb", value: "Abdichtungstechnik" },
                 { label: "Norm", value: "DIN 18533" },
                 { label: "Gas", value: "DVGW Regelwerk" },
                 { label: "Region", value: "Bundesweit aktiv" },
@@ -334,6 +336,20 @@ export default function Home() {
                 </span>
               </Link>
             </Reveal>
+          </div>
+
+          <Reveal delay={120}>
+            <div className="mt-12">
+              <SchadensfallSelector />
+            </div>
+          </Reveal>
+
+          <div className="mt-16 flex items-center gap-4">
+            <span className="h-px flex-1 bg-navy-100" />
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-navy-700/60">
+              Oder direkt zur Leistung
+            </span>
+            <span className="h-px flex-1 bg-navy-100" />
           </div>
 
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -458,20 +474,16 @@ export default function Home() {
               <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {[
                   {
-                    t: "Klare Diagnose",
-                    d: "Messung statt Vermutung. Wir wissen, woher die Feuchte kommt.",
+                    t: "Bauingenieur",
+                    d: "Planung, Baustoffkunde, Ausführung und Abnahme aus einer Hand.",
                   },
                   {
-                    t: "Eine Hand",
-                    d: "Planung, Material, Ausführung und Abnahme aus dem Haus.",
+                    t: "Wasserdichte Wände",
+                    d: "Wir sichern eine dauerhaft dichte Bausubstanz und steigern den Wert Ihrer Immobilie.",
                   },
                   {
-                    t: "Normgerecht",
-                    d: "Wir arbeiten nach DIN 18533 und nach DVGW-Regelwerk.",
-                  },
-                  {
-                    t: "Saubere Baustelle",
-                    d: "Wir hinterlassen das Gebäude besser, als wir es vorgefunden haben.",
+                    t: "Innenabdichtungssystem",
+                    d: "Geeignet für sämtliche Wasserdrucklastfälle – von Bodenfeuchtigkeit bis drückendem Wasser.",
                   },
                 ].map((b, i) => (
                   <Reveal key={b.t} delay={i * 80}>
@@ -493,38 +505,38 @@ export default function Home() {
 
             <Reveal variant="scale">
               <div className="relative">
-                <div className="relative aspect-4/5 overflow-hidden rounded-3xl ring-1 ring-navy-900/5">
-                  <Image
-                    src="/media/aussenabdichtung-altbau.jpg"
-                    alt="Außenabdichtung eines Altbaus"
-                    fill
-                    sizes="(min-width: 1024px) 40vw, 100vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-navy-950/70 via-navy-950/0 to-transparent p-5">
-                    <p className="rounded-lg bg-white/85 px-3 py-1.5 text-xs font-medium text-navy-800 backdrop-blur inline-block">
-                      Vor-Ort-Aufnahme bei einer Kellersanierung
-                    </p>
+                <UrkundeModal
+                  src="/media/0001.jpg"
+                  alt="Master-Urkunde Bauingenieurwesen (M.Sc.)"
+                  caption="Master of Science – Bauingenieurwesen, Universität Duisburg-Essen"
+                >
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-3xl bg-sand-50 ring-1 ring-navy-900/5">
+                    <Image
+                      src="/media/0001.jpg"
+                      alt="Master-Urkunde Bauingenieurwesen (M.Sc.)"
+                      fill
+                      sizes="(min-width: 1024px) 40vw, 100vw"
+                      className="object-contain p-3 transition-transform duration-700 group-hover:scale-[1.02]"
+                    />
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-linear-to-t from-navy-950/70 via-navy-950/0 to-transparent p-5">
+                      <span className="inline-flex items-center gap-2 rounded-lg bg-white/90 px-3 py-1.5 text-xs font-medium text-navy-800 backdrop-blur">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="11" cy="11" r="7" />
+                          <path d="m21 21-4.3-4.3" />
+                          <path d="M11 8v6M8 11h6" />
+                        </svg>
+                        Zum Vergrößern antippen
+                      </span>
+                    </div>
                   </div>
-                </div>
+                </UrkundeModal>
                 <div className="absolute -bottom-6 -left-6 hidden w-56 rounded-2xl bg-white p-4 shadow-[0_30px_60px_-30px_rgba(15,34,56,0.4)] ring-1 ring-navy-900/5 sm:block">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-teal-600">
-                    Zertifiziert
+                    Ingenieurgeführt
                   </p>
                   <p className="mt-2 text-sm font-semibold text-navy-900">
-                    Meisterschein vorhanden
+                    M.Sc. Bauingenieurwesen
                   </p>
-                  <a
-                    href="/dokumente/meisterschein.pdf"
-                    target="_blank"
-                    className="mt-3 inline-flex items-center gap-2 text-xs font-semibold text-navy-700 hover:text-navy-900"
-                  >
-                    Dokument ansehen
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M7 7h10v10" />
-                      <path d="M7 17 17 7" />
-                    </svg>
-                  </a>
                 </div>
               </div>
             </Reveal>
@@ -594,19 +606,19 @@ export default function Home() {
           <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
             {[
               {
-                src: "/media/aussenabdichtung-altbau.jpg",
+                src: "/media/abdichtungssysteme-start.png",
                 caption: "Außenabdichtung Altbau",
               },
               {
-                src: "/media/horizontalsperre.jpg",
+                src: "/media/mauertrockenlegung-horizontalsperre.jpeg",
                 caption: "Horizontalsperre",
               },
               {
-                src: "/media/balkonabdichtung-2.webp",
+                src: "/media/balkonabdichtung-start.png",
                 caption: "Balkonabdichtung",
               },
               {
-                src: "/media/gasleitungspruefung-2.jpg",
+                src: "/media/gasleitungspruefung-start.png",
                 caption: "Gasleitungsprüfung",
               },
             ].map((item, i) => (
@@ -717,7 +729,7 @@ export default function Home() {
                       <span className="block text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-700/70">
                         E-Mail
                       </span>
-                      info@drycore.de
+                      info@dry-core.de
                     </span>
                   </li>
                 </ul>

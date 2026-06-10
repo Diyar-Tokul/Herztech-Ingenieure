@@ -46,7 +46,7 @@ export default function ImpressumPage() {
                   Kontakt
                 </p>
                 <p className="mt-3 text-sm text-navy-800">Telefon folgt</p>
-                <p className="text-sm text-navy-800">info@drycore.de</p>
+                <p className="text-sm text-navy-800">info@dry-core.de</p>
               </div>
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-600">

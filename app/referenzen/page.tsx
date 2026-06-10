@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHeader from "../components/PageHeader";
 import Reveal from "../components/Reveal";
 import SectionTitle from "../components/SectionTitle";
-import ImagePlaceholder from "../components/ImagePlaceholder";
 import ProjectGallery, { type Project } from "../components/ProjectGallery";
 
 export const metadata: Metadata = {
@@ -13,6 +13,102 @@ export const metadata: Metadata = {
 };
 
 const projects: Project[] = [
+  {
+    id: "innenabdichtung-klimaplatten",
+    title: "Innenabdichtung mit Klimaplatten",
+    location: "Kellerräume",
+    year: "2025",
+    category: "abdichtung",
+    categoryLabel: "Abdichtung",
+    scope:
+      "Innenabdichtungssystem mit mineralischen Klimaplatten gegen Feuchte und Schimmel – diffusionsoffen ausgeführt.",
+    size: "md",
+    image: "/media/referenzen/innenabdichtung-klimaplatten.jpeg",
+  },
+  {
+    id: "schwimmbad-untergeschoss",
+    title: "Schwimmbadbereich im Untergeschoss",
+    location: "Wellnessbereich",
+    year: "2024",
+    category: "abdichtung",
+    categoryLabel: "Abdichtung",
+    scope:
+      "Abdichtung und Sanierung eines innenliegenden Schwimmbadbereichs im Untergeschoss inklusive angrenzender Bauteile.",
+    size: "md",
+    image: "/media/referenzen/schwimmbad.jpeg",
+  },
+  {
+    id: "gewoelbekeller-sanierung",
+    title: "Gewölbekeller-Sanierung",
+    location: "Altbau-Untergeschoss",
+    year: "2025",
+    category: "sanierung",
+    categoryLabel: "Sanierung",
+    scope:
+      "Stark durchfeuchteter Gewölbekeller komplett trockengelegt und mit diffusionsoffenem Sperrputz neu verputzt – Wände, Decke und Treppe.",
+    size: "lg",
+    image: "/media/referenzen/gewoelbekeller-nachher.jpeg",
+  },
+  {
+    id: "horizontalsperre-bruchstein",
+    title: "Horizontalsperre im Bruchsteinmauerwerk",
+    location: "Mauerwerksinjektion",
+    year: "2025",
+    category: "abdichtung",
+    categoryLabel: "Abdichtung",
+    scope:
+      "Nachträgliche Horizontalsperre gegen aufsteigende Feuchtigkeit – Bohrlochraster und Injektion mit zertifiziertem Wirkstoff im Bruchsteinmauerwerk.",
+    size: "md",
+    image: "/media/referenzen/horizontalsperre-injektion.jpeg",
+  },
+  {
+    id: "hallenbad-sanierung",
+    title: "Hallenbad im Untergeschoss",
+    location: "Wellnessbereich",
+    year: "2024",
+    category: "abdichtung",
+    categoryLabel: "Abdichtung",
+    scope:
+      "Abgedichteter und sanierter Innenpool – dauerhaft trockene Bausubstanz rund um den Beckenbereich.",
+    size: "md",
+    image: "/media/referenzen/schwimmbad-nachher.jpeg",
+  },
+  {
+    id: "keller-labor-praxis",
+    title: "Kellersanierung zum Praxisraum",
+    location: "Untergeschoss-Ausbau",
+    year: "2024",
+    category: "sanierung",
+    categoryLabel: "Sanierung",
+    scope:
+      "Vom feuchten Keller zum hellen, trockenen Arbeitsraum – Abdichtung, Trocknung und kompletter Innenausbau.",
+    size: "md",
+    image: "/media/referenzen/keller-labor-nachher.jpeg",
+  },
+  {
+    id: "kellerfenster-saniert",
+    title: "Saniertes Kellerfenster",
+    location: "Sperrputz-Detail",
+    year: "2025",
+    category: "abdichtung",
+    categoryLabel: "Abdichtung",
+    scope:
+      "Sauberer Anschluss am neuen Kellerfenster nach Trockenlegung und Sperrputz-Auftrag.",
+    size: "sm",
+    image: "/media/referenzen/kellerfenster-detail.jpeg",
+  },
+  {
+    id: "sperrputz-gewoelbe",
+    title: "Sperrputz im Gewölbekeller",
+    location: "Untergeschoss",
+    year: "2025",
+    category: "sanierung",
+    categoryLabel: "Sanierung",
+    scope:
+      "Frisch aufgebrachter, diffusionsoffener Sperrputz auf Wand und Gewölbe nach der Trockenlegung.",
+    size: "sm",
+    image: "/media/referenzen/gewoelbekeller-sperrputz.jpeg",
+  },
   {
     id: "altbau-keller-koeln",
     title: "Altbau Kellerabdichtung",
@@ -65,7 +161,7 @@ const projects: Project[] = [
     category: "abdichtung",
     categoryLabel: "Abdichtung",
     scope:
-      "Injektionsverfahren gegen aufsteigende Feuchte mit anschließendem Sanierputz im Sockelbereich.",
+      "Injektionsverfahren gegen aufsteigende Feuchte mit anschließendem Sperrputz im Sockelbereich.",
     size: "sm",
   },
   {
@@ -151,7 +247,7 @@ const stats = [
   { kpi: "240+", label: "Abgeschlossene Projekte" },
   { kpi: "20+", label: "Jahre Erfahrung" },
   { kpi: "98 %", label: "Weiterempfehlungsquote" },
-  { kpi: "5 J.", label: "Gewährleistung Standard" },
+  { kpi: "10 J.", label: "Gewährleistung Standard" },
 ];
 
 export default function ReferenzenPage() {
@@ -174,8 +270,14 @@ export default function ReferenzenPage() {
       <section className="container-x">
         <Reveal variant="scale">
           <div className="grid gap-6 overflow-hidden rounded-3xl bg-white ring-1 ring-navy-900/5 lg:grid-cols-[1.4fr_1fr]">
-            <div className="relative">
-              <ImagePlaceholder ratio="wide" rounded="md" className="rounded-none lg:h-full" />
+            <div className="relative min-h-[280px]">
+              <Image
+                src="/media/referenzen/keller-praxis-nachher.jpeg"
+                alt="Trockengelegtes Untergeschoss, ausgebaut zu einem hellen Praxisraum"
+                fill
+                sizes="(min-width: 1024px) 58vw, 100vw"
+                className="object-cover lg:rounded-none"
+              />
               <span className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-navy-700 backdrop-blur">
                 Projekt des Monats
               </span>
@@ -183,25 +285,27 @@ export default function ReferenzenPage() {
             <div className="flex flex-col justify-between p-7 sm:p-10">
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-teal-600">
-                  Köln Sülz · Gründerzeit-Bestand
+                  Untergeschoss-Sanierung
                 </p>
                 <h2 className="h-display mt-3 text-3xl text-navy-900 sm:text-4xl">
-                  Altbau wieder bewohnbar gemacht.
+                  Vom feuchten Keller zum Praxisraum.
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-navy-700/80">
-                  Über Jahre stand das Souterrain unter Wasser. Wir haben außen
-                  freigelegt, abgedichtet, drainiert und im Inneren Horizontalsperre
-                  gesetzt. Heute ist es eine vermietbare Wohnung.
+                  Stark durchfeuchtetes Mauerwerk mit Salzausblühungen, abgeplatztem
+                  Putz und muffiger Luft. Wir haben trockengelegt, das
+                  Innenabdichtungssystem mit Sperrputz ausgeführt und den Raum so
+                  vorbereitet, dass heute ein heller, trockener Praxisraum daraus
+                  geworden ist.
                 </p>
               </div>
               <dl className="mt-8 grid grid-cols-3 gap-4 border-t border-navy-100 pt-6">
                 <div>
-                  <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-700/70">Fläche</dt>
-                  <dd className="mt-1 text-lg font-semibold text-navy-900">180 m²</dd>
+                  <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-700/70">System</dt>
+                  <dd className="mt-1 text-lg font-semibold text-navy-900">Innenabdichtung</dd>
                 </div>
                 <div>
-                  <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-700/70">Dauer</dt>
-                  <dd className="mt-1 text-lg font-semibold text-navy-900">6 Wochen</dd>
+                  <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-700/70">Gewähr</dt>
+                  <dd className="mt-1 text-lg font-semibold text-navy-900">10 Jahre</dd>
                 </div>
                 <div>
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-700/70">Jahr</dt>
@@ -260,33 +364,45 @@ export default function ReferenzenPage() {
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             <Reveal>
               <div className="overflow-hidden rounded-3xl bg-white ring-1 ring-navy-900/5">
-                <div className="relative">
-                  <ImagePlaceholder ratio="video" rounded="md" className="rounded-none" />
+                <div className="relative aspect-video">
+                  <Image
+                    src="/media/referenzen/gewoelbekeller-vorher.jpeg"
+                    alt="Feuchter Gewölbekeller mit abplatzendem Putz vor der Sanierung"
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
+                  />
                   <span className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-navy-900 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white">
                     Vorher
                   </span>
                 </div>
                 <div className="p-6">
                   <p className="text-sm font-semibold text-navy-900">
-                    Salzausblühungen und feuchter Sockelputz
+                    Feuchter Gewölbekeller mit geschädigtem Putz
                   </p>
-                  <p className="mt-1 text-xs text-navy-700/70">Köln Mülheim · Juni 2024</p>
+                  <p className="mt-1 text-xs text-navy-700/70">Altbau-Untergeschoss</p>
                 </div>
               </div>
             </Reveal>
             <Reveal delay={100}>
               <div className="overflow-hidden rounded-3xl bg-white ring-1 ring-navy-900/5">
-                <div className="relative">
-                  <ImagePlaceholder ratio="video" rounded="md" className="rounded-none" />
+                <div className="relative aspect-video">
+                  <Image
+                    src="/media/referenzen/gewoelbekeller-nachher.jpeg"
+                    alt="Trockengelegter Gewölbekeller mit frischem Sperrputz nach der Sanierung"
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
+                  />
                   <span className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-teal-500 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white">
                     Nachher
                   </span>
                 </div>
                 <div className="p-6">
                   <p className="text-sm font-semibold text-navy-900">
-                    Saniert mit Sanierputz und neuer Sockelabdichtung
+                    Trockengelegt und mit Sperrputz neu verputzt
                   </p>
-                  <p className="mt-1 text-xs text-navy-700/70">Köln Mülheim · September 2024</p>
+                  <p className="mt-1 text-xs text-navy-700/70">Altbau-Untergeschoss</p>
                 </div>
               </div>
             </Reveal>

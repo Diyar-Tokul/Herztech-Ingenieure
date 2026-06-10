@@ -79,7 +79,7 @@ export default function ServiceDetailLayout({
             <div className="grid grid-cols-1 gap-3">
               {[
                 { k: "DIN 18533", v: "Normgerecht ausgeführt" },
-                { k: "5 Jahre", v: "Gewährleistung auf Ausführung" },
+                { k: "10 Jahre", v: "Gewährleistung auf Ausführung" },
                 { k: "Festpreis", v: "Klar kalkulierte Angebote" },
               ].map((kpi) => (
                 <div
@@ -110,7 +110,6 @@ export default function ServiceDetailLayout({
             {damageCases.map((c, i) => (
               <Reveal key={c.id} delay={i * 100}>
                 <article className="lift group h-full overflow-hidden rounded-3xl bg-white ring-1 ring-navy-900/5">
-                  <ImagePlaceholder ratio="video" rounded="md" className="rounded-none" />
                   <div className="p-7">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-600">
                       Schadensfall

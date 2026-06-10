@@ -3,13 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import PageHeader from "../components/PageHeader";
 import Reveal from "../components/Reveal";
-import ImagePlaceholder from "../components/ImagePlaceholder";
 import SectionTitle from "../components/SectionTitle";
+import UrkundeModal from "../components/UrkundeModal";
 
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "Drycore ist ein Meisterbetrieb für Bauwerks- und Gasleitungsabdichtung. Geführt von Mohammed Herz und Irfan Tokul, die zusammen jahrzehntelange Erfahrung in Abdichtung und Sanierung bündeln.",
+    "Drycore ist ein Ingenieurbetrieb für Abdichtungstechnik. Geführt von Mohammed Herz und Irfan Tokul, die zusammen jahrzehntelange Erfahrung in Abdichtung und Sanierung bündeln.",
 };
 
 const values = [
@@ -77,7 +77,7 @@ export default function UeberUnsPage() {
             <span className="text-gradient">handwerklicher Haltung.</span>
           </>
         }
-        intro="Drycore ist ein Meisterbetrieb für Bauwerksabdichtung und Gasleitungstechnik. Wir verbinden Planung, Diagnose und Ausführung in einer Hand."
+        intro="Drycore ist ein Ingenieurbetrieb für Abdichtungstechnik. Wir verbinden Planung, Diagnose und Ausführung in einer Hand."
         crumbs={[{ label: "Start", href: "/" }, { label: "Über uns" }]}
       />
 
@@ -212,12 +212,12 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      {/* Meisterbetrieb */}
+      {/* Ingenieurbetrieb / Qualifikation */}
       <section className="py-24 sm:py-32">
         <div className="container-x grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
             <SectionTitle
-              eyebrow="Meisterbetrieb"
+              eyebrow="Ingenieurbetrieb für Abdichtungstechnik"
               title={
                 <>
                   Geprüfte Qualifikation,
@@ -225,9 +225,15 @@ export default function UeberUnsPage() {
                   <span className="text-gradient">dokumentierte Qualität.</span>
                 </>
               }
-              intro="Unser Meistertitel ist mehr als ein Stück Papier. Er steht für die Qualifikation, mit der jede Maßnahme bei uns geplant und überwacht wird."
+              intro="Drycore ist ingenieurgeführt. Hinter jeder Maßnahme steht ein abgeschlossenes Studium des Bauingenieurwesens (M.Sc.) – Planung, Baustoffkunde, Ausführung und Abnahme aus einer Hand."
             />
             <div className="mt-8 flex flex-wrap gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full bg-navy-50 px-4 py-2 text-xs font-semibold text-navy-800">
+                Master Bauingenieurwesen (M.Sc.)
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full bg-navy-50 px-4 py-2 text-xs font-semibold text-navy-800">
+                TÜV-Zertifizierungen
+              </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-navy-50 px-4 py-2 text-xs font-semibold text-navy-800">
                 DIN 18533 konform
               </span>
@@ -235,37 +241,51 @@ export default function UeberUnsPage() {
                 DVGW-Regelwerk
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-navy-50 px-4 py-2 text-xs font-semibold text-navy-800">
-                TRGI
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full bg-navy-50 px-4 py-2 text-xs font-semibold text-navy-800">
                 WTA-orientiert
               </span>
             </div>
 
-            <a
-              href="/dokumente/meisterschein.pdf"
-              target="_blank"
-              className="group mt-8 inline-flex h-12 items-center gap-3 rounded-full bg-navy-900 px-5 text-sm font-semibold text-white transition-all hover:bg-navy-800"
+            <UrkundeModal
+              src="/media/0001.jpg"
+              alt="Master-Urkunde Bauingenieurwesen (M.Sc.) der Geschäftsführung von Drycore"
+              caption="Master of Science – Bauingenieurwesen, Universität Duisburg-Essen"
+              className="group mt-8 inline-flex h-12 cursor-pointer items-center gap-3 rounded-full bg-navy-900 px-5 text-sm font-semibold text-white transition-all hover:bg-navy-800"
             >
-              Meisterschein als PDF ansehen
-              <span aria-hidden className="grid h-7 w-7 place-items-center rounded-full bg-white/15 transition-transform group-hover:translate-x-0.5">
+              Master-Urkunde ansehen
+              <span aria-hidden className="grid h-7 w-7 place-items-center rounded-full bg-white/15 transition-transform group-hover:scale-110">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M7 7h10v10" />
-                  <path d="M7 17 17 7" />
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="m21 21-4.3-4.3" />
+                  <path d="M11 8v6M8 11h6" />
                 </svg>
               </span>
-            </a>
+            </UrkundeModal>
           </Reveal>
 
           <Reveal variant="scale" delay={150}>
             <div className="relative">
-              <ImagePlaceholder ratio="portrait" rounded="3xl" />
-              <div className="absolute -top-5 -right-5 hidden rounded-2xl bg-white p-4 shadow-[0_30px_60px_-30px_rgba(15,34,56,0.4)] ring-1 ring-navy-900/5 sm:block">
+              <UrkundeModal
+                src="/media/0001.jpg"
+                alt="Master-Urkunde Bauingenieurwesen (M.Sc.) der Geschäftsführung von Drycore"
+                caption="Master of Science – Bauingenieurwesen, Universität Duisburg-Essen"
+                className="lift group block w-full cursor-zoom-in overflow-hidden rounded-3xl bg-white p-4 shadow-[0_30px_80px_-40px_rgba(15,34,56,0.4)] ring-1 ring-navy-900/5"
+              >
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-sand-50">
+                  <Image
+                    src="/media/0001.jpg"
+                    alt="Master-Urkunde Bauingenieurwesen (M.Sc.) der Geschäftsführung von Drycore"
+                    fill
+                    sizes="(min-width: 1024px) 40vw, 100vw"
+                    className="object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                  />
+                </div>
+              </UrkundeModal>
+              <div className="pointer-events-none absolute -top-5 -right-5 hidden rounded-2xl bg-white p-4 shadow-[0_30px_60px_-30px_rgba(15,34,56,0.4)] ring-1 ring-navy-900/5 sm:block">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-600">
-                  Eingetragen
+                  Abschluss
                 </p>
                 <p className="mt-1 text-sm font-semibold text-navy-900">
-                  Handwerksrolle
+                  M.Sc. Bauingenieurwesen
                 </p>
               </div>
             </div>

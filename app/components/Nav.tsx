@@ -47,6 +47,7 @@ const mainLinks = [
   { href: "/", label: "Start" },
   { href: "/leistungen", label: "Leistungen", hasMenu: true },
   { href: "/referenzen", label: "Referenzen" },
+  { href: "/ratgeber", label: "Ratgeber" },
   { href: "/ueber-uns", label: "Über uns" },
   { href: "/kontakt", label: "Kontakt" },
 ];
@@ -111,10 +112,10 @@ export default function Nav() {
           <Image
             src="/media/drycore-logo.png"
             alt="Drycore – Ingenieurtechnik für Bauwerksabdichtung"
-            width={240}
-            height={100}
+            width={320}
+            height={134}
             priority
-            className={`h-9 w-auto object-contain transition-[filter] duration-500 ${
+            className={`h-12 w-auto object-contain transition-[filter] duration-500 sm:h-14 ${
               onHero ? "brightness-0 invert" : ""
             }`}
           />

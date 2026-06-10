@@ -16,12 +16,12 @@ const services = [
     index: "01",
     title: "Mauertrockenlegung",
     intro:
-      "Feuchte Wände dauerhaft trockenlegen. Nachträgliche Horizontalsperre, Mauerwerksinjektion und Sanierputz gegen aufsteigende Feuchtigkeit.",
+      "Feuchte Wände dauerhaft trockenlegen. Nachträgliche Horizontalsperre, Mauerwerksinjektion und Sperrputz gegen aufsteigende Feuchtigkeit.",
     bullets: [
       "Feuchtigkeitsmessung und Diagnose",
       "Nachträgliche Horizontalsperre durch Injektion",
       "Mauerwerksinjektion bei hoher Durchfeuchtung",
-      "Sanierputz gegen Salzausblühungen",
+      "Sperrputz gegen Salzausblühungen",
     ],
     href: "/leistungen/mauertrockenlegung",
     image: "/media/mauertrockenlegung-horizontalsperre.jpeg",

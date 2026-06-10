@@ -19,8 +19,8 @@ export default function Page() {
         </>
       }
       intro="Undichte Leitungen, korrodierte Stränge oder eine alte Bestandsanlage sind keine Themen für später. Wir lokalisieren, demontieren und ersetzen mit zertifizierten Materialien. Druckprüfung, Inbetriebnahme und Übergabeprotokoll inklusive. Geführt vom Installateur- und Heizungsbaumeister mit über 30 Jahren Erfahrung im Team."
-      heroImage="/media/gasleitungssanierung-start.png"
-      heroAlt="Fachgerechte Sanierung einer Gasleitung"
+      heroImage="/media/Gasleitungssarnierung.png"
+      heroImageAlt="Drycore bei der fachgerechten Sanierung einer Gasleitung"
       damageCases={[
         {
           id: "leckstelle",

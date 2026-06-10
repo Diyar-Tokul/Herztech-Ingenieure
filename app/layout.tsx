@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Drycore",
   },
   description:
-    "Drycore plant, prüft und saniert Bauwerksabdichtungen und Gasleitungen. Meisterbetrieb für Mauertrockenlegung, Keller, Balkon, Garage und Feuchtigkeitssanierung.",
+    "Drycore plant, prüft und saniert Bauwerksabdichtungen und Gasleitungen. Ingenieurbetrieb für Abdichtungstechnik – Mauertrockenlegung, Keller, Balkon, Garage und Feuchtigkeitssanierung.",
   keywords: [
     "Abdichtungstechnik",
     "Mauertrockenlegung",
@@ -57,6 +58,7 @@ export default function RootLayout({
         <Nav />
         <main className="pt-20">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

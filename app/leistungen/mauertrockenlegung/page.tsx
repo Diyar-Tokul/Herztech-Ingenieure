@@ -4,7 +4,7 @@ import ServiceDetailLayout from "../../components/ServiceDetailLayout";
 export const metadata: Metadata = {
   title: "Mauertrockenlegung",
   description:
-    "Mauertrockenlegung gegen aufsteigende Feuchtigkeit: nachträgliche Horizontalsperre, Mauerwerksinjektion und Sanierputz. Drycore legt feuchte Wände und Kellerwände dauerhaft trocken – normgerecht nach WTA und DIN 18533.",
+    "Mauertrockenlegung gegen aufsteigende Feuchtigkeit: nachträgliche Horizontalsperre, Mauerwerksinjektion und Sperrputz. Drycore legt feuchte Wände und Kellerwände dauerhaft trocken – normgerecht nach WTA und DIN 18533.",
   keywords: [
     "Mauertrockenlegung",
     "Mauerwerkstrockenlegung",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Injektionsverfahren",
     "Kellertrockenlegung",
     "Salzausblühungen",
-    "Sanierputz",
+    "Sperrputz",
     "Bauwerksabdichtung",
   ],
 };
@@ -35,7 +35,7 @@ export default function Page() {
           <span className="text-gradient">aufsteigende Feuchtigkeit.</span>
         </>
       }
-      intro="Feuchte Wände, abplatzender Putz und ein muffiger Geruch im Keller? Das sind klassische Anzeichen für aufsteigende Feuchtigkeit im Mauerwerk. Mit einer fachgerechten Mauertrockenlegung – nachträgliche Horizontalsperre, Mauerwerksinjektion und Sanierputz – legt Drycore Ihr Mauerwerk dauerhaft trocken und sorgt wieder für ein gesundes Raumklima. Normgerecht nach WTA-Merkblatt und DIN 18533, mit Messung, Konzept und Dokumentation."
+      intro="Feuchte Wände, abplatzender Putz und ein muffiger Geruch im Keller? Das sind klassische Anzeichen für aufsteigende Feuchtigkeit im Mauerwerk. Mit einer fachgerechten Mauertrockenlegung – nachträgliche Horizontalsperre, Mauerwerksinjektion und Sperrputz – legt Drycore Ihr Mauerwerk dauerhaft trocken und sorgt wieder für ein gesundes Raumklima. Normgerecht nach WTA-Merkblatt und DIN 18533, mit Messung, Konzept und Dokumentation."
       heroImage="/media/mauertrockenlegung-horizontalsperre.jpeg"
       heroImageAlt="Drycore Team beim Einbringen einer Horizontalsperre zur Mauertrockenlegung"
       damageCases={[
@@ -53,7 +53,7 @@ export default function Page() {
           problem:
             "Weiße, flauschige Kristalle an der Wandoberfläche und bröckelnder Putz im Sockelbereich zeigen, dass mit der Feuchtigkeit bauschädliche Salze ins Mauerwerk wandern.",
           solution:
-            "Nach der Trockenlegung tragen wir einen WTA-zertifizierten Sanierputz auf, der die Salze einlagert und die Wand atmen lässt – für eine dauerhaft trockene, saubere Oberfläche.",
+            "Nach der Trockenlegung tragen wir einen WTA-zertifizierten Sperrputz auf, der die Salze einlagert und die Wand atmen lässt – für eine dauerhaft trockene, saubere Oberfläche.",
         },
         {
           id: "nasse-kellerwand",
@@ -85,7 +85,7 @@ export default function Page() {
           problem:
             "Putz löst sich in Schollen, Tapeten lassen sich abziehen und Fußleisten verfärben sich – sichtbare Spuren der Feuchtigkeit an Innenwänden.",
           solution:
-            "Erst die Ursache, dann die Optik: Nach der Trockenlegung folgen Sanierputz und Oberflächen, die der Feuchtebelastung standhalten.",
+            "Erst die Ursache, dann die Optik: Nach der Trockenlegung folgen Sperrputz und Oberflächen, die der Feuchtebelastung standhalten.",
         },
       ]}
       services={[
@@ -122,12 +122,12 @@ export default function Page() {
           ],
         },
         {
-          title: "Sanierputz und Salzbehandlung",
+          title: "Sperrputz und Salzbehandlung",
           body:
-            "Mit der Feuchtigkeit wandern Salze ins Mauerwerk. Ein WTA-zertifizierter Sanierputz lagert diese Salze ein, hält die Oberfläche trocken und schützt vor erneuten Ausblühungen.",
+            "Mit der Feuchtigkeit wandern Salze ins Mauerwerk. Ein WTA-zertifizierter Sperrputz lagert diese Salze ein, hält die Oberfläche trocken und schützt vor erneuten Ausblühungen.",
           bullets: [
             "Abtrag von salzbelastetem Altputz",
-            "Grundierung und Sanierputzsystem nach WTA",
+            "Grundierung und Sperrputzsystem nach WTA",
             "Trockene, atmungsaktive Oberfläche",
           ],
         },
@@ -156,8 +156,8 @@ export default function Page() {
           text: "Sie erhalten ein schriftliches Konzept mit klaren Positionen, Materialien und einem verbindlichen Preis. Ohne Überraschungen.",
         },
         {
-          title: "Trockenlegung und Sanierputz",
-          text: "Wir bringen die Horizontalsperre ein, behandeln Salze und versehen die Wand mit einem Sanierputzsystem – sauber und nachweisbar ausgeführt.",
+          title: "Trockenlegung und Sperrputz",
+          text: "Wir bringen die Horizontalsperre ein, behandeln Salze und versehen die Wand mit einem Sperrputzsystem – sauber und nachweisbar ausgeführt.",
         },
         {
           title: "Abnahme und Gewähr",
@@ -167,7 +167,7 @@ export default function Page() {
       faq={[
         {
           q: "Was ist eine Mauertrockenlegung?",
-          a: "Als Mauertrockenlegung bezeichnet man alle Maßnahmen, die feuchtes Mauerwerk dauerhaft trockenlegen. Bei aufsteigender Feuchtigkeit ist das Kernstück eine nachträgliche Horizontalsperre, die den kapillaren Wassertransport in der Wand unterbricht. Ergänzt wird sie je nach Schadensbild durch Sanierputz und eine Kellerabdichtung.",
+          a: "Als Mauertrockenlegung bezeichnet man alle Maßnahmen, die feuchtes Mauerwerk dauerhaft trockenlegen. Bei aufsteigender Feuchtigkeit ist das Kernstück eine nachträgliche Horizontalsperre, die den kapillaren Wassertransport in der Wand unterbricht. Ergänzt wird sie je nach Schadensbild durch Sperrputz und eine Kellerabdichtung.",
         },
         {
           q: "Woran erkenne ich aufsteigende Feuchtigkeit?",
@@ -183,7 +183,7 @@ export default function Page() {
         },
         {
           q: "Wie lange dauert die Trocknung der Wand?",
-          a: "Die Injektion selbst ist meist an einem oder wenigen Tagen erledigt. Danach trocknet das Mauerwerk je nach Wandstärke und Ausgangsfeuchte über Wochen bis Monate aus. Der Sanierputz sorgt schon in dieser Phase für eine trockene, nutzbare Oberfläche.",
+          a: "Die Injektion selbst ist meist an einem oder wenigen Tagen erledigt. Danach trocknet das Mauerwerk je nach Wandstärke und Ausgangsfeuchte über Wochen bis Monate aus. Der Sperrputz sorgt schon in dieser Phase für eine trockene, nutzbare Oberfläche.",
         },
         {
           q: "Was kostet eine Mauertrockenlegung?",

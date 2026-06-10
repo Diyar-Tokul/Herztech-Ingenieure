@@ -19,6 +19,7 @@ const cols = [
     links: [
       { href: "/ueber-uns", label: "Über uns" },
       { href: "/referenzen", label: "Referenzen" },
+      { href: "/ratgeber", label: "Ratgeber" },
       { href: "/kontakt", label: "Kontakt" },
       { href: "/impressum", label: "Impressum" },
       { href: "/agb", label: "AGB" },
@@ -37,9 +38,9 @@ export default function Footer() {
               <Image
                 src="/media/drycore-logo.png"
                 alt="Drycore – Ingenieurtechnik für Bauwerksabdichtung"
-                width={240}
-                height={100}
-                className="h-8 w-auto object-contain"
+                width={320}
+                height={134}
+                className="h-12 w-auto object-contain"
               />
             </div>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/70">
@@ -51,7 +52,7 @@ export default function Footer() {
             <div className="mt-6 flex flex-wrap gap-2">
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 text-xs font-medium text-white/80 ring-1 ring-white/10">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4Z"/></svg>
-                Meisterbetrieb
+                Ingenieurbetrieb
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 text-xs font-medium text-white/80 ring-1 ring-white/10">
                 DIN 18533 konform
@@ -100,8 +101,8 @@ export default function Footer() {
                 <span className="mt-0.5 grid h-7 w-7 place-items-center rounded-full bg-white/5 ring-1 ring-white/10">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
                 </span>
-                <a href="mailto:info@drycore.de" className="hover:text-white">
-                  info@drycore.de
+                <a href="mailto:info@dry-core.de" className="hover:text-white">
+                  info@dry-core.de
                 </a>
               </li>
               <li className="flex items-start gap-3">
