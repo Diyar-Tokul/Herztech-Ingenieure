@@ -4,7 +4,7 @@ import ServiceDetailLayout from "../../components/ServiceDetailLayout";
 export const metadata: Metadata = {
   title: "Balkonabdichtung",
   description:
-    "Belastbare Balkonabdichtung mit Verbundabdichtung, sauberen Anschlussdetails und neuem Belag. Vom Ingenieurbetrieb für Abdichtungstechnik Drycore.",
+    "Belastbare Balkonabdichtung mit Verbundabdichtung, sauberen Anschlussdetails und neuem Belag. Vom Ingenieurbetrieb für Abdichtungstechnik Drycon Core.",
 };
 
 export default function Page() {
@@ -20,7 +20,7 @@ export default function Page() {
       }
       intro="Risse im Belag, durchnässte Decken darunter und beschädigte Fugen sind Warnsignale, die nicht warten. Wir nehmen den Bestand auf, sanieren den Untergrund und bauen eine Verbundabdichtung mit Anschlussdetails ein, die Regen, Frost und Belastung standhält. Mit über 30 Jahren Erfahrung im Team und sauberer Übergabe."
       heroImage="/media/BalkonabdichtungLeistung.png"
-      heroImageAlt="Drycore Balkonabdichtung mit neuem Belag"
+      heroImageAlt="Drycon Core Balkonabdichtung mit neuem Belag"
       damageCases={[
         {
           id: "balkon-belag-undicht",

@@ -46,8 +46,10 @@ const services = [
 const mainLinks = [
   { href: "/", label: "Start" },
   { href: "/leistungen", label: "Leistungen", hasMenu: true },
+  { href: "/konfigurator", label: "Konfigurator" },
   { href: "/referenzen", label: "Referenzen" },
   { href: "/ratgeber", label: "Ratgeber" },
+  { href: "/faq", label: "FAQ" },
   { href: "/ueber-uns", label: "Über uns" },
   { href: "/kontakt", label: "Kontakt" },
 ];
@@ -72,8 +74,12 @@ export default function Nav() {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+    // Markiert offenes Mobilmenü, damit schwebende Buttons (Chat/WhatsApp)
+    // ausgeblendet werden können.
+    document.body.classList.toggle("nav-open", open);
     return () => {
       document.body.style.overflow = "";
+      document.body.classList.remove("nav-open");
     };
   }, [open]);
 
@@ -87,7 +93,7 @@ export default function Nav() {
   const headerSolid = !isHome || scrolled || open;
 
   const linkBase =
-    "relative inline-flex h-10 items-center rounded-full px-4 text-sm font-medium transition-colors";
+    "relative inline-flex h-10 items-center whitespace-nowrap rounded-full px-3 text-[15px] font-medium transition-colors";
   const linkInactive = onHero
     ? "text-white/90 hover:text-white hover:bg-white/10"
     : "text-navy-700 hover:text-navy-900";
@@ -103,25 +109,25 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <div className="container-x flex h-20 items-center justify-between">
+      <div className="container-x flex h-20 items-center justify-between gap-4">
         <Link
           href="/"
-          className="flex items-center gap-3"
-          aria-label="Drycore Startseite"
+          className="flex shrink-0 items-center gap-3"
+          aria-label="Drycon Core Startseite"
         >
           <Image
-            src="/media/drycore-logo.png"
-            alt="Drycore – Ingenieurtechnik für Bauwerksabdichtung"
+            src="/media/DryconCoreLogo.png"
+            alt="Drycon Core – Ingenieur- und Meisterbetrieb für Bauwerksabdichtung"
             width={320}
             height={134}
             priority
-            className={`h-12 w-auto object-contain transition-[filter] duration-500 sm:h-14 ${
+            className={`h-11 w-auto object-contain transition-[filter] duration-500 sm:h-12 ${
               onHero ? "brightness-0 invert" : ""
             }`}
           />
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-0.5 xl:flex">
           {mainLinks.map((link) =>
             link.hasMenu ? (
               <div
@@ -180,14 +186,14 @@ export default function Nav() {
                     </div>
                     <div className="mt-2 flex items-center justify-between rounded-2xl bg-navy-900 px-5 py-4 text-white">
                       <div>
-                        <p className="text-sm font-semibold">Schaden festgestellt?</p>
-                        <p className="text-xs text-white/70">Wir analysieren kostenfrei vor Ort.</p>
+                        <p className="text-sm font-semibold">Welche Leistung passt?</p>
+                        <p className="text-xs text-white/70">In 3 Klicks zur Empfehlung – unser Konfigurator.</p>
                       </div>
                       <Link
-                        href="/kontakt"
+                        href="/konfigurator"
                         className="inline-flex h-9 items-center gap-2 rounded-full bg-teal-500 px-4 text-xs font-semibold transition-colors hover:bg-teal-400"
                       >
-                        Termin anfragen
+                        Konfigurator
                       </Link>
                     </div>
                   </div>
@@ -207,10 +213,11 @@ export default function Nav() {
           )}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden shrink-0 items-center gap-2 xl:flex">
           <a
             href="tel:+4900000000000"
-            className={`inline-flex h-10 items-center gap-2 rounded-full px-4 text-sm font-medium backdrop-blur transition-colors ${
+            aria-label="Anrufen"
+            className={`inline-flex h-10 items-center gap-2 rounded-full px-3.5 text-sm font-medium backdrop-blur transition-colors ${
               onHero
                 ? "bg-white/10 text-white ring-1 ring-white/25 hover:bg-white/20"
                 : "bg-white/70 text-navy-900 ring-1 ring-navy-900/10 hover:bg-white"
@@ -219,11 +226,11 @@ export default function Nav() {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" />
             </svg>
-            Anrufen
+            <span className="hidden 2xl:inline">Anrufen</span>
           </a>
           <Link
             href="/kontakt"
-            className={`group inline-flex h-10 items-center gap-2 rounded-full px-5 text-sm font-semibold transition-all ${
+            className={`group inline-flex h-10 items-center gap-2 whitespace-nowrap rounded-full px-5 text-sm font-semibold transition-all ${
               onHero
                 ? "bg-white text-navy-900 hover:bg-teal-50"
                 : "bg-navy-900 text-white hover:bg-navy-800"
@@ -249,7 +256,7 @@ export default function Nav() {
           aria-label="Menü"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className={`grid h-11 w-11 place-items-center rounded-full backdrop-blur transition-colors lg:hidden ${
+          className={`grid h-11 w-11 place-items-center rounded-full backdrop-blur transition-colors xl:hidden ${
             onHero
               ? "bg-white/15 text-white ring-1 ring-white/25"
               : "bg-white/80 text-navy-900 ring-1 ring-navy-900/10"
@@ -271,39 +278,62 @@ export default function Nav() {
       </div>
 
       <div
-        className={`lg:hidden ${open ? "pointer-events-auto" : "pointer-events-none"} overflow-hidden bg-white/95 backdrop-blur-xl transition-[max-height,opacity] duration-500 ${
-          open ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
+        className={`xl:hidden ${open ? "pointer-events-auto" : "pointer-events-none"} overflow-hidden border-t border-navy-900/5 bg-white/95 backdrop-blur-xl transition-[max-height,opacity] duration-500 ${
+          open ? "max-h-[calc(100dvh-5rem)] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="container-x flex flex-col gap-1 py-4">
-          {mainLinks.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className={`rounded-2xl px-4 py-3 text-base font-medium ${
-                isActive(l.href) ? "bg-navy-50 text-navy-900" : "text-navy-700"
-              }`}
-            >
-              {l.label}
-            </Link>
-          ))}
-          <div className="mt-2 grid grid-cols-1 gap-1 rounded-2xl bg-navy-50/60 p-2">
+        <div className="container-x flex max-h-[calc(100dvh-5rem)] flex-col overflow-y-auto py-4">
+          <nav className="flex flex-col gap-0.5">
+            {mainLinks.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={`flex items-center justify-between rounded-xl px-4 py-2.5 text-base font-medium transition-colors ${
+                  isActive(l.href)
+                    ? "bg-navy-50 text-navy-900"
+                    : "text-navy-700 hover:bg-navy-50/60"
+                }`}
+              >
+                {l.label}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-navy-300">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </Link>
+            ))}
+          </nav>
+
+          <p className="mt-4 px-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-600">
+            Leistungen im Detail
+          </p>
+          <div className="mt-2 grid grid-cols-1 gap-0.5 rounded-2xl bg-navy-50/60 p-1.5">
             {services.map((s) => (
               <Link
                 key={s.href}
                 href={s.href}
-                className="rounded-xl px-3 py-2 text-sm font-medium text-navy-800 hover:bg-white"
+                className="rounded-xl px-3 py-2 text-sm font-medium text-navy-800 transition-colors hover:bg-white"
               >
                 {s.label}
               </Link>
             ))}
           </div>
-          <Link
-            href="/kontakt"
-            className="mt-3 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-navy-900 text-sm font-semibold text-white"
-          >
-            Angebot anfragen
-          </Link>
+
+          <div className="mt-4 flex flex-col gap-2 pb-2">
+            <a
+              href="tel:+4900000000000"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white text-sm font-semibold text-navy-900 ring-1 ring-navy-900/10"
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z" />
+              </svg>
+              Anrufen
+            </a>
+            <Link
+              href="/kontakt"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-navy-900 text-sm font-semibold text-white"
+            >
+              Angebot anfragen
+            </Link>
+          </div>
         </div>
       </div>
     </header>

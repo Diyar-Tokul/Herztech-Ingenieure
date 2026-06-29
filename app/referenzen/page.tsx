@@ -9,7 +9,7 @@ import ProjectGallery, { type Project } from "../components/ProjectGallery";
 export const metadata: Metadata = {
   title: "Referenzen",
   description:
-    "Ausgewählte Projekte von Drycore: Mauertrockenlegung, Kellerabdichtung, Balkonabdichtung, Garagensanierung, Feuchtigkeitssanierung und Gasleitungsarbeiten.",
+    "Ausgewählte Projekte von Drycon Core: Mauertrockenlegung, Kellerabdichtung, Balkonabdichtung, Garagensanierung, Feuchtigkeitssanierung und Gasleitungsarbeiten.",
 };
 
 const projects: Project[] = [
@@ -109,138 +109,6 @@ const projects: Project[] = [
     size: "sm",
     image: "/media/referenzen/gewoelbekeller-sperrputz.jpeg",
   },
-  {
-    id: "altbau-keller-koeln",
-    title: "Altbau Kellerabdichtung",
-    location: "Köln Sülz",
-    year: "2025",
-    category: "abdichtung",
-    categoryLabel: "Abdichtung",
-    scope:
-      "Komplette Außenabdichtung mit Drainage und Horizontalsperre an einem Gründerzeit-Bestand.",
-    size: "lg",
-  },
-  {
-    id: "balkon-mfh-bonn",
-    title: "Balkonabdichtung MFH",
-    location: "Bonn Bad Godesberg",
-    year: "2025",
-    category: "balkon",
-    categoryLabel: "Balkon",
-    scope:
-      "Vier Balkone neu aufgebaut, Verbundabdichtung mit Naturstein-Belag und korrosionsfreien Geländeranschlüssen.",
-    size: "md",
-  },
-  {
-    id: "tiefgarage-essen",
-    title: "Tiefgaragen-Beschichtung",
-    location: "Essen Rüttenscheid",
-    year: "2024",
-    category: "garage",
-    categoryLabel: "Garage",
-    scope:
-      "OS-8-Beschichtung über 1.200 m², inklusive Rissverpressung und Bewehrungsschutz.",
-    size: "sm",
-  },
-  {
-    id: "wasserschaden-duesseldorf",
-    title: "Wasserschaden Erdgeschoss",
-    location: "Düsseldorf Pempelfort",
-    year: "2024",
-    category: "sanierung",
-    categoryLabel: "Sanierung",
-    scope:
-      "Akute Schadenshilfe nach Rohrbruch, Trocknung über zwei Wochen und vollständige Wiederherstellung.",
-    size: "md",
-  },
-  {
-    id: "horizontalsperre-aachen",
-    title: "Horizontalsperre Reihenhaus",
-    location: "Aachen Burtscheid",
-    year: "2024",
-    category: "abdichtung",
-    categoryLabel: "Abdichtung",
-    scope:
-      "Injektionsverfahren gegen aufsteigende Feuchte mit anschließendem Sperrputz im Sockelbereich.",
-    size: "sm",
-  },
-  {
-    id: "gasleitung-pruefung-duisburg",
-    title: "Gasleitungsprüfung MFH",
-    location: "Duisburg Neudorf",
-    year: "2025",
-    category: "gas",
-    categoryLabel: "Gas",
-    scope:
-      "Wiederkehrende Sicherheitsprüfung der Hausinstallation nach TRGI mit Protokoll für den Versorger.",
-    size: "sm",
-  },
-  {
-    id: "balkonsanierung-eft",
-    title: "Balkonsanierung EFH",
-    location: "Mönchengladbach",
-    year: "2024",
-    category: "balkon",
-    categoryLabel: "Balkon",
-    scope:
-      "Kompletter Aufbau neu, Flüssigkunststoff-Abdichtung und schwellenfreier Türanschluss.",
-    size: "md",
-  },
-  {
-    id: "garagenboden-eft",
-    title: "Garagenboden EFH",
-    location: "Krefeld",
-    year: "2025",
-    category: "garage",
-    categoryLabel: "Garage",
-    scope:
-      "Epoxidharz-Beschichtung mit Quarzsand-Einstreuung und rutschhemmender Versiegelung.",
-    size: "sm",
-  },
-  {
-    id: "kellerinnenabdichtung",
-    title: "Innenabdichtung Mehrfamilienhaus",
-    location: "Wuppertal Elberfeld",
-    year: "2023",
-    category: "abdichtung",
-    categoryLabel: "Abdichtung",
-    scope:
-      "Mineralische Dichtungsschlämme und Sperrputzsystem über zwei Souterrain-Wohnungen.",
-    size: "md",
-  },
-  {
-    id: "gasleitungssanierung-bestand",
-    title: "Gasleitung Bestandssanierung",
-    location: "Köln Mülheim",
-    year: "2023",
-    category: "gas",
-    categoryLabel: "Gas",
-    scope:
-      "Erneuerung defekter Steigleitung, Druckprüfung und Wiederinbetriebnahme über alle Etagen.",
-    size: "md",
-  },
-  {
-    id: "feuchtigkeitssanierung-villa",
-    title: "Feuchtigkeitssanierung Villa",
-    location: "Bonn Plittersdorf",
-    year: "2023",
-    category: "sanierung",
-    categoryLabel: "Sanierung",
-    scope:
-      "Schadensanalyse mit Endoskopie, Maßnahmenplan und Kombi-Sanierung über drei Bauteile.",
-    size: "lg",
-  },
-  {
-    id: "terrasse-dachgeschoss",
-    title: "Dachterrasse Dachgeschoss",
-    location: "Köln Lindenthal",
-    year: "2024",
-    category: "balkon",
-    categoryLabel: "Balkon",
-    scope:
-      "Komplettsanierung mit Bitumenbahn, Gefälledämmung und Holzdielen auf Stelzlagern.",
-    size: "sm",
-  },
 ];
 
 const stats = [
@@ -299,17 +167,17 @@ export default function ReferenzenPage() {
                 </p>
               </div>
               <dl className="mt-8 grid grid-cols-3 gap-4 border-t border-navy-100 pt-6">
-                <div>
+                <div className="min-w-0">
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-700/70">System</dt>
-                  <dd className="mt-1 text-lg font-semibold text-navy-900">Innenabdichtung</dd>
+                  <dd className="mt-1 wrap-break-word text-base font-semibold leading-tight text-navy-900">Innenabdichtung</dd>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-700/70">Gewähr</dt>
-                  <dd className="mt-1 text-lg font-semibold text-navy-900">10 Jahre</dd>
+                  <dd className="mt-1 wrap-break-word text-base font-semibold leading-tight text-navy-900">10 Jahre</dd>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-700/70">Jahr</dt>
-                  <dd className="mt-1 text-lg font-semibold text-navy-900">2025</dd>
+                  <dd className="mt-1 wrap-break-word text-base font-semibold leading-tight text-navy-900">2025</dd>
                 </div>
               </dl>
             </div>

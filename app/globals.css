@@ -200,3 +200,85 @@ body {
 @media (min-width: 768px) {
   .container-x { padding-inline: 2rem; }
 }
+
+/* ----------------------------------------------------------------------- */
+/* Barrierefreiheit                                                        */
+/* ----------------------------------------------------------------------- */
+
+/* Skip-Link: nur bei Tastaturfokus sichtbar, springt zum Hauptinhalt. */
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transform: translateY(-150%);
+  background: var(--color-navy-900);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 0.75rem 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid var(--color-teal-400);
+  outline-offset: 2px;
+}
+
+/* Programmatisch fokussierter Hauptinhalt zeigt keinen Ring. */
+#main:focus {
+  outline: none;
+}
+
+/* Nutzergesteuerte Schriftskalierung (Über das Barrierefreiheits-Panel). */
+html {
+  font-size: calc(100% * var(--a11y-font-scale, 1));
+}
+
+/* Hoher Kontrast: hebt sonst abgeschwächte (transparente) Texte auf volle
+   Deckkraft an, damit WCAG-AA-Kontraste sicher erreicht werden. */
+.a11y-contrast :where(
+  .text-white\/60, .text-white\/70, .text-white\/75,
+  .text-white\/80, .text-white\/85, .text-white\/90
+) {
+  color: #ffffff !important;
+}
+.a11y-contrast :where(
+  .text-navy-700\/60, .text-navy-700\/70, .text-navy-700\/75,
+  .text-navy-700\/80, .text-navy-700\/85, .text-navy-800\/80
+) {
+  color: var(--color-navy-900) !important;
+}
+.a11y-contrast a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Bewegungen reduzieren (Panel-Schalter, ergänzt prefers-reduced-motion). */
+.a11y-reduce-motion *,
+.a11y-reduce-motion *::before,
+.a11y-reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+.a11y-reduce-motion .reveal,
+.a11y-reduce-motion .reveal-scale {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Links durchgehend unterstreichen. */
+.a11y-underline-links a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Schwebende Aktionsbuttons (Chat/WhatsApp) ausblenden, solange das
+   mobile Navigationsmenü geöffnet ist. */
+body.nav-open .floating-action {
+  opacity: 0;
+  pointer-events: none;
+}

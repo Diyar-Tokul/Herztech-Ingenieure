@@ -9,8 +9,27 @@ import UrkundeModal from "../components/UrkundeModal";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "Drycore ist ein Ingenieurbetrieb für Abdichtungstechnik. Geführt von Mohammed Herz und Irfan Tokul, die zusammen jahrzehntelange Erfahrung in Abdichtung und Sanierung bündeln.",
+    "Drycon Core ist ein Ingenieur- und Meisterbetrieb für Bauwerksabdichtung und Tochtergesellschaft der drycon® GmbH. Geführt von Mohammed Herz, gestützt auf über 20 Jahre Erfahrung der drycon-Gruppe.",
 };
+
+// Mitarbeiterteam – übernommen aus der drycon-Gruppe.
+const team = [
+  { name: "Nina Giebler", role: "Geschäftsleitungsassistenz", image: "/team/Nina.webp" },
+  { name: "Christian Schulten", role: "Finanzen & Controlling", image: "/team/Christian.webp" },
+  { name: "Florian Kahlenberg", role: "Kalkulation", image: "/team/Florian.webp" },
+  { name: "Juan Villa", role: "Projektleitung", image: "/team/Juan.webp" },
+  { name: "Dennis Alkivilcim", role: "Einkauf", image: "/team/Dennis.webp" },
+  { name: "Kelly Becker", role: "Büromanagement", image: "/team/Kelly.webp" },
+  { name: "Katja Schulte", role: "Projektleitung", image: "/team/Katja.webp" },
+  { name: "Kristin Koslowski", role: "Projektleitung · Architektin M.A.", image: "/team/Kristin.webp" },
+  { name: "Mara Drinhausen", role: "Projektassistenz", image: "/team/Mara.webp" },
+  { name: "Thomas Jardim-Meyer", role: "Projektleitung", image: "/team/Thomas.webp" },
+  { name: "Drishti Chatrath", role: "Projektleitung · Architektin M.A.", image: "/team/Drishti.webp" },
+  { name: "Hoda Razzouki", role: "Auszubildende", image: "/team/Hoda.webp" },
+  { name: "Mine Sankaya", role: "Projektleitung", image: "/team/Mine.webp" },
+  { name: "Rebecca Malaney", role: "Büromanagement", image: "/team/Rebecca.webp" },
+  { name: "Adam Penketh", role: "Projektleitung", image: "/team/Adam.webp" },
+];
 
 const values = [
   {
@@ -31,40 +50,6 @@ const values = [
   },
 ];
 
-// Hinweis: Dummy-Namen, bis die echten Angaben des Teams vorliegen.
-const team = [
-  {
-    name: "Stefan Brückner",
-    role: "Bauleiter Abdichtung",
-    image: "/media/team/team-1.jpeg",
-  },
-  {
-    name: "Daniel Krause",
-    role: "Abdichtungstechniker",
-    image: "/media/team/team-2.jpeg",
-  },
-  {
-    name: "Lena Hoffmann",
-    role: "Projektleiterin",
-    image: "/media/team/team-3.jpeg",
-  },
-  {
-    name: "Tobias Wagner",
-    role: "Sanierungstechniker",
-    image: "/media/team/team-4.jpeg",
-  },
-  {
-    name: "Sara Yilmaz",
-    role: "Kundenbetreuung & Büro",
-    image: "/media/team/team-5.jpeg",
-  },
-  {
-    name: "Marie Schäfer",
-    role: "Bautechnikerin",
-    image: "/media/team/team-6.jpeg",
-  },
-];
-
 export default function UeberUnsPage() {
   return (
     <>
@@ -77,70 +62,92 @@ export default function UeberUnsPage() {
             <span className="text-gradient">handwerklicher Haltung.</span>
           </>
         }
-        intro="Drycore ist ein Ingenieurbetrieb für Abdichtungstechnik. Wir verbinden Planung, Diagnose und Ausführung in einer Hand."
+        intro="Drycon Core ist der Ingenieur- und Meisterbetrieb für Bauwerksabdichtung – eine Tochtergesellschaft der drycon® GmbH. Wir verbinden Planung, Diagnose und Ausführung in einer Hand."
         crumbs={[{ label: "Start", href: "/" }, { label: "Über uns" }]}
       />
+
+      {/* Drycon im Rücken */}
+      <section className="container-x pb-16 pt-4">
+        <Reveal>
+          <div className="grid gap-6 rounded-3xl bg-navy-900 p-8 text-white ring-1 ring-navy-900/5 sm:p-10 lg:grid-cols-[1fr_1.4fr] lg:items-center">
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-teal-300">
+                Teil der drycon-Gruppe
+              </p>
+              <p className="mt-3 text-4xl font-semibold text-teal-300 sm:text-5xl">20+ Jahre</p>
+              <p className="mt-1 text-sm text-white/70">Erfahrung im Rücken</p>
+            </div>
+            <p className="text-sm leading-relaxed text-white/80 sm:text-base">
+              Drycon Core ist die Abdichtungs-Tochter der drycon® GmbH, die seit
+              über 20 Jahren europaweit anspruchsvolle Bauprojekte realisiert und
+              koordiniert. Auf dieses Fundament aus Ingenieur-Know-how,
+              Meisterqualität und über 1.400 umgesetzten Projekten bauen wir auf,
+              wenn wir Ihr Bauwerk dauerhaft trockenlegen – von der ersten
+              Feuchtigkeitsmessung bis zur Abnahme.
+            </p>
+          </div>
+        </Reveal>
+      </section>
 
       {/* Geschäftsführer */}
       <section className="container-x pb-24">
         <SectionTitle
           eyebrow="Geschäftsführung"
-          title="Zwei Köpfe, ein Anspruch."
-          intro="Mohammed Herz und Irfan Tokul stehen mit ihrem Namen für das Ergebnis. Gemeinsam bringen sie jahrzehntelange Erfahrung in Bauwerksabdichtung, Sanierung und Gasleitungstechnik zusammen, führen das Unternehmen Seite an Seite und sind in jedes Projekt persönlich eingebunden."
+          title="Ein Name, der für das Ergebnis steht."
+          intro="Mohammed Herz führt Drycon Core als Ingenieur- und Meisterbetrieb. Er bündelt jahrelange Erfahrung in Bauwerksabdichtung, Sanierung und Gasleitungstechnik und ist in jedes Projekt persönlich eingebunden – von der Diagnose bis zur Abnahme."
         />
 
-        <Reveal>
-          <div className="mt-8 flex flex-col gap-4 rounded-3xl bg-navy-900 p-6 text-white ring-1 ring-navy-900/5 sm:flex-row sm:items-center sm:gap-8 sm:p-8">
-            <div className="flex items-baseline gap-3">
-              <span className="text-5xl font-semibold text-teal-300">Jahrzehnte</span>
-            </div>
-            <p className="text-sm leading-relaxed text-white/80 sm:text-base">
-              gemeinsame Erfahrung am Bau. Was Irfan Tokul und Mohammed Herz
-              in vielen Jahren auf der Baustelle und in der Planung gelernt haben,
-              fließt heute gebündelt in jedes Drycore-Projekt ein, von der
-              ersten Feuchtigkeitsmessung bis zur Abnahme.
-            </p>
-          </div>
-        </Reveal>
+        <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_1.2fr]">
+          <Reveal>
+            <article className="lift overflow-hidden rounded-3xl bg-white ring-1 ring-navy-900/5">
+              <div className="relative aspect-4/5 overflow-hidden bg-sand-50">
+                <Image
+                  src="/team/mohammed-herz.png"
+                  alt="Mohammed Herz, Geschäftsführer bei Drycon Core"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="p-7">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-600">
+                  Geschäftsführer
+                </p>
+                <h3 className="mt-2 text-2xl font-semibold text-navy-900">Mohammed Herz</h3>
+                <p className="mt-3 text-sm leading-relaxed text-navy-700/80">
+                  Verantwortet die technische Planung, Bauleitung und Ausführung.
+                  Sieht jede Maßnahme zuerst aus der Sicht des Bauteils und
+                  entscheidet auf dieser Basis über System und Aufbau.
+                </p>
+              </div>
+            </article>
+          </Reveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {[
-            {
-              name: "Mohammed Herz",
-              role: "Geschäftsführer",
-              image: "/media/gf-mohammed-herz.png",
-              text:
-                "Verantwortet die technische Planung und Bauleitung. Sieht jede Maßnahme zuerst aus der Sicht des Bauteils und entscheidet auf dieser Basis über System und Aufbau.",
-            },
-            {
-              name: "Irfan Tokul",
-              role: "Geschäftsführer",
-              image: "/media/gf-irfan-tokul.png",
-              text:
-                "Verantwortet Strategie, Kommunikation und Kundenbetreuung. Sorgt dafür, dass Anfragen schnell beantwortet werden und Projekte sauber organisiert sind.",
-            },
-          ].map((p, i) => (
-            <Reveal key={p.name} delay={i * 120}>
-              <article className="lift overflow-hidden rounded-3xl bg-white ring-1 ring-navy-900/5">
-                <div className="relative aspect-4/5 overflow-hidden bg-sand-50">
-                  <Image
-                    src={p.image}
-                    alt={`${p.name}, ${p.role} bei Drycore`}
-                    fill
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    className="object-cover object-top"
-                  />
-                </div>
-                <div className="p-7">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-600">
-                    {p.role}
-                  </p>
-                  <h3 className="mt-2 text-2xl font-semibold text-navy-900">{p.name}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-navy-700/80">{p.text}</p>
-                </div>
-              </article>
-            </Reveal>
-          ))}
+          <Reveal delay={120}>
+            <div className="flex h-full flex-col justify-center gap-4 rounded-3xl bg-navy-50/60 p-8 ring-1 ring-navy-900/5 sm:p-10">
+              <p className="text-lg font-semibold text-navy-900">
+                Ingenieur trifft Meister.
+              </p>
+              <p className="text-sm leading-relaxed text-navy-700/80">
+                Bei Drycon Core wird jedes Projekt ingenieurtechnisch geplant und
+                handwerklich in Meisterqualität ausgeführt. Diese Kombination ist
+                unser Anspruch: Wir dichten nicht einfach ab, wir verstehen zuerst
+                die Ursache des Schadens und entwickeln daraus ein technisch
+                sinnvolles, dauerhaftes Sanierungskonzept.
+              </p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-navy-800 ring-1 ring-navy-900/5">
+                  Ingenieurgeführt
+                </span>
+                <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-navy-800 ring-1 ring-navy-900/5">
+                  Meisterbetrieb
+                </span>
+                <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-navy-800 ring-1 ring-navy-900/5">
+                  drycon-Gruppe
+                </span>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -148,35 +155,37 @@ export default function UeberUnsPage() {
       <section className="container-x pb-24">
         <SectionTitle
           eyebrow="Unser Team"
-          title="Die Menschen hinter Drycore."
-          intro="Vom Erstkontakt bis zur Abnahme sind Sie bei uns in festen Händen. Unser eingespieltes Team aus Technikern, Bauleitung und Büro sorgt dafür, dass jedes Projekt sauber geplant und zuverlässig ausgeführt wird."
+          title="Die Menschen hinter Drycon Core."
+          intro="Vom Erstkontakt bis zur Abnahme sind Sie bei uns in festen Händen. Unser eingespieltes Team der drycon-Gruppe aus Projektleitung, Architektur, Kalkulation, Einkauf und Büro sorgt dafür, dass jedes Projekt sauber geplant und zuverlässig ausgeführt wird."
         />
 
-        <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
+        <ul className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
           {team.map((m, i) => (
-            <Reveal key={m.name} delay={i * 80}>
-              <article className="lift group overflow-hidden rounded-3xl bg-white ring-1 ring-navy-900/5">
-                <div className="relative aspect-[3/4] overflow-hidden">
-                  <Image
-                    src={m.image}
-                    alt={`${m.name}, ${m.role} bei Drycore`}
-                    fill
-                    sizes="(min-width: 1024px) 33vw, 50vw"
-                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-navy-950/75 via-navy-950/10 to-transparent p-4 sm:p-5">
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-teal-300">
-                      {m.role}
-                    </p>
-                    <h3 className="mt-1 text-base font-semibold text-white sm:text-lg">
-                      {m.name}
-                    </h3>
+            <li key={m.name}>
+              <Reveal delay={(i % 4) * 80}>
+                <article className="lift group overflow-hidden rounded-3xl bg-white ring-1 ring-navy-900/5">
+                  <div className="relative aspect-3/4 overflow-hidden">
+                    <Image
+                      src={m.image}
+                      alt={`${m.name}, ${m.role} bei Drycon Core`}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 50vw"
+                      className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-navy-950/75 via-navy-950/10 to-transparent p-4 sm:p-5">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-teal-300">
+                        {m.role}
+                      </p>
+                      <h3 className="mt-1 text-base font-semibold text-white sm:text-lg">
+                        {m.name}
+                      </h3>
+                    </div>
                   </div>
-                </div>
-              </article>
-            </Reveal>
+                </article>
+              </Reveal>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       {/* Werte */}
@@ -225,7 +234,7 @@ export default function UeberUnsPage() {
                   <span className="text-gradient">dokumentierte Qualität.</span>
                 </>
               }
-              intro="Drycore ist ingenieurgeführt. Hinter jeder Maßnahme steht ein abgeschlossenes Studium des Bauingenieurwesens (M.Sc.) – Planung, Baustoffkunde, Ausführung und Abnahme aus einer Hand."
+              intro="Drycon Core ist ingenieurgeführt. Hinter jeder Maßnahme steht ein abgeschlossenes Studium des Bauingenieurwesens (M.Sc.) – Planung, Baustoffkunde, Ausführung und Abnahme aus einer Hand."
             />
             <div className="mt-8 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 rounded-full bg-navy-50 px-4 py-2 text-xs font-semibold text-navy-800">
@@ -247,7 +256,7 @@ export default function UeberUnsPage() {
 
             <UrkundeModal
               src="/media/0001.jpg"
-              alt="Master-Urkunde Bauingenieurwesen (M.Sc.) der Geschäftsführung von Drycore"
+              alt="Master-Urkunde Bauingenieurwesen (M.Sc.) der Geschäftsführung von Drycon Core"
               caption="Master of Science – Bauingenieurwesen, Universität Duisburg-Essen"
               className="group mt-8 inline-flex h-12 cursor-pointer items-center gap-3 rounded-full bg-navy-900 px-5 text-sm font-semibold text-white transition-all hover:bg-navy-800"
             >
@@ -266,14 +275,14 @@ export default function UeberUnsPage() {
             <div className="relative">
               <UrkundeModal
                 src="/media/0001.jpg"
-                alt="Master-Urkunde Bauingenieurwesen (M.Sc.) der Geschäftsführung von Drycore"
+                alt="Master-Urkunde Bauingenieurwesen (M.Sc.) der Geschäftsführung von Drycon Core"
                 caption="Master of Science – Bauingenieurwesen, Universität Duisburg-Essen"
                 className="lift group block w-full cursor-zoom-in overflow-hidden rounded-3xl bg-white p-4 shadow-[0_30px_80px_-40px_rgba(15,34,56,0.4)] ring-1 ring-navy-900/5"
               >
                 <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-sand-50">
                   <Image
                     src="/media/0001.jpg"
-                    alt="Master-Urkunde Bauingenieurwesen (M.Sc.) der Geschäftsführung von Drycore"
+                    alt="Master-Urkunde Bauingenieurwesen (M.Sc.) der Geschäftsführung von Drycon Core"
                     fill
                     sizes="(min-width: 1024px) 40vw, 100vw"
                     className="object-contain transition-transform duration-700 group-hover:scale-[1.02]"

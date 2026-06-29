@@ -6,7 +6,7 @@ import ContactForm from "../components/ContactForm";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Sprechen Sie mit Drycore. Wir antworten innerhalb von 24 Stunden auf Anfragen zu Abdichtung, Sanierung und Gasleitungsprüfung.",
+    "Sprechen Sie mit Drycon Core. Wir antworten innerhalb von 24 Stunden auf Anfragen zu Abdichtung, Sanierung und Gasleitungsprüfung.",
 };
 
 export default function KontaktPage() {

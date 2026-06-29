@@ -23,7 +23,7 @@ export type Project = {
   image?: string;
 };
 
-const filters: { id: "all" | ProjectCategory; label: string }[] = [
+const allFilters: { id: "all" | ProjectCategory; label: string }[] = [
   { id: "all", label: "Alle Projekte" },
   { id: "abdichtung", label: "Abdichtung" },
   { id: "balkon", label: "Balkon" },
@@ -50,6 +50,12 @@ type Props = {
 
 export default function ProjectGallery({ projects }: Props) {
   const [active, setActive] = useState<"all" | ProjectCategory>("all");
+
+  // Nur Filter anzeigen, zu denen es tatsächlich Projekte gibt.
+  const filters = useMemo(() => {
+    const present = new Set(projects.map((p) => p.category));
+    return allFilters.filter((f) => f.id === "all" || present.has(f.id));
+  }, [projects]);
 
   const visible = useMemo(
     () => (active === "all" ? projects : projects.filter((p) => p.category === active)),

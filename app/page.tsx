@@ -6,6 +6,7 @@ import ServiceCard from "./components/ServiceCard";
 import ContactForm from "./components/ContactForm";
 import UrkundeModal from "./components/UrkundeModal";
 import SchadensfallSelector from "./components/SchadensfallSelector";
+import KonfiguratorCTA from "./components/KonfiguratorCTA";
 
 const services = [
   {
@@ -210,7 +211,7 @@ export default function Home() {
 
             <Reveal delay={240}>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-                Drycore steht für ingenieurgeführte Bauwerksabdichtung,
+                Drycon Core steht für ingenieurgeführte Bauwerksabdichtung,
                 Feuchtesanierung und Mauertrockenlegung – von der Schadensanalyse
                 über das Sanierungskonzept bis zur fachgerechten Ausführung.
               </p>
@@ -370,6 +371,10 @@ export default function Home() {
               </Link>
             </div>
           </Reveal>
+
+          <Reveal>
+            <KonfiguratorCTA className="mt-16" />
+          </Reveal>
         </div>
       </section>
 
@@ -384,45 +389,58 @@ export default function Home() {
             intro="Ein durchfeuchteter Raum, fachgerecht abgedichtet und saniert, bis ein trockener Poolbereich daraus wird. Genau diese Verwandlung steckt hinter unseren Leistungen."
           />
 
-          <Reveal variant="scale">
-            <div className="mt-12 grid gap-4 sm:gap-6 md:grid-cols-2">
-              {[
-                {
-                  src: "/media/pool-vorher.jpeg",
-                  tag: "Vorher",
-                  tagClass: "bg-amber-500/90 text-white",
-                  caption: "Feuchte, geschädigte Wand vor der Abdichtung",
-                },
-                {
-                  src: "/media/pool-nachher.jpeg",
-                  tag: "Nachher",
-                  tagClass: "bg-teal-500 text-white",
-                  caption: "Trockener, fertiger Poolraum nach der Sanierung",
-                },
-              ].map((item) => (
-                <figure
-                  key={item.tag}
-                  className="lift group relative aspect-4/5 overflow-hidden rounded-3xl ring-1 ring-navy-900/5 sm:aspect-4/3"
-                >
-                  <Image
-                    src={item.src}
-                    alt={item.caption}
-                    fill
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <span
-                    className={`absolute left-4 top-4 inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] backdrop-blur ${item.tagClass}`}
-                  >
-                    {item.tag}
+          <div className="relative mx-auto mt-12 max-w-3xl">
+            {/* VORHER */}
+            <Reveal variant="scale">
+              <figure className="lift group relative aspect-4/3 overflow-hidden rounded-3xl ring-1 ring-navy-900/5">
+                <Image
+                  src="/media/pool-vorher.jpeg"
+                  alt="Feuchte, geschädigte Wand vor der Abdichtung"
+                  fill
+                  sizes="(min-width: 768px) 768px, 100vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <span className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-amber-500/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur">
+                  Vorher
+                </span>
+              </figure>
+            </Reveal>
+
+            {/* Abstand zwischen den Bildern, in dem das Badge sitzt */}
+            <div className="relative z-30 h-10 sm:h-12">
+              <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                <div className="inline-flex items-center gap-3 rounded-full bg-navy-900 px-5 py-2.5 text-sm font-semibold text-white shadow-xl ring-4 ring-white">
+                  <span className="text-amber-300">Aus Feuchtigkeit</span>
+                  <span aria-hidden className="grid h-6 w-6 place-items-center rounded-full bg-white/15">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 5v14" />
+                      <path d="m6 13 6 6 6-6" />
+                    </svg>
                   </span>
-                  <figcaption className="absolute inset-x-4 bottom-4 rounded-lg bg-white/85 px-3 py-1.5 text-xs font-medium text-navy-800 backdrop-blur">
-                    {item.caption}
-                  </figcaption>
-                </figure>
-              ))}
+                  <span className="text-teal-300">wird Wohnraum</span>
+                </div>
+              </div>
             </div>
-          </Reveal>
+
+            {/* NACHHER (versetzt) */}
+            <Reveal delay={220} variant="scale">
+              <figure className="lift group relative ml-auto aspect-4/3 w-[92%] overflow-hidden rounded-3xl ring-1 ring-navy-900/5 sm:w-[88%]">
+                <Image
+                  src="/media/pool-nachher.jpeg"
+                  alt="Trockener, fertiger Poolraum nach der Sanierung"
+                  fill
+                  sizes="(min-width: 768px) 680px, 92vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <span className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-teal-500 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur">
+                  Nachher
+                </span>
+                <figcaption className="absolute inset-x-4 bottom-4 rounded-lg bg-white/85 px-3 py-1.5 text-xs font-medium text-navy-800 backdrop-blur">
+                  Trockener, fertiger Poolraum nach der Sanierung
+                </figcaption>
+              </figure>
+            </Reveal>
+          </div>
 
           <Reveal delay={150}>
             <div className="mt-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-center">
@@ -460,7 +478,7 @@ export default function Home() {
           <div className="grid items-center gap-14 lg:grid-cols-2">
             <div>
               <SectionTitle
-                eyebrow="Warum Drycore"
+                eyebrow="Warum Drycon Core"
                 title={
                   <>
                     Ingenieurwissen,
@@ -672,7 +690,7 @@ export default function Home() {
               <p className="max-w-3xl text-xl font-medium leading-relaxed text-navy-900 sm:text-2xl">
                 &bdquo;Endlich ein Betrieb, der erklärt, was er macht und warum.
                 Das Konzept war nachvollziehbar, der Preis fair und die
-                Baustelle picobello. Wir empfehlen Drycore ohne zu zögern.&rdquo;
+                Baustelle picobello. Wir empfehlen Drycon Core ohne zu zögern.&rdquo;
               </p>
               <div className="mt-8 flex items-center gap-4">
                 <div className="grid h-12 w-12 place-items-center rounded-full bg-navy-900 text-sm font-semibold text-white">

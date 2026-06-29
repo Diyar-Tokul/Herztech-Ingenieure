@@ -4,7 +4,7 @@ import Reveal from "../components/Reveal";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum und Anbieterkennzeichnung von Drycore.",
+  description: "Impressum und Anbieterkennzeichnung von Drycon Core.",
 };
 
 export default function ImpressumPage() {
@@ -26,7 +26,7 @@ export default function ImpressumPage() {
                   Anbieter
                 </p>
                 <p className="mt-3 text-base font-semibold text-navy-900">
-                  Drycore
+                  Drycon Core
                 </p>
                 <p className="text-sm text-navy-700/80">Adresse folgt</p>
               </div>
@@ -36,9 +36,6 @@ export default function ImpressumPage() {
                 </p>
                 <p className="mt-3 text-base font-semibold text-navy-900">
                   Mohammed Herz
-                </p>
-                <p className="text-base font-semibold text-navy-900">
-                  Irfan Tokul
                 </p>
               </div>
               <div>
@@ -65,7 +62,7 @@ export default function ImpressumPage() {
                 <h2 className="text-base font-semibold text-navy-900">
                   Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
                 </h2>
-                <p className="mt-2">Mohammed Herz und Irfan Tokul, Adresse folgt.</p>
+                <p className="mt-2">Mohammed Herz, Adresse folgt.</p>
               </div>
               <div>
                 <h2 className="text-base font-semibold text-navy-900">Haftung für Inhalte</h2>

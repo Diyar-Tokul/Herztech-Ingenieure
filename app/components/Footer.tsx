@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import PrivacySettingsLink from "./privacy/PrivacySettingsLink";
 
 const cols = [
   {
@@ -20,8 +21,10 @@ const cols = [
       { href: "/ueber-uns", label: "Über uns" },
       { href: "/referenzen", label: "Referenzen" },
       { href: "/ratgeber", label: "Ratgeber" },
+      { href: "/faq", label: "FAQ" },
       { href: "/kontakt", label: "Kontakt" },
       { href: "/impressum", label: "Impressum" },
+      { href: "/datenschutz", label: "Datenschutz" },
       { href: "/agb", label: "AGB" },
     ],
   },
@@ -36,17 +39,20 @@ export default function Footer() {
           <div>
             <div className="inline-flex items-center gap-3 rounded-2xl bg-white px-4 py-3">
               <Image
-                src="/media/drycore-logo.png"
-                alt="Drycore – Ingenieurtechnik für Bauwerksabdichtung"
+                src="/media/DryconCoreLogo.png"
+                alt="Drycon Core – Ingenieur- und Meisterbetrieb für Bauwerksabdichtung"
                 width={320}
                 height={134}
                 className="h-12 w-auto object-contain"
               />
             </div>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/70">
-              Ingenieurtechnik für Bauwerks- und Gasleitungsabdichtung. Wir
-              planen, prüfen und sanieren mit handwerklicher Präzision und
-              normgerechter Dokumentation.
+              Ingenieur- und Meisterbetrieb für Bauwerks- und
+              Gasleitungsabdichtung. Wir planen, prüfen und sanieren mit
+              handwerklicher Präzision und normgerechter Dokumentation.
+            </p>
+            <p className="mt-4 max-w-sm text-xs leading-relaxed text-white/50">
+              Drycon Core ist eine Tochtergesellschaft der drycon® GmbH.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2">
@@ -116,10 +122,13 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/60 sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} Drycore. Alle Rechte vorbehalten.</p>
-          <p>
-            Geschäftsführer: Mohammed Herz und Irfan Tokul
-          </p>
+          <p>© {new Date().getFullYear()} Drycon Core. Alle Rechte vorbehalten.</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <PrivacySettingsLink className="text-white/70 underline-offset-2 transition-colors hover:text-white hover:underline">
+              Cookie-Einstellungen
+            </PrivacySettingsLink>
+            <p>Geschäftsführer: Mohammed Herz</p>
+          </div>
         </div>
       </div>
     </footer>

@@ -5,6 +5,7 @@ import PageHeader from "./PageHeader";
 import Reveal from "./Reveal";
 import ImagePlaceholder from "./ImagePlaceholder";
 import SectionTitle from "./SectionTitle";
+import KonfiguratorCTA from "./KonfiguratorCTA";
 
 export type DamageCase = {
   id: string;
@@ -140,6 +141,10 @@ export default function ServiceDetailLayout({
               </Reveal>
             ))}
           </div>
+
+          <Reveal>
+            <KonfiguratorCTA className="mt-12" />
+          </Reveal>
         </div>
       </section>
 

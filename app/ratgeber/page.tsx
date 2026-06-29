@@ -8,7 +8,7 @@ import SectionTitle from "../components/SectionTitle";
 export const metadata: Metadata = {
   title: "Ratgeber",
   description:
-    "Ratgeber rund um Abdichtung, Feuchtigkeit und Mauertrockenlegung: feuchter Keller, aufsteigende Feuchtigkeit, Salzausblühungen, Innen- vs. Außenabdichtung, Balkon und Gasleitung – verständlich erklärt von Drycore.",
+    "Ratgeber rund um Abdichtung, Feuchtigkeit und Mauertrockenlegung: feuchter Keller, aufsteigende Feuchtigkeit, Salzausblühungen, Innen- vs. Außenabdichtung, Balkon und Gasleitung – verständlich erklärt von Drycon Core.",
   keywords: [
     "Ratgeber Abdichtung",
     "feuchter Keller was tun",

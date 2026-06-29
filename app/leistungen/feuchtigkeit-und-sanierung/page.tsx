@@ -20,7 +20,7 @@ export default function Page() {
       }
       intro="Wasserschäden, dauerhafte Durchfeuchtung oder ein Schimmelverdacht setzen Substanz und Gesundheit unter Druck. Wir messen mit kalibrierter Technik, finden die Ursache und liefern ein Sanierungskonzept, das hält und nicht den nächsten Schaden vorbereitet. Mit über 30 Jahren Erfahrung im Team und sauberer Abstimmung mit Ihrer Versicherung, wenn nötig."
       heroImage="/media/FeuchtigkeitUndSarnierungLeistung.png"
-      heroImageAlt="Drycore Team bei der Feuchtigkeitssanierung an einer Innenwand"
+      heroImageAlt="Drycon Core Team bei der Feuchtigkeitssanierung an einer Innenwand"
       damageCases={[
         {
           id: "wasserschaden",

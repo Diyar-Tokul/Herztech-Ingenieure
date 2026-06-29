@@ -1,9 +1,8 @@
 // Schwebender WhatsApp-Kontaktbutton, auf allen Seiten sichtbar.
-// HINWEIS: Sobald die echte WhatsApp-Nummer vorliegt, hier eintragen
-// (internationales Format ohne "+" und ohne Leerzeichen, z. B. 4915123456789).
-const WHATSAPP_NUMBER = "4900000000000";
+// Internationales Format ohne "+" und ohne Leerzeichen.
+const WHATSAPP_NUMBER = "4917632029139";
 const WHATSAPP_TEXT =
-  "Hallo Drycore, ich habe eine Frage zu einer Abdichtung bzw. Feuchtigkeit.";
+  "Hallo Drycon Core, ich habe eine Frage zu einer Abdichtung bzw. Feuchtigkeit.";
 
 export default function WhatsAppButton() {
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -16,7 +15,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Per WhatsApp kontaktieren"
-      className="group fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_-12px_rgba(37,211,102,0.6)] ring-1 ring-black/5 transition-all hover:bg-[#1ebe5d] hover:shadow-[0_22px_50px_-12px_rgba(37,211,102,0.7)] sm:bottom-7 sm:right-7"
+      className="floating-action group fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_-12px_rgba(37,211,102,0.6)] ring-1 ring-black/5 transition-all hover:bg-[#1ebe5d] hover:shadow-[0_22px_50px_-12px_rgba(37,211,102,0.7)] sm:bottom-7 sm:right-7"
     >
       <svg
         width="22"

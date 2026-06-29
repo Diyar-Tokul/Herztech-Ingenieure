@@ -93,8 +93,12 @@ export default function ContactForm() {
           className="mt-1 h-4 w-4 rounded border-navy-900/20 text-teal-600 focus:ring-teal-500"
         />
         <span>
-          Ich habe die Datenschutzhinweise zur Kenntnis genommen und stimme der
-          Verarbeitung meiner Daten zur Bearbeitung der Anfrage zu.
+          Ich habe die{" "}
+          <a href="/datenschutz" className="font-semibold text-teal-700 underline-offset-2 hover:underline">
+            Datenschutzhinweise
+          </a>{" "}
+          zur Kenntnis genommen und stimme der Verarbeitung meiner Daten zur
+          Bearbeitung der Anfrage zu.
         </span>
       </label>
 

@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import SchadensChat from "./components/SchadensChat";
+import PrivacyProvider from "./components/privacy/PrivacyProvider";
+import PrivacyHub from "./components/privacy/PrivacyHub";
+import ConsentScripts from "./components/privacy/ConsentScripts";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,11 +19,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://drycore.de"),
   title: {
-    default: "Drycore | Ingenieurtechnik für Bauwerksabdichtung",
-    template: "%s | Drycore",
+    default: "Drycon Core | Ingenieur- und Meisterbetrieb für Bauwerksabdichtung",
+    template: "%s | Drycon Core",
   },
   description:
-    "Drycore plant, prüft und saniert Bauwerksabdichtungen und Gasleitungen. Ingenieurbetrieb für Abdichtungstechnik – Mauertrockenlegung, Keller, Balkon, Garage und Feuchtigkeitssanierung.",
+    "Drycon Core plant, prüft und saniert Bauwerksabdichtungen und Gasleitungen. Ingenieur- und Meisterbetrieb für Abdichtungstechnik – Mauertrockenlegung, Keller, Balkon, Garage und Feuchtigkeitssanierung. Tochtergesellschaft der drycon® GmbH.",
   keywords: [
     "Abdichtungstechnik",
     "Mauertrockenlegung",
@@ -33,12 +38,13 @@ export const metadata: Metadata = {
     "Feuchtigkeitssanierung",
     "Gasleitungsprüfung",
     "Gasleitungssanierung",
-    "Drycore",
+    "Drycon Core",
+    "drycon",
   ],
   openGraph: {
-    title: "Drycore | Ingenieurtechnik für Bauwerksabdichtung",
+    title: "Drycon Core | Ingenieur- und Meisterbetrieb für Bauwerksabdichtung",
     description:
-      "Ingenieurtechnik für Bauwerks- und Gasleitungsabdichtung. Wir analysieren, planen und sanieren mit handwerklicher Präzision.",
+      "Ingenieur- und Meisterbetrieb für Bauwerks- und Gasleitungsabdichtung. Wir analysieren, planen und sanieren mit handwerklicher Präzision.",
     type: "website",
     locale: "de_DE",
   },
@@ -55,10 +61,23 @@ export default function RootLayout({
       className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-white text-navy-900">
-        <Nav />
-        <main className="pt-20">{children}</main>
-        <Footer />
-        <WhatsAppButton />
+        {/* Wendet gespeicherte Barrierefreiheits-Einstellungen vor dem Paint an
+            (verhindert Flackern). */}
+        <Script id="a11y-init" strategy="beforeInteractive">
+          {`(function(){try{var s=localStorage.getItem('drycore.a11y.v1');if(!s)return;var a=JSON.parse(s);var r=document.documentElement;if(a.fontScale)r.style.setProperty('--a11y-font-scale',String(a.fontScale));r.classList.toggle('a11y-contrast',!!a.highContrast);r.classList.toggle('a11y-reduce-motion',!!a.reduceMotion);r.classList.toggle('a11y-underline-links',!!a.underlineLinks);}catch(e){}})();`}
+        </Script>
+
+        <PrivacyProvider>
+          <Nav />
+          <main id="main" tabIndex={-1} className="pt-20">
+            {children}
+          </main>
+          <Footer />
+          <SchadensChat />
+          <WhatsAppButton />
+          <PrivacyHub />
+          <ConsentScripts />
+        </PrivacyProvider>
       </body>
     </html>
   );

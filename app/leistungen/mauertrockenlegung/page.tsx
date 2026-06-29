@@ -4,7 +4,7 @@ import ServiceDetailLayout from "../../components/ServiceDetailLayout";
 export const metadata: Metadata = {
   title: "Mauertrockenlegung",
   description:
-    "Mauertrockenlegung gegen aufsteigende Feuchtigkeit: nachträgliche Horizontalsperre, Mauerwerksinjektion und Sperrputz. Drycore legt feuchte Wände und Kellerwände dauerhaft trocken – normgerecht nach WTA und DIN 18533.",
+    "Mauertrockenlegung gegen aufsteigende Feuchtigkeit: nachträgliche Horizontalsperre, Mauerwerksinjektion und Sperrputz. Drycon Core legt feuchte Wände und Kellerwände dauerhaft trocken – normgerecht nach WTA und DIN 18533.",
   keywords: [
     "Mauertrockenlegung",
     "Mauerwerkstrockenlegung",
@@ -35,9 +35,9 @@ export default function Page() {
           <span className="text-gradient">aufsteigende Feuchtigkeit.</span>
         </>
       }
-      intro="Feuchte Wände, abplatzender Putz und ein muffiger Geruch im Keller? Das sind klassische Anzeichen für aufsteigende Feuchtigkeit im Mauerwerk. Mit einer fachgerechten Mauertrockenlegung – nachträgliche Horizontalsperre, Mauerwerksinjektion und Sperrputz – legt Drycore Ihr Mauerwerk dauerhaft trocken und sorgt wieder für ein gesundes Raumklima. Normgerecht nach WTA-Merkblatt und DIN 18533, mit Messung, Konzept und Dokumentation."
+      intro="Feuchte Wände, abplatzender Putz und ein muffiger Geruch im Keller? Das sind klassische Anzeichen für aufsteigende Feuchtigkeit im Mauerwerk. Mit einer fachgerechten Mauertrockenlegung – nachträgliche Horizontalsperre, Mauerwerksinjektion und Sperrputz – legt Drycon Core Ihr Mauerwerk dauerhaft trocken und sorgt wieder für ein gesundes Raumklima. Normgerecht nach WTA-Merkblatt und DIN 18533, mit Messung, Konzept und Dokumentation."
       heroImage="/media/mauertrockenlegung-horizontalsperre.jpeg"
-      heroImageAlt="Drycore Team beim Einbringen einer Horizontalsperre zur Mauertrockenlegung"
+      heroImageAlt="Drycon Core Team beim Einbringen einer Horizontalsperre zur Mauertrockenlegung"
       damageCases={[
         {
           id: "aufsteigende-feuchtigkeit",
@@ -53,7 +53,7 @@ export default function Page() {
           problem:
             "Weiße, flauschige Kristalle an der Wandoberfläche und bröckelnder Putz im Sockelbereich zeigen, dass mit der Feuchtigkeit bauschädliche Salze ins Mauerwerk wandern.",
           solution:
-            "Nach der Trockenlegung tragen wir einen WTA-zertifizierten Sperrputz auf, der die Salze einlagert und die Wand atmen lässt – für eine dauerhaft trockene, saubere Oberfläche.",
+            "Nach dem Entfernen des geschädigten Putzes folgen Untergrundvorbereitung, Salzsperre und das Innenabdichtungssystem mit Sperrputz. In Verbindung mit einer fachgerechten Hohlkehle entsteht ein dauerhaft wirksames und diffusionsoffenes Abdichtungssystem.",
         },
         {
           id: "nasse-kellerwand",
@@ -122,13 +122,14 @@ export default function Page() {
           ],
         },
         {
-          title: "Sperrputz und Salzbehandlung",
+          title: "Salzsperre, Sperrputz und Innenabdichtung",
           body:
-            "Mit der Feuchtigkeit wandern Salze ins Mauerwerk. Ein WTA-zertifizierter Sperrputz lagert diese Salze ein, hält die Oberfläche trocken und schützt vor erneuten Ausblühungen.",
+            "Nach dem Entfernen des geschädigten Putzes erfolgt die Untergrundvorbereitung, anschließend die Salzsperre und danach die Ausführung des Innenabdichtungssystems mit Sperrputz. In Verbindung mit einer fachgerechten Hohlkehle entsteht ein dauerhaft wirksames und diffusionsoffenes Abdichtungssystem.",
           bullets: [
-            "Abtrag von salzbelastetem Altputz",
-            "Grundierung und Sperrputzsystem nach WTA",
-            "Trockene, atmungsaktive Oberfläche",
+            "Entfernen des geschädigten Putzes und Untergrundvorbereitung",
+            "Aufbringen der Salzsperre",
+            "Innenabdichtungssystem mit Sperrputz und fachgerechter Hohlkehle",
+            "Dauerhaft wirksam und diffusionsoffen",
           ],
         },
         {

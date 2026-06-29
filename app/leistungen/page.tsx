@@ -3,12 +3,13 @@ import PageHeader from "../components/PageHeader";
 import ServiceCard from "../components/ServiceCard";
 import Reveal from "../components/Reveal";
 import SectionTitle from "../components/SectionTitle";
+import KonfiguratorCTA from "../components/KonfiguratorCTA";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Leistungen",
   description:
-    "Mauertrockenlegung, Abdichtungssysteme, Balkonabdichtung, Garagen- und Bodenabdichtung, Feuchtigkeits- und Sanierungstechnik, Gasleitungsprüfung und Gasleitungssanierung. Alle Leistungen von Drycore im Überblick.",
+    "Mauertrockenlegung, Abdichtungssysteme, Balkonabdichtung, Garagen- und Bodenabdichtung, Feuchtigkeits- und Sanierungstechnik, Gasleitungsprüfung und Gasleitungssanierung. Alle Leistungen von Drycon Core im Überblick.",
 };
 
 const services = [
@@ -171,7 +172,7 @@ export default function LeistungenPage() {
             <span className="text-gradient">trocken und sicher hält.</span>
           </>
         }
-        intro="Feuchte Wände, undichte Balkone, beschädigte Garagenböden oder anstehende Gasleitungsprüfungen brauchen keine Bastellösungen, sondern saubere Planung und Ausführung. HERZTEC bündelt sechs Leistungen unter einem Dach. Wählen Sie Ihren Bereich, sehen Sie typische Schadensfälle und die Antworten von über 30 Jahren Erfahrung im Team."
+        intro="Feuchte Wände, undichte Balkone, beschädigte Garagenböden oder anstehende Gasleitungsprüfungen brauchen keine Bastellösungen, sondern saubere Planung und Ausführung. Drycon Core bündelt sechs Leistungen unter einem Dach. Wählen Sie Ihren Bereich, sehen Sie typische Schadensfälle und die Antworten von über 30 Jahren Erfahrung im Team."
         crumbs={[{ label: "Start", href: "/" }, { label: "Leistungen" }]}
       />
 
@@ -183,6 +184,10 @@ export default function LeistungenPage() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal>
+          <KonfiguratorCTA className="mt-10" />
+        </Reveal>
       </section>
 
       <section className="py-24 sm:py-32">

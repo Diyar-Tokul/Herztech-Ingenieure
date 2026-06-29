@@ -5,7 +5,7 @@ import Reveal from "../components/Reveal";
 export const metadata: Metadata = {
   title: "Allgemeine Geschäftsbedingungen",
   description:
-    "Allgemeine Geschäftsbedingungen von Drycore. Die finale Fassung folgt.",
+    "Allgemeine Geschäftsbedingungen von Drycon Core. Die finale Fassung folgt.",
 };
 
 export default function AgbPage() {
@@ -27,7 +27,7 @@ export default function AgbPage() {
                   § 1 Geltungsbereich
                 </h2>
                 <p className="mt-2">
-                  Diese AGB gelten für alle Verträge zwischen Drycore
+                  Diese AGB gelten für alle Verträge zwischen Drycon Core
                   und unseren Auftraggebern.
                 </p>
               </div>
