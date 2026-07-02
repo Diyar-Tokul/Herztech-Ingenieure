@@ -4,7 +4,7 @@ import ServiceDetailLayout from "../../components/ServiceDetailLayout";
 export const metadata: Metadata = {
   title: "Abdichtungssysteme",
   description:
-    "Innenabdichtung, Außenabdichtung, Sockelabdichtung, Horizontalsperre und Bodenabdichtung. Bauwerksabdichtung nach DIN 18533 vom Ingenieurbetrieb für Abdichtungstechnik.",
+    "Innenabdichtung, Außenabdichtung, Sockelabdichtung, Horizontalsperre und Bodenabdichtung. Bauwerksabdichtung nach DIN 18533 vom Ingenieur- und Meisterbetrieb für Abdichtungstechnik.",
 };
 
 export default function Page() {

@@ -73,7 +73,8 @@ export default function ContactForm() {
             <option>Balkonabdichtung</option>
             <option>Garagenabdichtung</option>
             <option>Feuchtigkeitsschaden</option>
-            <option>Gasleitungsprüfung</option>
+            <option>Schimmelsanierung</option>
+            <option>Wasserschadensanierung</option>
             <option>Sonstiges</option>
           </select>
         </label>

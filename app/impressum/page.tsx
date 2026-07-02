@@ -35,7 +35,7 @@ export default function ImpressumPage() {
                   Vertretungsberechtigte
                 </p>
                 <p className="mt-3 text-base font-semibold text-navy-900">
-                  Mohammed Herz
+                  Mohammed Herz, Zekai Savas, Frank Althaus
                 </p>
               </div>
               <div>
@@ -62,7 +62,7 @@ export default function ImpressumPage() {
                 <h2 className="text-base font-semibold text-navy-900">
                   Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
                 </h2>
-                <p className="mt-2">Mohammed Herz, Adresse folgt.</p>
+                <p className="mt-2">Mohammed Herz, Zekai Savas, Frank Althaus, Adresse folgt.</p>
               </div>
               <div>
                 <h2 className="text-base font-semibold text-navy-900">Haftung für Inhalte</h2>

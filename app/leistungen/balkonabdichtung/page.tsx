@@ -4,7 +4,7 @@ import ServiceDetailLayout from "../../components/ServiceDetailLayout";
 export const metadata: Metadata = {
   title: "Balkonabdichtung",
   description:
-    "Belastbare Balkonabdichtung mit Verbundabdichtung, sauberen Anschlussdetails und neuem Belag. Vom Ingenieurbetrieb für Abdichtungstechnik Drycon Core.",
+    "Belastbare Balkonabdichtung mit Verbundabdichtung, sauberen Anschlussdetails und neuem Belag. Vom Ingenieur- und Meisterbetrieb für Abdichtungstechnik Drycon Core.",
 };
 
 export default function Page() {

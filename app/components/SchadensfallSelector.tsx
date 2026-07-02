@@ -127,23 +127,23 @@ const cases: Case[] = [
     ),
   },
   {
-    id: "gasleitung",
-    title: "Gasleitung prüfen",
+    id: "schimmel",
+    title: "Schimmelbefall",
     short:
-      "Sicherheitsprüfung steht an oder Sie haben Geruchsverdacht. Wir prüfen nach DVGW und TRGI mit Protokoll.",
+      "Dunkle Flecken oder muffiger Geruch an Wänden und Decken. Wir finden die Ursache und sanieren dauerhaft.",
     symptoms: [
-      "Anstehende DVGW Prüfung",
-      "Geruchsverdacht oder Druckverlust",
-      "Modernisierung der Hausanschluss Leitung",
+      "Sichtbare Flecken oder Befall",
+      "Muffiger Geruch ohne erkennbare Quelle",
+      "Wiederkehrender Schimmel trotz Reinigung",
     ],
-    cta: "Gasleitungsprüfung buchen",
-    href: "/leistungen/gasleitungspruefung",
+    cta: "Schimmelsanierung anfragen",
+    href: "/leistungen/schimmelsanierung",
     accent: "amber",
     pattern: "flame",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 12h6l2-4 4 8 2-4h2" />
-        <path d="M3 18h18" />
+        <path d="M12 2s6 7 6 12a6 6 0 0 1-12 0c0-5 6-12 6-12Z" />
+        <path d="M9 14a3 3 0 0 0 3 3" />
       </svg>
     ),
   },

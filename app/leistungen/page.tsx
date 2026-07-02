@@ -9,7 +9,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Leistungen",
   description:
-    "Mauertrockenlegung, Abdichtungssysteme, Balkonabdichtung, Garagen- und Bodenabdichtung, Feuchtigkeits- und Sanierungstechnik, Gasleitungsprüfung und Gasleitungssanierung. Alle Leistungen von Drycon Core im Überblick.",
+    "Mauertrockenlegung, Abdichtungssysteme, Balkonabdichtung, Garagen- und Bodenabdichtung, Feuchtigkeits- und Sanierungstechnik, Schimmelsanierung und Wasserschadensanierung. Alle Leistungen von Drycon Core im Überblick.",
 };
 
 const services = [
@@ -119,36 +119,35 @@ const services = [
   },
   {
     index: "06",
-    title: "Gasleitungsprüfung",
+    title: "Schimmelsanierung",
     intro:
-      "Sicherheit nach DVGW. Sicht- und Dichtheitsprüfung Ihrer Hausinstallation mit Protokoll.",
+      "Ursache statt Symptom. Wir entfernen den Befall fachgerecht und beheben die eigentliche Feuchtequelle.",
     bullets: [
-      "Sichtprüfung der Leitungen",
-      "Dichtheitsprüfung mit Messgerät",
-      "Protokoll für Unterlagen und Versorger",
+      "Ursachenanalyse und Feuchtemessung",
+      "Fachgerechte Schimmelentfernung",
+      "Behebung der Schadensursache",
     ],
-    href: "/leistungen/gasleitungspruefung",
-    image: "/media/gasleitungspruefung-start.png",
+    href: "/leistungen/schimmelsanierung",
+    image: "/media/feuchtigkeit-sanierung-start.png",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 12h6l2-4 4 8 2-4h2" />
-        <path d="M3 18h18" />
+        <path d="M12 2s6 7 6 12a6 6 0 0 1-12 0c0-5 6-12 6-12Z" />
+        <path d="M9 14a3 3 0 0 0 3 3" />
       </svg>
     ),
   },
   {
     index: "07",
-    title: "Gasleitungssanierung",
+    title: "Wasserschadensanierung",
     intro:
-      "Fachgerechte Sanierung undichter Leitungen. Mit Druckprüfung, Inbetriebnahme und Übergabe.",
+      "Schnelle Schadensbegrenzung, professionelle Trocknung und dauerhafte Instandsetzung.",
     bullets: [
-      "Lokalisierung und Demontage",
-      "Austausch mit zertifizierten Materialien",
-      "Druck- und Dichtheitsprüfung",
-      "Übergabe mit Doku",
+      "Sofortige Schadensbegrenzung",
+      "Technische Trocknung mit Feuchtemessung",
+      "Instandsetzung betroffener Bauteile",
     ],
-    href: "/leistungen/gasleitungssanierung",
-    image: "/media/gasleitungssanierung-start.png",
+    href: "/leistungen/wasserschadensanierung",
+    image: "/media/feuchte-keller-beratung.jpeg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 18V8a2 2 0 0 1 2-2h4" />
@@ -172,7 +171,7 @@ export default function LeistungenPage() {
             <span className="text-gradient">trocken und sicher hält.</span>
           </>
         }
-        intro="Feuchte Wände, undichte Balkone, beschädigte Garagenböden oder anstehende Gasleitungsprüfungen brauchen keine Bastellösungen, sondern saubere Planung und Ausführung. Drycon Core bündelt sechs Leistungen unter einem Dach. Wählen Sie Ihren Bereich, sehen Sie typische Schadensfälle und die Antworten von über 30 Jahren Erfahrung im Team."
+        intro="Feuchte Wände, undichte Balkone, beschädigte Garagenböden, Schimmelbefall oder ein akuter Wasserschaden brauchen keine Bastellösungen, sondern saubere Planung und Ausführung. Drycon Core bündelt sieben Leistungen unter einem Dach. Wählen Sie Ihren Bereich, sehen Sie typische Schadensfälle und die Antworten von über 30 Jahren Erfahrung im Team."
         crumbs={[{ label: "Start", href: "/" }, { label: "Leistungen" }]}
       />
 

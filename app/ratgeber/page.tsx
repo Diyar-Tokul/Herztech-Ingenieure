@@ -8,7 +8,7 @@ import SectionTitle from "../components/SectionTitle";
 export const metadata: Metadata = {
   title: "Ratgeber",
   description:
-    "Ratgeber rund um Abdichtung, Feuchtigkeit und Mauertrockenlegung: feuchter Keller, aufsteigende Feuchtigkeit, Salzausblühungen, Innen- vs. Außenabdichtung, Balkon und Gasleitung – verständlich erklärt von Drycon Core.",
+    "Ratgeber rund um Abdichtung, Feuchtigkeit und Mauertrockenlegung: feuchter Keller, aufsteigende Feuchtigkeit, Salzausblühungen, Innen- vs. Außenabdichtung, Schimmel und Wasserschaden – verständlich erklärt von Drycon Core.",
   keywords: [
     "Ratgeber Abdichtung",
     "feuchter Keller was tun",
@@ -19,7 +19,8 @@ export const metadata: Metadata = {
     "Mauertrockenlegung Kosten",
     "Schimmel im Keller",
     "Balkon abdichten",
-    "Gasleitungsprüfung",
+    "Schimmelsanierung",
+    "Wasserschadensanierung",
   ],
 };
 
@@ -71,12 +72,12 @@ const articles = [
     readingTime: "4 Min.",
   },
   {
-    category: "Gas",
-    title: "Gasleitungsprüfung: Pflichten, Ablauf und Protokoll",
+    category: "Schimmel",
+    title: "Schimmelsanierung: Ursachen erkennen und dauerhaft beheben",
     teaser:
-      "Wann ist eine Dichtheitsprüfung fällig, was passiert dabei und welche Unterlagen brauchen Sie? Ein Überblick zur Gas-Hausinstallation nach DVGW und TRGI.",
-    href: "/leistungen/gasleitungspruefung",
-    image: "/media/gasleitungspruefung-start.png",
+      "Wie entsteht Schimmel, woran erkennen Sie einen Befall frühzeitig und wie läuft eine fachgerechte Sanierung ab? Ein Überblick zur Ursachenanalyse und Vorbeugung.",
+    href: "/leistungen/schimmelsanierung",
+    image: "/media/feuchtigkeit-sanierung-start.png",
     readingTime: "4 Min.",
   },
 ];

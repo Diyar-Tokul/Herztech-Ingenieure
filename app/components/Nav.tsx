@@ -32,21 +32,21 @@ const services = [
     desc: "Schadensanalyse, Trocknung und passgenaue Sanierung.",
   },
   {
-    href: "/leistungen/gasleitungspruefung",
-    label: "Gasleitungsprüfung",
-    desc: "Dichtheitsprüfung nach DVGW und TRGI mit Protokoll.",
+    href: "/leistungen/schimmelsanierung",
+    label: "Schimmelsanierung",
+    desc: "Ursachenanalyse, Befallsentfernung und dauerhafte Lösung.",
   },
   {
-    href: "/leistungen/gasleitungssanierung",
-    label: "Gasleitungssanierung",
-    desc: "Fachgerechte Sanierung und Inbetriebnahme.",
+    href: "/leistungen/wasserschadensanierung",
+    label: "Wasserschadensanierung",
+    desc: "Schadensbegrenzung, Trocknung und Instandsetzung.",
   },
 ];
 
 const mainLinks = [
   { href: "/", label: "Start" },
   { href: "/leistungen", label: "Leistungen", hasMenu: true },
-  { href: "/konfigurator", label: "Konfigurator" },
+  { href: "/konfigurator", label: "Konfigurator", isNew: true },
   { href: "/referenzen", label: "Referenzen" },
   { href: "/ratgeber", label: "Ratgeber" },
   { href: "/faq", label: "FAQ" },
@@ -205,9 +205,18 @@ export default function Nav() {
                 href={link.href}
                 className={`${linkBase} ${
                   isActive(link.href) ? linkActive : linkInactive
-                }`}
+                } ${link.isNew ? "gap-1.5" : ""}`}
               >
                 {link.label}
+                {link.isNew && (
+                  <span
+                    aria-hidden
+                    className="relative inline-flex h-4 items-center rounded-full bg-teal-500 px-1.5 text-[9px] font-bold uppercase tracking-wide text-white"
+                  >
+                    Neu
+                    <span className="absolute inset-0 -z-10 animate-ping rounded-full bg-teal-400 opacity-75" />
+                  </span>
+                )}
               </Link>
             )
           )}
@@ -294,7 +303,17 @@ export default function Nav() {
                     : "text-navy-700 hover:bg-navy-50/60"
                 }`}
               >
-                {l.label}
+                <span className="flex items-center gap-1.5">
+                  {l.label}
+                  {l.isNew && (
+                    <span
+                      aria-hidden
+                      className="inline-flex h-4 items-center rounded-full bg-teal-500 px-1.5 text-[9px] font-bold uppercase tracking-wide text-white"
+                    >
+                      Neu
+                    </span>
+                  )}
+                </span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-navy-300">
                   <path d="m9 18 6-6-6-6" />
                 </svg>

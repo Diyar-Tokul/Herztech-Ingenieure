@@ -4,7 +4,7 @@ import ServiceDetailLayout from "../../components/ServiceDetailLayout";
 export const metadata: Metadata = {
   title: "Feuchtigkeits- und Sanierungstechnik",
   description:
-    "Wasserschadensanierung, Feuchtigkeitsmessung, Schadensanalyse und Sanierungskonzepte. Strukturiertes Vorgehen vom Ingenieurbetrieb für Abdichtungstechnik.",
+    "Wasserschadensanierung, Feuchtigkeitsmessung, Schadensanalyse und Sanierungskonzepte. Strukturiertes Vorgehen vom Ingenieur- und Meisterbetrieb für Abdichtungstechnik.",
 };
 
 export default function Page() {
@@ -127,10 +127,10 @@ export default function Page() {
         },
       ]}
       nextService={{
-        href: "/leistungen/gasleitungspruefung",
-        label: "Gasleitungsprüfung",
+        href: "/leistungen/schimmelsanierung",
+        label: "Schimmelsanierung",
         intro:
-          "Sicherheit für Ihre Hausinstallation, mit Sicht- und Dichtheitsprüfung nach DVGW.",
+          "Ursachenanalyse, fachgerechte Entfernung des Befalls und dauerhafte Behebung der Feuchtequelle.",
       }}
     />
   );

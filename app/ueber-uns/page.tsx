@@ -9,7 +9,7 @@ import UrkundeModal from "../components/UrkundeModal";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "Drycon Core ist ein Ingenieur- und Meisterbetrieb für Bauwerksabdichtung und Tochtergesellschaft der drycon® GmbH. Geführt von Mohammed Herz, gestützt auf über 20 Jahre Erfahrung der drycon-Gruppe.",
+    "Drycon Core ist ein Ingenieur- und Meisterbetrieb für Bauwerksabdichtung, Wasserschaden- und Schimmelsanierung und Tochtergesellschaft der drycon® GmbH. Geführt von Mohammed Herz, Zekai Savas und Frank Althaus, gestützt auf über 20 Jahre Erfahrung der drycon-Gruppe.",
 };
 
 // Mitarbeiterteam – übernommen aus der drycon-Gruppe.
@@ -93,61 +93,65 @@ export default function UeberUnsPage() {
       <section className="container-x pb-24">
         <SectionTitle
           eyebrow="Geschäftsführung"
-          title="Ein Name, der für das Ergebnis steht."
-          intro="Mohammed Herz führt Drycon Core als Ingenieur- und Meisterbetrieb. Er bündelt jahrelange Erfahrung in Bauwerksabdichtung, Sanierung und Gasleitungstechnik und ist in jedes Projekt persönlich eingebunden – von der Diagnose bis zur Abnahme."
+          title="Drei Köpfe, ein Anspruch."
+          intro="Mohammed Herz, Zekai Savas und Frank Althaus führen Drycon Core als Ingenieur- und Meisterbetrieb. Gemeinsam bündeln sie jahrelange Erfahrung in Bauwerksabdichtung sowie Wasserschaden- und Schimmelsanierung und sind in jedes Projekt persönlich eingebunden – von der Diagnose bis zur Abnahme."
         />
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_1.2fr]">
-          <Reveal>
-            <article className="lift overflow-hidden rounded-3xl bg-white ring-1 ring-navy-900/5">
-              <div className="relative aspect-4/5 overflow-hidden bg-sand-50">
-                <Image
-                  src="/team/mohammed-herz.png"
-                  alt="Mohammed Herz, Geschäftsführer bei Drycon Core"
-                  fill
-                  sizes="(min-width: 1024px) 40vw, 100vw"
-                  className="object-cover object-top"
-                />
-              </div>
-              <div className="p-7">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-600">
-                  Geschäftsführer
-                </p>
-                <h3 className="mt-2 text-2xl font-semibold text-navy-900">Mohammed Herz</h3>
-                <p className="mt-3 text-sm leading-relaxed text-navy-700/80">
-                  Verantwortet die technische Planung, Bauleitung und Ausführung.
-                  Sieht jede Maßnahme zuerst aus der Sicht des Bauteils und
-                  entscheidet auf dieser Basis über System und Aufbau.
-                </p>
-              </div>
-            </article>
-          </Reveal>
-
-          <Reveal delay={120}>
-            <div className="flex h-full flex-col justify-center gap-4 rounded-3xl bg-navy-50/60 p-8 ring-1 ring-navy-900/5 sm:p-10">
-              <p className="text-lg font-semibold text-navy-900">
-                Ingenieur trifft Meister.
-              </p>
-              <p className="text-sm leading-relaxed text-navy-700/80">
-                Bei Drycon Core wird jedes Projekt ingenieurtechnisch geplant und
-                handwerklich in Meisterqualität ausgeführt. Diese Kombination ist
-                unser Anspruch: Wir dichten nicht einfach ab, wir verstehen zuerst
-                die Ursache des Schadens und entwickeln daraus ein technisch
-                sinnvolles, dauerhaftes Sanierungskonzept.
-              </p>
-              <div className="mt-2 flex flex-wrap gap-2">
-                <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-navy-800 ring-1 ring-navy-900/5">
-                  Ingenieurgeführt
-                </span>
-                <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-navy-800 ring-1 ring-navy-900/5">
-                  Meisterbetrieb
-                </span>
-                <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-navy-800 ring-1 ring-navy-900/5">
-                  drycon-Gruppe
-                </span>
-              </div>
-            </div>
-          </Reveal>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {[
+            {
+              name: "Mohammed Herz",
+              role: "Geschäftsführung",
+              image: "/team/mohammed-herz.png",
+              text:
+                "Verantwortet die technische Planung, Bauleitung und Ausführung. Sieht jede Maßnahme zuerst aus der Sicht des Bauteils und entscheidet auf dieser Basis über System und Aufbau.",
+            },
+            {
+              name: "Zekai Savas",
+              role: "Geschäftsführung",
+              image: "/media/savas-aspect-ratio-408-310-1.webp",
+              email: "savas@drycon.com",
+              text:
+                "Verantwortet Kundenbetreuung und Projektkoordination. Sorgt dafür, dass Anfragen schnell beantwortet werden und Projekte sauber organisiert sind.",
+            },
+            {
+              name: "Frank Althaus",
+              role: "Geschäftsführung",
+              image: "/media/frank-2-aspect-ratio-408-310-1.webp",
+              email: "althaus@drycon.com",
+              text:
+                "Verantwortet Ausführung und Qualitätssicherung auf der Baustelle. Bringt jahrelange Erfahrung in Abdichtungstechnik und Sanierung mit ein.",
+            },
+          ].map((p, i) => (
+            <Reveal key={p.name} delay={i * 120}>
+              <article className="lift overflow-hidden rounded-3xl bg-white ring-1 ring-navy-900/5">
+                <div className="relative aspect-4/5 overflow-hidden bg-sand-50">
+                  <Image
+                    src={p.image}
+                    alt={`${p.name}, ${p.role} bei Drycon Core`}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, 100vw"
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="p-7">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-600">
+                    {p.role}
+                  </p>
+                  <h3 className="mt-2 text-2xl font-semibold text-navy-900">{p.name}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-navy-700/80">{p.text}</p>
+                  {p.email && (
+                    <a
+                      href={`mailto:${p.email}`}
+                      className="mt-3 inline-block text-sm font-medium text-teal-600 hover:text-teal-700"
+                    >
+                      {p.email}
+                    </a>
+                  )}
+                </div>
+              </article>
+            </Reveal>
+          ))}
         </div>
       </section>
 
@@ -221,12 +225,12 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      {/* Ingenieurbetrieb / Qualifikation */}
+      {/* Ingenieur- und Meisterbetrieb / Qualifikation */}
       <section className="py-24 sm:py-32">
         <div className="container-x grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
             <SectionTitle
-              eyebrow="Ingenieurbetrieb für Abdichtungstechnik"
+              eyebrow="Ingenieur- und Meisterbetrieb für Abdichtungstechnik"
               title={
                 <>
                   Geprüfte Qualifikation,
@@ -245,9 +249,6 @@ export default function UeberUnsPage() {
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-navy-50 px-4 py-2 text-xs font-semibold text-navy-800">
                 DIN 18533 konform
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full bg-navy-50 px-4 py-2 text-xs font-semibold text-navy-800">
-                DVGW-Regelwerk
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-navy-50 px-4 py-2 text-xs font-semibold text-navy-800">
                 WTA-orientiert

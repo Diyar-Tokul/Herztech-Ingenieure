@@ -8,8 +8,7 @@ export type ProjectCategory =
   | "abdichtung"
   | "balkon"
   | "garage"
-  | "sanierung"
-  | "gas";
+  | "sanierung";
 
 export type Project = {
   id: string;
@@ -29,7 +28,6 @@ const allFilters: { id: "all" | ProjectCategory; label: string }[] = [
   { id: "balkon", label: "Balkon" },
   { id: "garage", label: "Garage & Boden" },
   { id: "sanierung", label: "Sanierung" },
-  { id: "gas", label: "Gasleitung" },
 ];
 
 const sizeClass: Record<Project["size"], string> = {

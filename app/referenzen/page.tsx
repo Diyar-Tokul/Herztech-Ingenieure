@@ -9,7 +9,7 @@ import ProjectGallery, { type Project } from "../components/ProjectGallery";
 export const metadata: Metadata = {
   title: "Referenzen",
   description:
-    "Ausgewählte Projekte von Drycon Core: Mauertrockenlegung, Kellerabdichtung, Balkonabdichtung, Garagensanierung, Feuchtigkeitssanierung und Gasleitungsarbeiten.",
+    "Ausgewählte Projekte von Drycon Core: Mauertrockenlegung, Kellerabdichtung, Balkonabdichtung, Garagensanierung, Feuchtigkeits-, Schimmel- und Wasserschadensanierung.",
 };
 
 const projects: Project[] = [
@@ -130,7 +130,7 @@ export default function ReferenzenPage() {
             <span className="text-gradient">Sichtbar gemacht.</span>
           </>
         }
-        intro="Ein Ausschnitt aus unserer Arbeit der letzten Jahre. Von der Kellerabdichtung bis zur Gasleitungssanierung. Echte Bauten, echte Eigentümer, dokumentierte Ergebnisse."
+        intro="Ein Ausschnitt aus unserer Arbeit der letzten Jahre. Von der Kellerabdichtung bis zur Wasserschadensanierung. Echte Bauten, echte Eigentümer, dokumentierte Ergebnisse."
         crumbs={[{ label: "Start", href: "/" }, { label: "Referenzen" }]}
       />
 

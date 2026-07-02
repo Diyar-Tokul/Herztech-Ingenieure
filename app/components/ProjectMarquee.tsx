@@ -4,11 +4,11 @@ const items = [
   { city: "Essen Rüttenscheid", scope: "Tiefgaragen-Beschichtung" },
   { city: "Düsseldorf Pempelfort", scope: "Wasserschadensanierung" },
   { city: "Aachen Burtscheid", scope: "Horizontalsperre Reihenhaus" },
-  { city: "Duisburg Neudorf", scope: "Gasleitungsprüfung" },
+  { city: "Duisburg Neudorf", scope: "Schimmelsanierung" },
   { city: "Mönchengladbach", scope: "Balkonsanierung EFH" },
   { city: "Krefeld", scope: "Garagenboden EFH" },
   { city: "Wuppertal Elberfeld", scope: "Innenabdichtung MFH" },
-  { city: "Köln Mülheim", scope: "Gasleitung Bestandssanierung" },
+  { city: "Köln Mülheim", scope: "Wasserschadensanierung" },
   { city: "Bonn Plittersdorf", scope: "Feuchtigkeitssanierung Villa" },
   { city: "Köln Lindenthal", scope: "Dachterrassen-Sanierung" },
 ];

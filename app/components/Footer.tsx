@@ -11,8 +11,8 @@ const cols = [
       { href: "/leistungen/balkonabdichtung", label: "Balkonabdichtung" },
       { href: "/leistungen/garagenabdichtung", label: "Garagen- & Bodenabdichtung" },
       { href: "/leistungen/feuchtigkeit-und-sanierung", label: "Feuchtigkeit & Sanierung" },
-      { href: "/leistungen/gasleitungspruefung", label: "Gasleitungsprüfung" },
-      { href: "/leistungen/gasleitungssanierung", label: "Gasleitungssanierung" },
+      { href: "/leistungen/schimmelsanierung", label: "Schimmelsanierung" },
+      { href: "/leistungen/wasserschadensanierung", label: "Wasserschadensanierung" },
     ],
   },
   {
@@ -47,9 +47,10 @@ export default function Footer() {
               />
             </div>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/70">
-              Ingenieur- und Meisterbetrieb für Bauwerks- und
-              Gasleitungsabdichtung. Wir planen, prüfen und sanieren mit
-              handwerklicher Präzision und normgerechter Dokumentation.
+              Ingenieur- und Meisterbetrieb für Bauwerksabdichtung,
+              Wasserschaden- und Schimmelsanierung. Wir planen, prüfen und
+              sanieren mit handwerklicher Präzision und normgerechter
+              Dokumentation.
             </p>
             <p className="mt-4 max-w-sm text-xs leading-relaxed text-white/50">
               Drycon Core ist eine Tochtergesellschaft der drycon® GmbH.
@@ -58,13 +59,13 @@ export default function Footer() {
             <div className="mt-6 flex flex-wrap gap-2">
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 text-xs font-medium text-white/80 ring-1 ring-white/10">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4Z"/></svg>
-                Ingenieurbetrieb
+                Ingenieur- und Meisterbetrieb
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 text-xs font-medium text-white/80 ring-1 ring-white/10">
                 DIN 18533 konform
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 text-xs font-medium text-white/80 ring-1 ring-white/10">
-                DVGW Regelwerk
+                WTA-orientiert
               </span>
             </div>
           </div>
@@ -127,7 +128,9 @@ export default function Footer() {
             <PrivacySettingsLink className="text-white/70 underline-offset-2 transition-colors hover:text-white hover:underline">
               Cookie-Einstellungen
             </PrivacySettingsLink>
-            <p>Geschäftsführer: Mohammed Herz</p>
+            <p>
+              Geschäftsführung: Mohammed Herz, Zekai Savas, Frank Althaus
+            </p>
           </div>
         </div>
       </div>

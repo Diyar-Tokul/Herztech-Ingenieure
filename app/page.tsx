@@ -101,41 +101,41 @@ const services = [
   },
   {
     index: "05",
-    title: "Gasleitungsprüfung",
-    problem: "Unsichere oder fällige Gasleitung",
+    title: "Schimmelsanierung",
+    problem: "Schimmelbefall in Wohnräumen",
     intro:
-      "Sicht- und Dichtheitsprüfung Ihrer Gas-Hausinstallation nach DVGW und TRGI.",
+      "Ursachenanalyse, fachgerechte Entfernung des Befalls und dauerhafte Behebung der Feuchtequelle.",
     bullets: [
-      "Sichtprüfung der Leitungen",
-      "Dichtheitsprüfung mit Messgerät",
-      "Protokoll für Unterlagen und Versorger",
-      "Klare Handlungsempfehlung",
+      "Ursachenanalyse und Feuchtemessung",
+      "Fachgerechte Schimmelentfernung",
+      "Behebung der Schadensursache",
+      "Dokumentation und Vorbeugung",
     ],
-    href: "/leistungen/gasleitungspruefung",
-    image: "/media/gasleitungspruefung-start.png",
-    imageAlt: "Dichtheitsprüfung einer Gasleitung",
+    href: "/leistungen/schimmelsanierung",
+    image: "/media/feuchtigkeit-sanierung-start.png",
+    imageAlt: "Fachgerechte Schimmelsanierung einer Innenwand",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 12h6l2-4 4 8 2-4h2" />
-        <path d="M3 18h18" />
+        <path d="M12 2s6 7 6 12a6 6 0 0 1-12 0c0-5 6-12 6-12Z" />
+        <path d="M9 14a3 3 0 0 0 3 3" />
       </svg>
     ),
   },
   {
     index: "06",
-    title: "Gasleitungssanierung",
-    problem: "Veraltete, undichte Gasleitung",
+    title: "Wasserschadensanierung",
+    problem: "Rohrbruch oder Wasserschaden",
     intro:
-      "Fachgerechte Sanierung undichter oder veralteter Leitungen, mit Druckprüfung und Übergabe.",
+      "Schnelle Schadensbegrenzung, professionelle Trocknung und dauerhafte Instandsetzung.",
     bullets: [
-      "Lokalisierung und Demontage",
-      "Austausch mit zertifizierten Materialien",
-      "Druck- und Dichtheitsprüfung",
-      "Übergabe mit vollständiger Doku",
+      "Sofortige Schadensbegrenzung",
+      "Technische Trocknung mit Feuchtemessung",
+      "Instandsetzung betroffener Bauteile",
+      "Vorbeugung von Folgeschäden",
     ],
-    href: "/leistungen/gasleitungssanierung",
-    image: "/media/gasleitungssanierung-start.png",
-    imageAlt: "Sanierung einer Gasleitung",
+    href: "/leistungen/wasserschadensanierung",
+    image: "/media/feuchte-keller-beratung.jpeg",
+    imageAlt: "Sanierung eines Wasserschadens",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 18V8a2 2 0 0 1 2-2h4" />
@@ -197,7 +197,7 @@ export default function Home() {
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white ring-1 ring-white/20 backdrop-blur">
                 <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
-                Ingenieurbetrieb für Abdichtungstechnik
+                Ingenieur- und Meisterbetrieb für Abdichtungstechnik
               </span>
             </Reveal>
 
@@ -286,9 +286,9 @@ export default function Home() {
           <Reveal variant="scale">
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-navy-100 shadow-[0_30px_80px_-40px_rgba(15,34,56,0.35)] sm:grid-cols-4">
               {[
-                { label: "Ingenieurbetrieb", value: "Abdichtungstechnik" },
+                { label: "Ingenieur- und Meisterbetrieb", value: "Abdichtungstechnik" },
                 { label: "Norm", value: "DIN 18533" },
-                { label: "Gas", value: "DVGW Regelwerk" },
+                { label: "Sanierung", value: "Schimmel & Wasserschaden" },
                 { label: "Region", value: "Bundesweit aktiv" },
               ].map((b) => (
                 <div
@@ -321,7 +321,7 @@ export default function Home() {
                   <span className="text-gradient">haben Sie?</span>
                 </>
               }
-              intro="Ob feuchter Keller, undichter Balkon oder eine fällige Gasleitungsprüfung: Wählen Sie Ihr Schadensbild und Sie landen direkt beim passenden Kompetenzfeld. Für jedes Problem die fachgerechte Lösung, statt halber Sachen."
+              intro="Ob feuchter Keller, Schimmelbefall, Wasserschaden oder undichter Balkon: Wählen Sie Ihr Schadensbild und Sie landen direkt beim passenden Kompetenzfeld. Für jedes Problem die fachgerechte Lösung, statt halber Sachen."
             />
             <Reveal delay={200}>
               <Link
@@ -636,8 +636,8 @@ export default function Home() {
                 caption: "Balkonabdichtung",
               },
               {
-                src: "/media/gasleitungspruefung-start.png",
-                caption: "Gasleitungsprüfung",
+                src: "/media/feuchtigkeit-sanierung-start.png",
+                caption: "Schimmelsanierung",
               },
             ].map((item, i) => (
               <Reveal

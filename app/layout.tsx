@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Drycon Core",
   },
   description:
-    "Drycon Core plant, prüft und saniert Bauwerksabdichtungen und Gasleitungen. Ingenieur- und Meisterbetrieb für Abdichtungstechnik – Mauertrockenlegung, Keller, Balkon, Garage und Feuchtigkeitssanierung. Tochtergesellschaft der drycon® GmbH.",
+    "Drycon Core plant, prüft und saniert Bauwerksabdichtungen sowie Schimmel- und Wasserschäden. Ingenieur- und Meisterbetrieb für Abdichtungstechnik – Mauertrockenlegung, Keller, Balkon, Garage, Feuchtigkeits-, Schimmel- und Wasserschadensanierung. Tochtergesellschaft der drycon® GmbH.",
   keywords: [
     "Abdichtungstechnik",
     "Mauertrockenlegung",
@@ -36,15 +36,15 @@ export const metadata: Metadata = {
     "Balkonabdichtung",
     "Garagenabdichtung",
     "Feuchtigkeitssanierung",
-    "Gasleitungsprüfung",
-    "Gasleitungssanierung",
+    "Schimmelsanierung",
+    "Wasserschadensanierung",
     "Drycon Core",
     "drycon",
   ],
   openGraph: {
     title: "Drycon Core | Ingenieur- und Meisterbetrieb für Bauwerksabdichtung",
     description:
-      "Ingenieur- und Meisterbetrieb für Bauwerks- und Gasleitungsabdichtung. Wir analysieren, planen und sanieren mit handwerklicher Präzision.",
+      "Ingenieur- und Meisterbetrieb für Bauwerksabdichtung, Wasserschaden- und Schimmelsanierung. Wir analysieren, planen und sanieren mit handwerklicher Präzision.",
     type: "website",
     locale: "de_DE",
   },
