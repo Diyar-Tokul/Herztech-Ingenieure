@@ -13,7 +13,17 @@
       "Bash(cp \"Außenabdichtung Altbau.jpg\" \"../../../public/media/aussenabdichtung-altbau.jpg\")",
       "Bash(cp \"Balkonabdichtung.webp\" \"../../../public/media/balkonabdichtung.webp\")",
       "Bash(cp \"Balkonabdichtung2.webp\" \"../../../public/media/balkonabdichtung-2.webp\")",
-      "Bash(cp \"Bodenabdichtung.webp\" \"../../../public/media/bodenabdichtung.webp\")"
+      "Bash(cp \"Bodenabdichtung.webp\" \"../../../public/media/bodenabdichtung.webp\")",
+      "Bash(npx tsc *)",
+      "WebFetch(domain:www.drycon.com)",
+      "Bash(git add *)",
+      "Bash(git commit -q -m '@ *)",
+      "Bash(git commit -q --amend -m 'Rebranding zu Drycon Core, KI-Schadens-Chatbot, FAQ-Seite & Nav-Redesign' -m '- Rebranding Drycore -> Drycon Core \\(Logo, Texte, Metadaten\\); Hinweis als Tochtergesellschaft der drycon GmbH *)",
+      "Bash(git push *)",
+      "mcp__claude_ai_Vercel__list_teams",
+      "mcp__claude_ai_Vercel__list_projects",
+      "mcp__claude_ai_Vercel__deploy_to_vercel",
+      "Bash(npx vercel *)"
     ]
   }
 }

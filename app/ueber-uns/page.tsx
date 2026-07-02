@@ -57,9 +57,9 @@ export default function UeberUnsPage() {
         eyebrow="Über uns"
         title={
           <>
-            Ingenieurwissen mit
+            Ingenieurtechnik für
             <br />
-            <span className="text-gradient">handwerklicher Haltung.</span>
+            <span className="text-gradient">Bauwerksabdichtung</span>
           </>
         }
         intro="Drycon Core ist der Ingenieur- und Meisterbetrieb für Bauwerksabdichtung – eine Tochtergesellschaft der drycon® GmbH. Wir verbinden Planung, Diagnose und Ausführung in einer Hand."
@@ -94,33 +94,33 @@ export default function UeberUnsPage() {
         <SectionTitle
           eyebrow="Geschäftsführung"
           title="Drei Köpfe, ein Anspruch."
-          intro="Mohammed Herz, Zekai Savas und Frank Althaus führen Drycon Core als Ingenieur- und Meisterbetrieb. Gemeinsam bündeln sie jahrelange Erfahrung in Bauwerksabdichtung sowie Wasserschaden- und Schimmelsanierung und sind in jedes Projekt persönlich eingebunden – von der Diagnose bis zur Abnahme."
+          intro="Die Führung von Drycon Core vereint technische Kompetenz mit unternehmerischer Erfahrung. Mohamed Herz verantwortet die operative Unternehmensführung und die fachliche Umsetzung der Projekte. Zekai Savas steuert die strategische Unternehmensentwicklung und den Aufbau nachhaltiger Unternehmensstrukturen. Als Gesellschafter bringt Frank Althaus seine jahrzehntelange Unternehmererfahrung, ein weitreichendes Netzwerk sowie seine Expertise in den Bereichen Unternehmensentwicklung, Finanzierung und kaufmännische Organisation in das Unternehmen ein."
         />
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
             {
               name: "Mohammed Herz",
-              role: "Geschäftsführung",
+              role: "Geschäftsführender Gesellschafter",
               image: "/team/mohammed-herz.png",
               text:
-                "Verantwortet die technische Planung, Bauleitung und Ausführung. Sieht jede Maßnahme zuerst aus der Sicht des Bauteils und entscheidet auf dieser Basis über System und Aufbau.",
+                "Verantwortet die operative Unternehmensführung und die fachliche Umsetzung der Projekte.",
             },
             {
               name: "Zekai Savas",
-              role: "Geschäftsführung",
+              role: "Geschäftsführender Gesellschafter",
               image: "/media/savas-aspect-ratio-408-310-1.webp",
               email: "savas@drycon.com",
               text:
-                "Verantwortet Kundenbetreuung und Projektkoordination. Sorgt dafür, dass Anfragen schnell beantwortet werden und Projekte sauber organisiert sind.",
+                "Verantwortet die strategische Ausrichtung des Unternehmens sowie den Aufbau moderner Organisations- und Unternehmensstrukturen.",
             },
             {
               name: "Frank Althaus",
-              role: "Geschäftsführung",
+              role: "Gesellschafter",
               image: "/media/frank-2-aspect-ratio-408-310-1.webp",
               email: "althaus@drycon.com",
               text:
-                "Verantwortet Ausführung und Qualitätssicherung auf der Baustelle. Bringt jahrelange Erfahrung in Abdichtungstechnik und Sanierung mit ein.",
+                "Bringt jahrzehntelange Unternehmererfahrung, ein weitreichendes Netzwerk sowie Expertise in Unternehmensentwicklung, Finanzierung und kaufmännische Organisation mit ein.",
             },
           ].map((p, i) => (
             <Reveal key={p.name} delay={i * 120}>

@@ -481,9 +481,9 @@ export default function Home() {
                 eyebrow="Warum Drycon Core"
                 title={
                   <>
-                    Ingenieurwissen,
+                    Ingenieurkompetenz.
                     <br />
-                    handwerklich umgesetzt.
+                    Meisterqualität.
                   </>
                 }
                 intro="Wir verbinden präzise Diagnose mit sauberem Handwerk. Jede Maßnahme ist dokumentiert, jede Naht geprüft. Das spüren Sie in der Qualität und in der Garantie."

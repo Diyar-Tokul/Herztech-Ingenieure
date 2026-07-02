@@ -41,7 +41,7 @@ export default function DatenschutzPage() {
           <Section title="1. Verantwortlicher">
             <p>
               Verantwortlich für die Datenverarbeitung auf dieser Website ist Drycon Core,
-              Geschäftsführer Mohammed Herz. Die vollständigen
+              geschäftsführender Gesellschafter Mohammed Herz. Die vollständigen
               Kontaktdaten finden Sie im{" "}
               <a href="/impressum" className="font-semibold text-teal-700 hover:underline">
                 Impressum

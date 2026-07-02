@@ -116,12 +116,12 @@ export default function Nav() {
           aria-label="Drycon Core Startseite"
         >
           <Image
-            src="/media/DryconCoreLogo.png"
-            alt="Drycon Core – Ingenieur- und Meisterbetrieb für Bauwerksabdichtung"
+            src="/media/dryconCore.png"
+            alt="Drycon Core – Ingenieurtechnik für Bauwerksabdichtung"
             width={320}
             height={134}
             priority
-            className={`h-11 w-auto object-contain transition-[filter] duration-500 sm:h-12 ${
+            className={`h-12 w-auto object-contain transition-[filter] duration-500 sm:h-14 ${
               onHero ? "brightness-0 invert" : ""
             }`}
           />
