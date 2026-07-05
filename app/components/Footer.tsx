@@ -39,7 +39,7 @@ export default function Footer() {
           <div>
             <div className="inline-flex items-center gap-3 rounded-2xl bg-white px-4 py-3">
               <Image
-                src="/media/DryconCoreLogo.png"
+                src="/media/LogoNav.png"
                 alt="Drycon Core – Ingenieur- und Meisterbetrieb für Bauwerksabdichtung"
                 width={320}
                 height={134}

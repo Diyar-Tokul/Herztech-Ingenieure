@@ -112,19 +112,30 @@ export default function Nav() {
       <div className="container-x flex h-20 items-center justify-between gap-4">
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-3"
+          className="flex shrink-0 flex-col items-center gap-1"
           aria-label="Drycon Core Startseite"
         >
           <Image
-            src="/media/dryconCore.png"
-            alt="Drycon Core – Ingenieurtechnik für Bauwerksabdichtung"
+            src="/media/LogoNav.png"
+            alt="Drycon Core"
             width={320}
-            height={134}
+            height={100}
             priority
-            className={`h-12 w-auto object-contain transition-[filter] duration-500 sm:h-14 ${
+            className={`h-8 w-auto object-contain transition-[filter] duration-500 sm:h-9 ${
               onHero ? "brightness-0 invert" : ""
             }`}
           />
+          <span
+            className={`w-full border-t pt-0.5 text-center text-[9px] font-semibold uppercase leading-tight tracking-wide transition-colors duration-500 sm:text-[10px] ${
+              onHero
+                ? "border-white/40 text-white/90"
+                : "border-navy-900/20 text-navy-700"
+            }`}
+          >
+            Ingenieurtechnik
+            <br />
+            für Bauwerksabdichtung
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-0.5 xl:flex">
