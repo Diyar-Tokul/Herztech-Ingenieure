@@ -109,7 +109,7 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <div className="container-x flex h-20 items-center justify-between gap-4">
+      <div className="container-x flex h-20 items-center gap-4 xl:gap-8">
         <Link
           href="/"
           className="flex shrink-0 items-center"
@@ -222,7 +222,7 @@ export default function Nav() {
           )}
         </nav>
 
-        <div className="hidden shrink-0 items-center gap-2 xl:flex">
+        <div className="ml-auto hidden shrink-0 items-center gap-2 xl:flex">
           <a
             href="tel:+4900000000000"
             aria-label="Anrufen"
@@ -265,7 +265,7 @@ export default function Nav() {
           aria-label="Menü"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className={`grid h-11 w-11 place-items-center rounded-full backdrop-blur transition-colors xl:hidden ${
+          className={`ml-auto grid h-11 w-11 place-items-center rounded-full backdrop-blur transition-colors xl:hidden ${
             onHero
               ? "bg-white/15 text-white ring-1 ring-white/25"
               : "bg-white/80 text-navy-900 ring-1 ring-navy-900/10"
