@@ -121,7 +121,7 @@ export default function Nav() {
             width={320}
             height={70}
             priority
-            className={`h-12 w-auto object-contain transition-[filter] duration-500 sm:h-14 ${
+            className={`h-10 w-auto object-contain transition-[filter] duration-500 sm:h-12 ${
               onHero ? "brightness-0 invert" : ""
             }`}
           />
