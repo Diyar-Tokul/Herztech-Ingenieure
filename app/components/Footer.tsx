@@ -100,23 +100,23 @@ export default function Footer() {
                 <span className="mt-0.5 grid h-7 w-7 place-items-center rounded-full bg-white/5 ring-1 ring-white/10">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
                 </span>
-                <a href="tel:+4900000000000" className="hover:text-white">
-                  Telefon folgt
+                <a href="tel:+4922876371800" className="hover:text-white">
+                  0228 76371800
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-0.5 grid h-7 w-7 place-items-center rounded-full bg-white/5 ring-1 ring-white/10">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
                 </span>
-                <a href="mailto:info@dry-core.de" className="hover:text-white">
-                  info@dry-core.de
+                <a href="mailto:info@drycon-core.com" className="hover:text-white">
+                  info@drycon-core.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-0.5 grid h-7 w-7 place-items-center rounded-full bg-white/5 ring-1 ring-white/10">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                 </span>
-                <span>Adresse folgt</span>
+                <span>Colmantstraße 20, 53115 Bonn</span>
               </li>
             </ul>
           </div>
@@ -129,7 +129,7 @@ export default function Footer() {
               Cookie-Einstellungen
             </PrivacySettingsLink>
             <p>
-              Geschäftsführung: Mohammed Herz, Zekai Savas, Frank Althaus
+              Geschäftsführung: Mohamed Herz, Zekai Savas
             </p>
           </div>
         </div>

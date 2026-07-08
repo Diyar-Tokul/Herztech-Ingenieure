@@ -289,7 +289,7 @@ export default function Home() {
                 { label: "Ingenieur- und Meisterbetrieb", value: "Abdichtungstechnik" },
                 { label: "Norm", value: "DIN 18533" },
                 { label: "Sanierung", value: "Schimmel & Wasserschaden" },
-                { label: "Region", value: "Bundesweit aktiv" },
+                { label: "Region", value: "Bonn & Rheinland" },
               ].map((b) => (
                 <div
                   key={b.label}
@@ -736,7 +736,9 @@ export default function Home() {
                       <span className="block text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-700/70">
                         Telefon
                       </span>
-                      Nummer folgt
+                      <a href="tel:+4922876371800" className="hover:text-teal-700">
+                        0228 76371800
+                      </a>
                     </span>
                   </li>
                   <li className="flex items-center gap-3 text-navy-800">
@@ -747,7 +749,9 @@ export default function Home() {
                       <span className="block text-[11px] font-semibold uppercase tracking-[0.16em] text-navy-700/70">
                         E-Mail
                       </span>
-                      info@dry-core.de
+                      <a href="mailto:info@drycon-core.com" className="hover:text-teal-700">
+                        info@drycon-core.com
+                      </a>
                     </span>
                   </li>
                 </ul>

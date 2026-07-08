@@ -45,7 +45,12 @@ export default function KontaktPage() {
                       <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-white/60">
                         Telefon
                       </p>
-                      <p className="text-base font-semibold text-white">Nummer folgt</p>
+                      <a
+                        href="tel:+4922876371800"
+                        className="text-base font-semibold text-white hover:text-teal-300"
+                      >
+                        0228 76371800
+                      </a>
                       <p className="text-xs text-white/60">Mo bis Fr, 8 bis 18 Uhr</p>
                     </div>
                   </li>
@@ -57,7 +62,12 @@ export default function KontaktPage() {
                       <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-white/60">
                         E-Mail
                       </p>
-                      <p className="text-base font-semibold text-white">info@dry-core.de</p>
+                      <a
+                        href="mailto:info@drycon-core.com"
+                        className="text-base font-semibold text-white hover:text-teal-300"
+                      >
+                        info@drycon-core.com
+                      </a>
                       <p className="text-xs text-white/60">Antwort innerhalb von 24 Stunden</p>
                     </div>
                   </li>
@@ -69,8 +79,12 @@ export default function KontaktPage() {
                       <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-white/60">
                         Adresse
                       </p>
-                      <p className="text-base font-semibold text-white">Adresse folgt</p>
-                      <p className="text-xs text-white/60">Einsatzgebiet bundesweit</p>
+                      <p className="text-base font-semibold text-white">
+                        Colmantstraße 20, 53115 Bonn
+                      </p>
+                      <p className="text-xs text-white/60">
+                        Hauptsitz Bonn · Einsatz im Rheinland &amp; Niederrhein
+                      </p>
                     </div>
                   </li>
                 </ul>

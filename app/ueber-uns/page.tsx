@@ -9,7 +9,7 @@ import UrkundeModal from "../components/UrkundeModal";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "Drycon Core ist ein Ingenieur- und Meisterbetrieb für Bauwerksabdichtung, Wasserschaden- und Schimmelsanierung und Tochtergesellschaft der drycon® GmbH. Geführt von Mohammed Herz, Zekai Savas und Frank Althaus, gestützt auf über 20 Jahre Erfahrung der drycon-Gruppe.",
+    "Drycon Core ist ein Ingenieur- und Meisterbetrieb für Bauwerksabdichtung, Wasserschaden- und Schimmelsanierung und Tochtergesellschaft der drycon® GmbH. Geführt von Mohamed Herz und Zekai Savas, gestützt auf über 20 Jahre Erfahrung der drycon-Gruppe.",
 };
 
 // Mitarbeiterteam – übernommen aus der drycon-Gruppe.
@@ -100,7 +100,7 @@ export default function UeberUnsPage() {
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
             {
-              name: "Mohammed Herz",
+              name: "Mohamed Herz",
               role: "Geschäftsführender Gesellschafter",
               image: "/team/mohammed-herz.png",
               text:

@@ -24,7 +24,7 @@ const groups: FaqGroup[] = [
       },
       {
         q: "In welchen Regionen arbeiten Sie?",
-        a: "Wir arbeiten hauptsächlich im Raum Düsseldorf, Mönchengladbach, Neuss, Krefeld, Viersen und Umgebung. Größere Projekte übernehmen wir auch darüber hinaus.",
+        a: "Unser Hauptsitz ist in Bonn. Wir arbeiten außerdem im Raum Düsseldorf, Mönchengladbach, Neuss, Krefeld, Viersen und Umgebung. Größere Projekte übernehmen wir auch darüber hinaus.",
       },
       {
         q: "Wie schnell können Sie einen Termin anbieten?",

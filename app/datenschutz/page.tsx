@@ -31,22 +31,33 @@ export default function DatenschutzPage() {
 
       <div className="container-x pb-24">
         <div className="mx-auto max-w-3xl">
-          <div className="rounded-2xl bg-amber-50 p-4 text-sm text-amber-900 ring-1 ring-amber-200">
-            Hinweis: Diese Datenschutzerklärung ist eine Vorlage und ersetzt keine
-            Rechtsberatung. Bitte vor Veröffentlichung durch eine fachkundige Stelle
-            (z. B. Datenschutzbeauftragte:r oder Rechtsanwält:in) prüfen und um
-            landesspezifische Anforderungen ergänzen.
-          </div>
+          <p className="text-xs text-navy-700/60">Stand: Juli 2026</p>
 
           <Section title="1. Verantwortlicher">
             <p>
-              Verantwortlich für die Datenverarbeitung auf dieser Website ist Drycon Core,
-              geschäftsführender Gesellschafter Mohammed Herz. Die vollständigen
-              Kontaktdaten finden Sie im{" "}
+              Verantwortlich für die Datenverarbeitung auf dieser Website ist:
+            </p>
+            <p>
+              drycon-electrics GmbH (Geschäftsbezeichnung: Drycon Core)
+              <br />
+              Colmantstraße 20, 53115 Bonn
+              <br />
+              Telefon:{" "}
+              <a href="tel:+4922876371800" className="font-semibold text-teal-700 hover:underline">
+                0228 76371800
+              </a>
+              <br />
+              E-Mail:{" "}
+              <a href="mailto:info@drycon-core.com" className="font-semibold text-teal-700 hover:underline">
+                info@drycon-core.com
+              </a>
+            </p>
+            <p>
+              Die vollständigen Angaben zum Unternehmen finden Sie im{" "}
               <a href="/impressum" className="font-semibold text-teal-700 hover:underline">
                 Impressum
               </a>
-              . E-Mail: info@dry-core.de.
+              .
             </p>
           </Section>
 
@@ -77,12 +88,15 @@ export default function DatenschutzPage() {
 
           <Section title="3. Hosting & Server-Logfiles">
             <p>
-              Beim Aufruf der Website werden durch den Hosting-Provider automatisch
-              Informationen in Server-Logfiles verarbeitet (z. B. IP-Adresse, Datum und
-              Uhrzeit, abgerufene Datei, übertragene Datenmenge, Browsertyp). Dies dient
+              Diese Website wird bei der Vercel Inc., 340 S Lemon Ave #4133,
+              Walnut, CA 91789, USA, gehostet. Beim Aufruf der Website werden
+              durch den Hosting-Provider automatisch Informationen in
+              Server-Logfiles verarbeitet (z. B. IP-Adresse, Datum und Uhrzeit,
+              abgerufene Datei, übertragene Datenmenge, Browsertyp). Dies dient
               der technischen Bereitstellung, Sicherheit und Stabilität
-              (Art. 6 Abs. 1 lit. f DSGVO). Bitte ergänzen Sie hier den konkreten
-              Hosting-Dienstleister und ggf. einen Auftragsverarbeitungsvertrag.
+              (Art. 6 Abs. 1 lit. f DSGVO). Mit dem Anbieter besteht ein
+              Auftragsverarbeitungsvertrag; eine Datenübermittlung in die USA
+              wird auf die EU-Standardvertragsklauseln gestützt.
             </p>
           </Section>
 

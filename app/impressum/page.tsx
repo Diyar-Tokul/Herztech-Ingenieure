@@ -13,7 +13,7 @@ export default function ImpressumPage() {
       <PageHeader
         eyebrow="Impressum"
         title="Anbieterkennzeichnung"
-        intro="Die rechtlich vollständige Fassung folgt. Die hier hinterlegten Angaben dienen zunächst als Platzhalter."
+        intro="Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)."
         crumbs={[{ label: "Start", href: "/" }, { label: "Impressum" }]}
       />
 
@@ -26,31 +26,64 @@ export default function ImpressumPage() {
                   Anbieter
                 </p>
                 <p className="mt-3 text-base font-semibold text-navy-900">
-                  Drycon Core
+                  drycon-electrics GmbH
                 </p>
-                <p className="text-sm text-navy-700/80">Adresse folgt</p>
+                <p className="text-sm text-navy-700/80">
+                  Geschäftsbezeichnung: Drycon Core
+                </p>
+                <p className="mt-2 text-sm text-navy-800">Colmantstraße 20</p>
+                <p className="text-sm text-navy-800">53115 Bonn</p>
               </div>
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-600">
-                  Vertretungsberechtigte
+                  Vertreten durch
                 </p>
                 <p className="mt-3 text-base font-semibold text-navy-900">
-                  Mohammed Herz, Zekai Savas, Frank Althaus
+                  Geschäftsführer
                 </p>
+                <p className="text-sm text-navy-800">Mohamed Herz, Zekai Savas</p>
               </div>
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-600">
                   Kontakt
                 </p>
-                <p className="mt-3 text-sm text-navy-800">Telefon folgt</p>
-                <p className="text-sm text-navy-800">info@dry-core.de</p>
+                <p className="mt-3 text-sm text-navy-800">
+                  Telefon:{" "}
+                  <a href="tel:+4922876371800" className="hover:text-teal-700">
+                    0228 76371800
+                  </a>
+                </p>
+                <p className="text-sm text-navy-800">
+                  E-Mail:{" "}
+                  <a
+                    href="mailto:info@drycon-core.com"
+                    className="hover:text-teal-700"
+                  >
+                    info@drycon-core.com
+                  </a>
+                </p>
               </div>
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-600">
                   Register und Steuer
                 </p>
-                <p className="mt-3 text-sm text-navy-700/80">
-                  Eintragungsdaten und Umsatzsteuer-Identifikationsnummer folgen.
+                <p className="mt-3 text-sm text-navy-800">
+                  Registergericht: Amtsgericht Bonn, HRB 27947
+                </p>
+                <p className="text-sm text-navy-800">
+                  Umsatzsteuer-Identifikationsnummer: DE256031886
+                </p>
+              </div>
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-600">
+                  Handwerkskammer
+                </p>
+                <p className="mt-3 text-sm text-navy-800">
+                  Zuständige Handwerkskammer: Handwerkskammer zu Köln
+                </p>
+                <p className="text-sm text-navy-800">
+                  Eingetragen in die Handwerksrolle: Maurer- und
+                  Betonbauerhandwerk, Stuckateurhandwerk
                 </p>
               </div>
             </div>
@@ -62,7 +95,10 @@ export default function ImpressumPage() {
                 <h2 className="text-base font-semibold text-navy-900">
                   Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
                 </h2>
-                <p className="mt-2">Mohammed Herz, Zekai Savas, Frank Althaus, Adresse folgt.</p>
+                <p className="mt-2">
+                  Mohamed Herz, Zekai Savas, drycon-electrics GmbH,
+                  Colmantstraße 20, 53115 Bonn.
+                </p>
               </div>
               <div>
                 <h2 className="text-base font-semibold text-navy-900">Haftung für Inhalte</h2>
@@ -87,10 +123,16 @@ export default function ImpressumPage() {
                   dieser Website unterliegen dem deutschen Urheberrecht.
                 </p>
               </div>
-              <p className="text-xs text-navy-700/60">
-                Hinweis: Diese Seite ist ein Platzhalter. Die finale Fassung des
-                Impressums wird in einem separaten Schritt erstellt.
-              </p>
+              <div>
+                <h2 className="text-base font-semibold text-navy-900">
+                  Verbraucherstreitbeilegung
+                </h2>
+                <p className="mt-2">
+                  Wir sind nicht bereit und nicht verpflichtet, an
+                  Streitbeilegungsverfahren vor einer
+                  Verbraucherschlichtungsstelle teilzunehmen.
+                </p>
+              </div>
             </div>
           </div>
         </Reveal>

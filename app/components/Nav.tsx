@@ -224,7 +224,7 @@ export default function Nav() {
 
         <div className="ml-auto hidden shrink-0 items-center gap-2 xl:flex">
           <a
-            href="tel:+4900000000000"
+            href="tel:+4922876371800"
             aria-label="Anrufen"
             className={`inline-flex h-10 items-center gap-2 rounded-full px-3.5 text-sm font-medium backdrop-blur transition-colors ${
               onHero
@@ -338,7 +338,7 @@ export default function Nav() {
 
           <div className="mt-4 flex flex-col gap-2 pb-2">
             <a
-              href="tel:+4900000000000"
+              href="tel:+4922876371800"
               className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white text-sm font-semibold text-navy-900 ring-1 ring-navy-900/10"
             >
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
