@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://drycore.de"),
+  metadataBase: new URL("https://drycon-core.com"),
   title: {
     default: "Drycon Core | Ingenieur- und Meisterbetrieb für Bauwerksabdichtung",
     template: "%s | Drycon Core",
