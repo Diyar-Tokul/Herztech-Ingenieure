@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
+
+const FORMSPREE_FORM_ID = "xzdllnqz";
 
 type FieldProps = {
   label: string;
@@ -40,22 +42,40 @@ function Field({ label, name, type = "text", required, multiline, placeholder }:
 }
 
 export default function ContactForm() {
-  const [sent, setSent] = useState(false);
+  const [state, handleSubmit] = useForm(FORMSPREE_FORM_ID);
+
+  if (state.succeeded) {
+    return (
+      <div className="rounded-2xl bg-teal-50 p-8 text-center ring-1 ring-teal-500/20">
+        <p className="text-lg font-semibold text-navy-900">
+          Vielen Dank für Ihre Anfrage.
+        </p>
+        <p className="mt-2 text-sm text-navy-700/80">
+          Wir haben Ihre Nachricht erhalten und melden uns innerhalb von 24
+          Stunden bei Ihnen.
+        </p>
+      </div>
+    );
+  }
 
   return (
-    <form
-      className="grid gap-4"
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSent(true);
-      }}
-    >
+    <form className="grid gap-4" onSubmit={handleSubmit}>
+      <input type="hidden" name="_subject" value="Neue Kontaktanfrage – Drycon Core Website" />
+
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Name" name="name" required placeholder="Vor- und Nachname" />
         <Field label="Telefon" name="phone" type="tel" placeholder="Optional" />
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="E-Mail" name="email" type="email" required placeholder="name@beispiel.de" />
+        <div>
+          <Field label="E-Mail" name="email" type="email" required placeholder="name@beispiel.de" />
+          <ValidationError
+            prefix="E-Mail"
+            field="email"
+            errors={state.errors}
+            className="mt-1.5 block text-xs font-medium text-red-600"
+          />
+        </div>
         <label className="block">
           <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-navy-700/80">
             Anliegen
@@ -79,13 +99,21 @@ export default function ContactForm() {
           </select>
         </label>
       </div>
-      <Field
-        label="Nachricht"
-        name="message"
-        multiline
-        required
-        placeholder="Beschreiben Sie kurz, was wir uns ansehen sollen."
-      />
+      <div>
+        <Field
+          label="Nachricht"
+          name="message"
+          multiline
+          required
+          placeholder="Beschreiben Sie kurz, was wir uns ansehen sollen."
+        />
+        <ValidationError
+          prefix="Nachricht"
+          field="message"
+          errors={state.errors}
+          className="mt-1.5 block text-xs font-medium text-red-600"
+        />
+      </div>
 
       <label className="flex items-start gap-3 text-xs text-navy-700/80">
         <input
@@ -106,9 +134,10 @@ export default function ContactForm() {
       <div className="mt-2 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
         <button
           type="submit"
-          className="group inline-flex h-12 items-center gap-2 rounded-full bg-navy-900 px-6 text-sm font-semibold text-white transition-all hover:bg-navy-800"
+          disabled={state.submitting}
+          className="group inline-flex h-12 items-center gap-2 rounded-full bg-navy-900 px-6 text-sm font-semibold text-white transition-all hover:bg-navy-800 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {sent ? "Vielen Dank, wir melden uns" : "Anfrage absenden"}
+          {state.submitting ? "Wird gesendet…" : "Anfrage absenden"}
           <span aria-hidden className="grid h-7 w-7 place-items-center rounded-full bg-white/15 transition-transform group-hover:translate-x-0.5">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14" />
