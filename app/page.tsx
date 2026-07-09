@@ -692,19 +692,6 @@ export default function Home() {
                 Das Konzept war nachvollziehbar, der Preis fair und die
                 Baustelle picobello. Wir empfehlen Drycon Core ohne zu zögern.&rdquo;
               </p>
-              <div className="mt-8 flex items-center gap-4">
-                <div className="grid h-12 w-12 place-items-center rounded-full bg-navy-900 text-sm font-semibold text-white">
-                  AK
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-navy-900">
-                    Kundenstimme folgt
-                  </p>
-                  <p className="text-xs text-navy-700/70">
-                    Eigentümer, Bestandsimmobilie
-                  </p>
-                </div>
-              </div>
             </div>
           </Reveal>
         </div>
