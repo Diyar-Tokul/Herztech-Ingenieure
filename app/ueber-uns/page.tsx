@@ -102,7 +102,7 @@ export default function UeberUnsPage() {
             {
               name: "Mohamed Herz",
               role: "Geschäftsführender Gesellschafter",
-              image: "/team/MOHerz.png",
+              image: "/team/MoNew.jpeg",
               text:
                 "Verantwortet die operative Unternehmensführung und die fachliche Umsetzung der Projekte.",
             },
