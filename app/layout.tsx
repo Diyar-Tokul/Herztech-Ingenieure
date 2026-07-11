@@ -59,6 +59,10 @@ export default function RootLayout({
     <html
       lang="de"
       className={`${inter.variable} h-full antialiased`}
+      // Das a11y-init-Script setzt vor der Hydration Klassen/Styles auf
+      // <html> (gespeicherte Barrierefreiheits-Einstellungen). Ohne dies
+      // meldet React einen Hydration-Mismatch am html-Element.
+      suppressHydrationWarning
     >
       <body className="min-h-full bg-white text-navy-900">
         {/* Wendet gespeicherte Barrierefreiheits-Einstellungen vor dem Paint an
