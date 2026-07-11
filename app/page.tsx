@@ -621,11 +621,15 @@ export default function Home() {
             </Reveal>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+          <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-5">
             {[
               {
                 src: "/media/abdichtungssysteme-start.png",
-                caption: "Außenabdichtung Altbau",
+                caption: "Innenabdichtung",
+              },
+              {
+                src: "/media/aussenabdichtung-start.png",
+                caption: "Außenabdichtung",
               },
               {
                 src: "/media/mauertrockenlegung-horizontalsperre.jpeg",

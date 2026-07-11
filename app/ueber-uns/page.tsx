@@ -101,6 +101,7 @@ export default function UeberUnsPage() {
           {[
             {
               name: "Mohamed Herz",
+              degree: "M.Sc.",
               role: "Geschäftsführender Gesellschafter",
               image: "/team/MoNew.jpeg",
               text:
@@ -108,6 +109,7 @@ export default function UeberUnsPage() {
             },
             {
               name: "Zekai Savas",
+              degree: "M.Sc.",
               role: "Geschäftsführender Gesellschafter",
               image: "/media/savas-aspect-ratio-408-310-1.webp",
               email: "savas@drycon.com",
@@ -138,7 +140,14 @@ export default function UeberUnsPage() {
                   <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-teal-600">
                     {p.role}
                   </p>
-                  <h3 className="mt-2 text-2xl font-semibold text-navy-900">{p.name}</h3>
+                  <h3 className="mt-2 text-2xl font-semibold text-navy-900">
+                    {p.name}
+                    {p.degree && (
+                      <span className="ml-2 text-base font-medium text-navy-700/70">
+                        {p.degree}
+                      </span>
+                    )}
+                  </h3>
                   <p className="mt-3 text-sm leading-relaxed text-navy-700/80">{p.text}</p>
                   {p.email && (
                     <a
